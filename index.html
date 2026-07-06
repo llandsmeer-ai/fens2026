@@ -163,13 +163,22 @@ h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
 
 @media (max-width: 600px) {
   body { padding: 8px; }
-  .card-header { flex-wrap: wrap; }
-  .card-header .title { width: 100%; order: 3; }
+  .card-header { flex-direction: column; align-items: flex-start; }
+  .card-header .tag { margin-top: 2px; margin-bottom: 1px; }
+  .card-header .meta { order: 3; }
+  .card-header .meta-time, .card-header .meta-location { display: block; font-size: 0.75rem; line-height: 1.4; }
+  .card-header .title { width: 100%; order: 4; }
+  .card-header .star-btn { order: 5; align-self: flex-end; }
   .poster-id { min-width: 85px; }
   .talk-time { min-width: 70px; }
   .controls { flex-direction: column; }
   .search-box { min-width: 100%; }
   .star-filter { width: 100%; justify-content: center; }
+  .nested-header .tag-poster { display: none; }
+  .poster-item { flex-wrap: wrap; }
+  .poster-item .poster-id { order: 1; flex: 1; min-width: 0; }
+  .poster-item .star-btn { order: 2; margin-left: auto; }
+  .poster-item .poster-info { order: 3; flex-basis: 100%; }
 }
 </style>
 </head>
@@ -236,6 +245,14 @@ function parseSession(s){
 }
 
 function tagHtml(cls){return '<span class="tag tag-'+cls+'">'+cls+'</span>'}
+function toTitleCase(s){
+  if(!s)return s;
+  var small=/^(a|an|the|and|but|or|for|nor|on|at|to|by|with|of|in|from)$/i;
+  return s.toLowerCase().split(/\s+/).map(function(w,i,arr){
+    if(i>0&&i<arr.length-1&&small.test(w))return w;
+    return w.charAt(0).toUpperCase()+w.slice(1);
+  }).join(' ');
+}
 function arrowHtml(open){return '<span class="arrow'+(open?' open':'')+'" onclick="toggleBody(this)">&#9654;</span>'}
 function starHtml(k,active){
   return '<button class="star-btn'+(active?' active':'')+'" data-star="'+esc(k)+'" onclick="toggleStar(this.getAttribute(\'data-star\'))">&#9733;</button>';
@@ -366,7 +383,7 @@ function render(){
         visP++;
         h+='<div class="poster-item'+(pStar?' starred':'')+'">';
         h+='<span class="poster-id">'+esc(p.id)+'</span>';
-        h+='<div class="poster-info"><div class="poster-title">'+hlight(p.title,q)+'</div>';
+        h+='<div class="poster-info"><div class="poster-title">'+hlight(toTitleCase(p.title),q)+'</div>';
         h+='<div class="poster-presenter">'+hlight(p.presenter,q);
         if(p.location)h+=' ('+esc(p.location)+')';
         h+='</div></div>';
@@ -411,9 +428,8 @@ function render(){
     r+=tagHtml(typeClass);
     r+='<span class="title" onclick="toggleBody(this)">'+esc(ev.title)+'</span>';
     r+='<span class="meta">';
-    if(ev.time && ev.location) r+=esc(ev.time)+' \u00b7 '+esc(ev.location);
-    else if(ev.time) r+=esc(ev.time);
-    else if(ev.location) r+=esc(ev.location);
+    if(ev.time) r+='<span class="meta-time">'+esc(ev.time)+'</span>';
+    if(ev.location) r+='<span class="meta-location">'+esc(ev.location)+'</span>';
     r+='</span>';
     r+=starHtml(evKey,evStarred);
     r+='</div>';
