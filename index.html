@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FENS 2026 Program</title>
+<style>
+:root {
+  --bg: #fafafa; --surface: #fff; --border: #e0e0e0;
+  --text: #1a1a1a; --text-muted: #666; --accent: #2563eb;
+  --accent-light: #dbeafe; --star: #eab308; --star-bg: #fef9c3;
+  --tag-symposia: #6366f1; --tag-plenary: #ec4899; --tag-poster: #14b8a6;
+  --tag-special: #f59e0b; --tag-workshop: #8b5cf6; --tag-lecture: #ef4444;
+  --tag-debate: #06b6d4; --tag-network: #84cc16; --tag-ceremony: #f97316;
+  --tag-timeslot: #78716c;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a; --surface: #1e293b; --border: #334155;
+    --text: #e2e8f0; --text-muted: #94a3b8; --accent: #60a5fa;
+    --accent-light: #1e3a5f; --star-bg: #422006;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg); color: var(--text); line-height: 1.5;
+  padding: 16px; max-width: 960px; margin: 0 auto;
+}
+h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
+.subtitle { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px; }
+.tabs { display: flex; gap: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+.tab {
+  padding: 8px 20px; border: 1px solid var(--border); border-radius: 8px;
+  cursor: pointer; font-size: 0.9rem; font-weight: 600;
+  background: var(--surface); color: var(--text-muted); transition: all .15s;
+}
+.tab:hover { border-color: var(--accent); }
+.tab.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.controls { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+.search-box {
+  flex: 1; min-width: 200px; padding: 8px 12px;
+  border: 1px solid var(--border); border-radius: 8px;
+  font-size: 0.9rem; background: var(--surface); color: var(--text);
+}
+.search-box:focus { outline: none; border-color: var(--accent); }
+.star-filter {
+  display: flex; align-items: center; gap: 6px; padding: 7px 14px;
+  border: 1px solid var(--border); border-radius: 8px; cursor: pointer;
+  font-size: 0.85rem; background: var(--surface); user-select: none; white-space: nowrap;
+}
+.star-filter.active { border-color: var(--star); background: var(--star-bg); }
+.stats { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px; }
+
+/* Cards */
+.card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 10px; margin-bottom: 12px; overflow: hidden;
+}
+.card-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 16px; cursor: pointer; user-select: none; transition: background .15s;
+  border-bottom:1px solid var(--border);
+}
+.card-header:hover { background: var(--accent-light); }
+.card-header .arrow {
+  flex-shrink: 0; transition: transform .2s; font-size: 0.8rem; color: var(--text-muted);
+}
+.card-header .arrow.open { transform: rotate(90deg); }
+.card-header .title { flex: 1; font-size: 0.9rem; font-weight: 600; line-height: 1.3; }
+.card-header .meta { font-size: 0.8rem; color: var(--text-muted); }
+.card-header .star-btn { font-size: 1rem; padding:2px; opacity:0.4; }
+.card-header .star-btn.active { opacity:1; }
+.card-body { padding: 0 16px 16px; display: none; }
+.card-body.open { display: block; }
+
+/* Star btn — placed OUTSIDE toggle headers */
+.star-btn {
+  flex-shrink: 0; cursor: pointer; font-size: 1.2rem; line-height: 1;
+  opacity: 0.3; transition: all .15s; background: none; border: none; padding: 4px 6px;
+}
+.star-btn:hover { opacity: 0.7; transform: scale(1.2); }
+.star-btn.active { opacity: 1; color: var(--star); }
+
+/* Timeslot group insider header */
+.ts-header {
+  display: flex; align-items: center; gap: 8px; padding: 12px 16px;
+  border-bottom: none;
+}
+.ts-header .title { flex: 1; font-size: 0.95rem; font-weight: 700; }
+.ts-header .meta { font-size: 0.85rem; color: var(--text-muted); }
+
+/* Nested poster sessions inside a timeslot */
+.nested-card {
+  border: 1px solid var(--border); border-radius: 8px; margin: 8px 0; overflow: hidden;
+}
+.nested-header {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 12px; cursor: pointer; user-select: none; transition: background .15s;
+}
+.nested-header:hover { background: var(--accent-light); }
+.nested-header .arrow {
+  flex-shrink: 0; transition: transform .2s; font-size: 0.7rem; color: var(--text-muted);
+}
+.nested-header .arrow.open { transform: rotate(90deg); }
+.nested-header .title { flex: 1; font-size: 0.85rem; font-weight: 600; line-height: 1.3; }
+.nested-header .meta { font-size: 0.75rem; color: var(--text-muted); }
+.nested-body { padding: 0 12px 8px; display: none; }
+.nested-body.open { display: block; }
+
+/* Tags */
+.tag {
+  font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+  padding: 2px 8px; border-radius: 4px; color: #fff; flex-shrink: 0;
+}
+.tag-symposia { background: var(--tag-symposia); }
+.tag-plenary { background: var(--tag-plenary); }
+.tag-poster { background: var(--tag-poster); }
+.tag-special { background: var(--tag-special); }
+.tag-workshop { background: var(--tag-workshop); }
+.tag-lecture { background: var(--tag-lecture); }
+.tag-debate { background: var(--tag-debate); }
+.tag-network { background: var(--tag-network); }
+.tag-ceremony { background: var(--tag-ceremony); }
+.tag-timeslot { background: var(--tag-timeslot); }
+.tag-other { background: var(--text-muted); }
+
+/* Talks */
+.chairs { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
+.talk {
+  padding: 6px 8px; margin: 2px 0; border-radius: 6px;
+  display: flex; align-items: flex-start; gap: 6px; transition: background .15s;
+}
+.talk:hover { background: var(--accent-light); }
+.talk.starred { background: var(--star-bg); }
+.talk-time {
+  flex-shrink: 0; font-size: 0.8rem; color: var(--text-muted);
+  font-family: monospace; min-width: 90px;
+}
+.talk-content { flex: 1; min-width: 0; }
+.talk-speaker { font-size: 0.85rem; font-weight: 600; }
+.talk-title { font-size: 0.85rem; }
+
+/* Posters */
+.poster-item {
+  display: flex; align-items: flex-start; gap: 8px;
+  padding: 5px 4px; border-radius: 6px; transition: background .15s;
+}
+.poster-item:hover { background: var(--accent-light); }
+.poster-item.starred { background: var(--star-bg); }
+.poster-id {
+  flex-shrink: 0; font-size: 0.75rem; color: var(--text-muted);
+  font-family: monospace; min-width: 115px;
+}
+.poster-info { flex: 1; min-width: 0; }
+.poster-title { font-size: 0.85rem; font-weight: 500; }
+.poster-presenter { font-size: 0.8rem; color: var(--text-muted); }
+.poster-item .star-btn, .talk .star-btn { font-size: 1rem; padding: 2px 4px; }
+
+.highlight { background: #fde68a; border-radius: 2px; padding: 0 2px; }
+@media (prefers-color-scheme: dark) { .highlight { background: #78350f; } }
+.loading { text-align: center; padding: 40px; color: var(--text-muted); }
+
+@media (max-width: 600px) {
+  body { padding: 8px; }
+  .card-header { flex-wrap: wrap; }
+  .card-header .title { width: 100%; order: 3; }
+  .poster-id { min-width: 85px; }
+  .talk-time { min-width: 70px; }
+  .controls { flex-direction: column; }
+  .search-box { min-width: 100%; }
+  .star-filter { width: 100%; justify-content: center; }
+}
+</style>
+</head>
+<body>
+<h1>FENS 2026</h1>
+<div class="subtitle" id="subtitle">Loading program...</div>
+<div class="tabs" id="tabs"></div>
+<div class="controls">
+  <input class="search-box" id="search" type="text" placeholder="Search titles, authors, poster IDs...">
+  <label class="star-filter" id="starFilter">&#9733; Starred only</label>
+</div>
+<div class="stats" id="stats"></div>
+<div id="content"></div>
+
+<script>
+const LS_STARS='fens2026_stars';
+let data=null;
+let curDay=0;
+
+function stars(){try{return JSON.parse(localStorage.getItem(LS_STARS)||'{}')}catch(e){return{}}}
+function saveStars(s){localStorage.setItem(LS_STARS,JSON.stringify(s))}
+function starred(k){return!!stars()[k]}
+
+function toggleStar(k){
+  var s=stars();
+  if(s[k])delete s[k];else s[k]=true;
+  saveStars(s);render();
+}
+
+function esc(s){
+  var d=document.createElement('div');
+  d.appendChild(document.createTextNode(s));
+  return d.innerHTML;
+}
+function hlight(t,q){
+  if(!q)return esc(t);
+  var re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
+  return esc(t).replace(re,'<mark class="highlight">$1</mark>');
+}
+function mq(t,q){return !q||!t||t.toLowerCase().includes(q.toLowerCase())}
+function parseSession(s){
+  var m=s.match(/^Poster Session (\d+) - (.+)$/);
+  return m?{num:m[1],theme:m[2]}:null;
+}
+
+function tagHtml(cls){return '<span class="tag tag-'+cls+'">'+cls+'</span>'}
+function arrowHtml(open){return '<span class="arrow'+(open?' open':'')+'">&#9654;</span>'}
+function starHtml(k,active){
+  return '<button class="star-btn'+(active?' active':'')+'" data-star="'+esc(k)+'">&#9733;</button>';
+}
+
+function render(){
+  if(!data)return;
+  var q=document.getElementById('search').value.trim();
+  var onlyStarred=document.getElementById('starFilter').classList.contains('active');
+  var day=data.days[curDay];
+  var isSearch=!!q;
+  document.getElementById('subtitle').textContent=day.date+' \u2014 '+day.day;
+
+  // Separate poster sessions and non-poster events
+  var posterEvs=[];
+  var otherEvs=[];
+  for(var i=0;i<day.events.length;i++){
+    if(day.events[i].posters) posterEvs.push(day.events[i]);
+    else otherEvs.push(day.events[i]);
+  }
+
+  // Group poster sessions by time slot
+  var groups={};
+  for(var i=0;i<posterEvs.length;i++){
+    var ev=posterEvs[i];
+    var t=ev.time||'';
+    if(!groups[t]) groups[t]={time:t,sessions:[]};
+    groups[t].sessions.push(ev);
+  }
+  var timeslots=Object.keys(groups).sort();
+
+  var totalP=0,visP=0,visE=0;
+  var h='';
+
+  // --- Poster time slot groups ---
+  for(var ti=0;ti<timeslots.length;ti++){
+    var ts=timeslots[ti];
+    var grp=groups[ts];
+    var grpKey='timeslot::'+day.date+'::'+ts;
+    var grpStarred=starred(grpKey);
+
+    // Filter sessions within this timeslot
+    var visSess=[];
+    for(var si=0;si<grp.sessions.length;si++){
+      var sess=grp.sessions[si];
+      var sessKey='session::'+sess.session_name;
+      var sessStarred=starred(sessKey);
+
+      var mp=[];
+      for(var pi=0;pi<sess.posters.length;pi++){
+        var p=sess.posters[pi];
+        var pk='poster::'+p.id;
+        totalP++;
+        if(onlyStarred&&!grpStarred&&!sessStarred&&!starred(pk))continue;
+        if(q&&!mq(p.title,q)&&!mq(p.presenter,q)&&!mq(p.id,q))continue;
+        mp.push(p);
+      }
+
+      if(onlyStarred&&!grpStarred&&!sessStarred&&mp.length===0)continue;
+      visSess.push({sess:sess,sessStarred:sessStarred,mp:mp});
+    }
+
+    if(onlyStarred&&!grpStarred&&visSess.length===0)continue;
+    visE++;
+
+    // Collect session numbers for the time block label
+    var sessNums=[];
+    for(var si=0;si<visSess.length;si++){
+      var ps=parseSession(visSess[si].sess.session_name);
+      if(ps&&sessNums.indexOf(ps.num)<0)sessNums.push(ps.num);
+    }
+    sessNums.sort();
+    var slotLabel=ts.indexOf('09:30')>=0?'Morning Posters':'Afternoon Posters';
+    if(sessNums.length>0)slotLabel+=' Session '+sessNums.join(', ');
+
+    // Render timeslot group
+    var anySessOpen=false;
+    for(var si=0;si<visSess.length;si++){
+      var v=visSess[si];
+      if(v.sessStarred||(isSearch&&v.mp.length>0)||(onlyStarred&&v.mp.length>0)){
+        anySessOpen=true;break;
+      }
+    }
+    var grpOpen=grpStarred||anySessOpen;
+
+    h+='<div class="card">';
+    // Timeslot header — clicking toggles entire group
+    h+='<div class="card-header" data-toggle="ts-'+esc(day.date)+'-'+esc(ts)+'">';
+    h+=arrowHtml(grpOpen);
+    h+=tagHtml('timeslot');
+    h+='<span class="title">'+slotLabel+'</span>';
+    h+='<span class="meta">'+esc(ts)+'</span>';
+    h+='</div>';
+    // Star for the timeslot (OUTSIDE toggle header)
+    h+='<div style="display:flex;align-items:center;gap:8px;padding:0 16px 2px;border-bottom:1px solid var(--border)">';
+    h+=starHtml(grpKey,grpStarred);
+    h+='<span style="font-size:0.75rem;color:var(--text-muted)">Star this time block</span>';
+    h+='</div>';
+
+    h+='<div class="card-body'+(grpOpen?' open':'')+'">';
+    h+='<div style="padding:4px 0">';
+    for(var si=0;si<visSess.length;si++){
+      var v=visSess[si];
+      var sess=v.sess;
+      var sessKey='session::'+sess.session_name;
+      var sessStarred=v.sessStarred;
+      var mp=v.mp;
+
+      var sessOpen=sessStarred||(isSearch&&mp.length>0)||(onlyStarred&&mp.length>0);
+      var ps=parseSession(sess.session_name);
+      var sessTitle=ps?ps.theme:sess.session_name;
+      h+='<div class="nested-card">';
+      h+='<div class="nested-header" data-toggle="sess-'+esc(sess.session_name)+'">';
+      h+=arrowHtml(sessOpen);
+      h+=tagHtml('poster');
+      h+='<span class="title">'+esc(sessTitle)+'</span>';
+      h+='<span class="meta">'+mp.length+' posters</span>';
+      h+=starHtml(sessKey,sessStarred);
+      h+='</div>';
+
+      h+='<div class="nested-body'+(sessOpen?' open':'')+'">';
+      for(var pi=0;pi<mp.length;pi++){
+        var p=mp[pi];
+        var pk='poster::'+p.id;
+        var pStar=starred(pk);
+        visP++;
+        h+='<div class="poster-item'+(pStar?' starred':'')+'">';
+        h+='<span class="poster-id">'+esc(p.id)+'</span>';
+        h+='<div class="poster-info"><div class="poster-title">'+hlight(p.title,q)+'</div>';
+        h+='<div class="poster-presenter">'+hlight(p.presenter,q);
+        if(p.location)h+=' ('+esc(p.location)+')';
+        h+='</div></div>';
+        h+=starHtml(pk,pStar);
+        h+='</div>';
+      }
+      if(mp.length===0){
+        h+='<div style="color:var(--text-muted);font-size:0.85rem;padding:8px">No matching posters</div>';
+      }
+      h+='</div></div>';
+    }
+    h+='</div></div></div>';
+  }
+
+  // --- Non-poster events (grouped by time to show parallel events) ---
+  function renderEvent(ev){
+    var eid=ev.title;
+    var evKey='event::'+eid;
+    var evStarred=starred(evKey);
+    var mt=[];
+    for(var ti=0;ti<(ev.talks||[]).length;ti++){
+      var t=ev.talks[ti];
+      var tk='talk::'+eid+'::'+(t.speaker||'')+'::'+(t.time||'');
+      if(onlyStarred&&!evStarred&&!starred(tk))continue;
+      if(q&&!mq(t.title||'',q)&&!mq(t.speaker||'',q))continue;
+      mt.push(t);
+    }
+    if(onlyStarred&&!evStarred&&mt.length===0)return '';
+    var hasContent=(ev.talks||[]).length>0;
+    var anyStar=evStarred||mt.some(function(t){
+      return starred('talk::'+eid+'::'+(t.speaker||'')+'::'+(t.time||''));
+    });
+    var isOpen=evStarred||anyStar||(isSearch&&mt.length>0)||(onlyStarred&&mt.length>0);
+
+    var typeClass='symposia';
+    var m={'Scientific Symposia (S)':'symposia','Plenary Lecture (PL)':'plenary',
+      'Special Interest Events (SiE)':'special','Technical Workshop (W)':'workshop',
+      'Special Lecture (SL)':'lecture','Brain Debate':'debate','Opening Ceremony':'ceremony',
+      'Networking Events (NE)':'network'};
+    typeClass=m[ev.type]||'other';
+
+    var r='<div class="card">';
+    r+='<div class="card-header" data-toggle="evt-'+esc(eid)+'">';
+    r+=arrowHtml(isOpen);
+    r+=tagHtml(typeClass);
+    r+='<span class="title">'+esc(ev.title)+'</span>';
+    r+='<span class="meta">';
+    if(ev.time && ev.location) r+=esc(ev.time)+' \u00b7 '+esc(ev.location);
+    else if(ev.time) r+=esc(ev.time);
+    else if(ev.location) r+=esc(ev.location);
+    r+='</span>';
+    r+=starHtml(evKey,evStarred);
+    r+='</div>';
+
+    r+='<div class="card-body'+(isOpen?' open':'')+'">';
+    if(ev.chairs&&ev.chairs.length>0){
+      r+='<div class="chairs">Chairs: '+ev.chairs.map(function(c){return esc(c);}).join(', ')+'</div>';
+    }
+    function renderTalk(t){
+      var tk='talk::'+eid+'::'+(t.speaker||'')+'::'+(t.time||'');
+      var tStar=starred(tk);
+      var s='<div class="talk'+(tStar?' starred':'')+'">';
+      s+='<span class="talk-time">'+(t.time||'')+'</span>';
+      s+='<div class="talk-content">';
+      if(t.speaker)s+='<div class="talk-speaker">'+hlight(t.speaker,q)+(t.location?' <span style="color:var(--text-muted);font-weight:400">('+esc(t.location)+')</span>':'')+'</div>';
+      if(t.title)s+='<div class="talk-title">'+hlight(t.title,q)+'</div>';
+      if(!t.speaker&&!t.title)s+='<div style="color:var(--text-muted)">(no details)</div>';
+      s+='</div>';
+      s+=starHtml(tk,tStar);
+      s+='</div>';
+      return s;
+    }
+    if(hasContent){
+      var shown=mt.length>0?mt:ev.talks;
+      // Group talks by time to detect parallel ones
+      var tgroups=[], tgmap={};
+      for(var ti=0;ti<shown.length;ti++){
+        var t=shown[ti];
+        if(onlyStarred&&!evStarred&&mt.length>0&&mt.indexOf(t)<0)continue;
+        var tm=t.time||'';
+        if(!tgmap[tm]){tgmap[tm]={time:tm,talks:[]};tgroups.push(tgmap[tm]);}
+        tgmap[tm].talks.push(t);
+      }
+      for(var gi=0;gi<tgroups.length;gi++){
+        var grp=tgroups[gi];
+        if(grp.talks.length===1){
+          r+=renderTalk(grp.talks[0]);
+        }else{
+          r+='<div style="margin:6px 0;padding:6px 8px;border:1px solid var(--border);border-radius:8px;background:var(--accent-light)">';
+          r+='<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;font-size:0.8rem;color:var(--text-muted)">';
+          r+='<span style="font-weight:600">&#8646; Parallel</span>';
+          r+='<span style="font-family:monospace">'+esc(grp.time)+'</span>';
+          r+='</div>';
+          for(var ti2=0;ti2<grp.talks.length;ti2++){
+            r+=renderTalk(grp.talks[ti2]);
+          }
+          r+='</div>';
+        }
+      }
+    }else{
+      r+='<div style="color:var(--text-muted);font-size:0.85rem">No scheduled talks</div>';
+    }
+    r+='</div></div>';
+    return r;
+  }
+
+  // Group otherEvs by time, skipping invisible events
+  var evGroups=[], evGmap={};
+  for(var i=0;i<otherEvs.length;i++){
+    var ev=otherEvs[i];
+    var tm=ev.time||'';
+    if(!evGmap[tm]){evGmap[tm]={time:tm,events:[]};evGroups.push(evGmap[tm]);}
+    evGmap[tm].events.push(ev);
+  }
+  for(var gi=0;gi<evGroups.length;gi++){
+    var grp=evGroups[gi];
+    // Render each event in the group, filtering invisible ones
+    var rendered=[];
+    for(var ei=0;ei<grp.events.length;ei++){
+      var evHtml=renderEvent(grp.events[ei]);
+      if(evHtml) { rendered.push(evHtml); visE++; }
+    }
+    if(rendered.length===0)continue;
+    if(rendered.length===1){
+      h+=rendered[0];
+    }else{
+      h+='<div style="margin:0 0 16px;padding:10px 12px;border:1px solid var(--border);border-radius:12px;background:var(--accent-light)">';
+      h+='<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;font-size:0.8rem;color:var(--text-muted)">';
+      h+='<span style="font-weight:600">&#8646; Parallel sessions</span>';
+      h+='<span style="font-family:monospace">'+esc(grp.time)+'</span>';
+      h+='</div>';
+      for(var ei=0;ei<rendered.length;ei++){
+        h+=rendered[ei];
+      }
+      h+='</div>';
+    }
+  }
+
+  if(visE===0){
+    h='<div style="text-align:center;padding:40px;color:var(--text-muted)">No items match your filters</div>';
+  }
+
+  document.getElementById('stats').textContent=visE+' blocks \u00b7 '+visP+' posters (of '+totalP+')';
+  document.getElementById('content').innerHTML=h;
+}
+
+// Click handler: toggle only when clicking .arrow or .title inside [data-toggle].
+// Star buttons, meta text, and other areas do NOT trigger expand/collapse.
+document.addEventListener('click',function(e){
+  if(e.target.closest('[data-star]')){
+    toggleStar(e.target.closest('[data-star]').getAttribute('data-star'));
+    return;
+  }
+  var arrow=e.target.closest('[data-toggle] .arrow');
+  var title=e.target.closest('[data-toggle] .title');
+  if(arrow||title){
+    var tg=(arrow||title).closest('[data-toggle]');
+    var card=tg.closest('.card');
+    if(!card)return;
+    var body=card.querySelector('.card-body');
+    var nestedCard=tg.closest('.nested-card');
+    if(nestedCard){
+      body=nestedCard.querySelector('.nested-body');
+    }
+    if(body){
+      var open=body.classList.toggle('open');
+      var arrowEl=tg.querySelector('.arrow');
+      if(arrowEl)arrowEl.classList.toggle('open',open);
+    }
+  }
+});
+
+function switchDay(idx){
+  curDay=idx;
+  var tabs=document.querySelectorAll('.tab');
+  for(var i=0;i<tabs.length;i++)tabs[i].classList.toggle('active',i===idx);
+  render();
+}
+
+async function init(){
+  try{
+    var resp=await fetch('program.json');
+    if(!resp.ok)throw new Error('HTTP '+resp.status);
+    data=await resp.json();
+    var tabsEl=document.getElementById('tabs');
+    for(var i=0;i<data.days.length;i++){
+      var tab=document.createElement('div');
+      tab.className='tab'+(i===0?' active':'');
+      tab.textContent=data.days[i].day;
+      tab.onclick=(function(idx){return function(){switchDay(idx);};})(i);
+      tabsEl.appendChild(tab);
+    }
+    var st;
+    document.getElementById('search').addEventListener('input',function(){
+      clearTimeout(st);st=setTimeout(render,150);
+    });
+    document.getElementById('starFilter').addEventListener('click',function(){
+      this.classList.toggle('active');render();
+    });
+    render();
+  }catch(e){
+    document.getElementById('subtitle').textContent='Error loading program';
+    document.getElementById('content').innerHTML='<div class="loading">Failed to load program.json.<br><small>'+e.message+'</small></div>';
+  }
+}
+init();
+</script>
+</body>
+</html>
