@@ -238,7 +238,7 @@ function hlight(t,q){
   var re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi');
   return esc(t).replace(re,'<mark class="highlight">$1</mark>');
 }
-function mq(t,q){return !q||!t||t.toLowerCase().includes(q.toLowerCase())}
+function mq(t,q){return !q||(t&&t.toLowerCase().includes(q.toLowerCase()))}
 function parseSession(s){
   var m=s.match(/^Poster Session (\d+) - (.+)$/);
   return m?{num:m[1],theme:m[2]}:null;
@@ -311,7 +311,7 @@ function render(){
         mp.push(p);
       }
 
-      if(onlyStarred&&!grpStarred&&!sessStarred&&mp.length===0)continue;
+      if(mp.length===0 && (onlyStarred||isSearch))continue;
       visSess.push({sess:sess,sessStarred:sessStarred,mp:mp});
     }
 
@@ -411,7 +411,7 @@ function render(){
       if(q&&!mq(t.title||'',q)&&!mq(t.speaker||'',q))continue;
       mt.push(t);
     }
-    if(onlyStarred&&!evStarred&&mt.length===0)return '';
+    if(mt.length===0 && (onlyStarred||isSearch))return '';
     var hasContent=(ev.talks||[]).length>0;
     var isOpen=openStates['evt-'+esc(eid)]||(isSearch&&mt.length>0)||(onlyStarred&&mt.length>0);
 
