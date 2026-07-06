@@ -152,43 +152,44 @@
           ],
           "talks": [
             {
-              "time": "11:00 - 11:15"
+              "time": "11:00 - 11:15",
+              "title": "Barcoding across vertebrates"
             },
             {
               "time": "11:15 - 11:40",
-              "title": "Barcoding across vertebrates",
               "speaker": "Justus Kebschull",
-              "location": "Baltimore, United States"
+              "location": "Baltimore, United States",
+              "title": "The input-output organization of the cortical-thalamic-basal ganglia network and its molecular basis"
             },
             {
               "time": "11:40 - 12:05",
-              "title": "The input-output organization of the cortical-thalamic-basal ganglia network and its molecular basis",
               "speaker": "Shenqin Yao",
-              "location": "Seattle, United States"
+              "location": "Seattle, United States",
+              "title": "Sequencing-based connectomics reveals dynamic connectivity motifs in the developing human brain"
             },
             {
               "time": "12:05 - 12:30",
-              "title": "Sequencing-based connectomics reveals dynamic connectivity motifs in the developing human brain",
               "speaker": "Cathryn Cadwell",
-              "location": "San Francisco, United States"
+              "location": "San Francisco, United States",
+              "title": "Tracing 1000s of synaptic connections with BRISC: Barcoded Rabies In Situ Connectomics"
             },
             {
               "time": "12:30 - 12:55",
-              "title": "Tracing 1000s of synaptic connections with BRISC: Barcoded Rabies In Situ Connectomics",
               "speaker": "Petr Znamenskiy",
-              "location": "London, United Kingdom"
+              "location": "London, United Kingdom",
+              "title": "Shotgun assembly of synaptic wiring diagrams"
             },
             {
               "time": "12:55 - 13:20",
-              "title": "Shotgun assembly of synaptic wiring diagrams",
               "speaker": "Arpiar Saunders",
-              "location": "Portland, United States"
+              "location": "Portland, United States",
+              "title": "Connectome-seq: High-throughput Circuit Mapping via SingleNucleus and Synaptosome Sequencing"
             },
             {
               "time": "13:20 - 13:45",
-              "title": "Connectome-seq: High-throughput Circuit Mapping via SingleNucleus and Synaptosome Sequencing",
               "speaker": "Boxuan Zhao",
-              "location": "Champaign, United States"
+              "location": "Champaign, United States",
+              "title": "Q&A"
             },
             {
               "time": "13:45 - 14:00"
@@ -292,45 +293,44 @@
             {
               "time": "11:00 - 11:05",
               "speaker": "Antoine Bergel",
-              "location": "Paris, France"
+              "location": "Paris, France",
+              "title": "Neurovascular interactions across the sleep-wake cycle in freelymoving rats, mice and reptiles"
             },
             {
               "time": "11:05 - 11:30",
-              "title": "Neurovascular interactions across the sleep-wake cycle in freelymoving rats, mice and reptiles",
               "speaker": "Antoine Bergel",
-              "location": "Paris, France"
+              "location": "Paris, France",
+              "title": "Neural correlates of spontaneous behavioral state switching"
             },
             {
               "time": "11:30 - 11:55",
-              "title": "Neural correlates of spontaneous behavioral state switching",
               "speaker": "Emilie Macé",
-              "location": "Göttingen, Germany"
+              "location": "Göttingen, Germany",
+              "title": "Modulation of brainwide activity by arousal and behavioral state"
             },
             {
               "time": "11:55 - 12:20",
-              "title": "Modulation of brainwide activity by arousal and behavioral state",
               "speaker": "Agnes Landemard",
-              "location": "London, United Kingdom"
+              "location": "London, United Kingdom",
+              "title": "Cortical hemodynamic activity tracks arousal in awake ferrets"
             },
             {
               "time": "12:20 - 12:45",
-              "title": "Cortical hemodynamic activity tracks arousal in awake ferrets",
               "speaker": "Yves Boubenec",
-              "location": "Paris, France"
-            },
-            {
-              "time": "12:45 - 13:10",
+              "location": "Paris, France",
               "title": "Transcranial in-depth ultrafast ultrasound brain imaging in non-"
             },
             {
+              "time": "12:45 - 13:10",
+              "title": "human primates Mobile human brain imaging using functional ultrasound",
               "speaker": "Thomas Orset",
               "location": "Paris, France"
             },
             {
               "time": "13:10 - 13:35",
-              "title": "Mobile human brain imaging using functional ultrasound",
               "speaker": "Sadaf Soloukey",
-              "location": "Rotterdam, Netherlands"
+              "location": "Rotterdam, Netherlands",
+              "title": "Q&A"
             },
             {
               "time": "13:35 - 14:00"
@@ -433,15 +433,15 @@
           "title": "Opening Ceremony Plenary Lecture (PL)",
           "talks": [
             {
-              "time": "18:00 - 19:00"
-            },
-            {
-              "time": "18:00 - 18:05",
+              "time": "18:00 - 19:00",
               "title": "HALL A PL01 - Fred Kavli Opening Plenary Lecture, Guillermina López-Bendito (ES) Introduction"
             },
             {
+              "time": "18:00 - 18:05",
+              "title": "Wiring the Senses: The Dialogue Between Genes and Spontaneous Activity in Circuit Formation"
+            },
+            {
               "time": "18:05 - 19:00",
-              "title": "Wiring the Senses: The Dialogue Between Genes and Spontaneous Activity in Circuit Formation",
               "speaker": "Guillermina López-Bendito",
               "location": "Alicante, Spain"
             }
@@ -457,11 +457,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00"
+              "time": "19:00 - 19:00",
+              "title": "Speakers"
             },
             {
               "time": "19:00 - 19:00",
-              "title": "Speakers",
               "speaker": "Eduardo Zimmer",
               "location": "Brazil"
             }
@@ -477,11 +477,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00"
+              "time": "19:00 - 19:00",
+              "title": "Speakers"
             },
             {
               "time": "19:00 - 19:00",
-              "title": "Speakers",
               "speaker": "Morten Lorenzen",
               "location": "Denmark"
             }
@@ -497,11 +497,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00"
+              "time": "19:00 - 19:00",
+              "title": "Speakers"
             },
             {
               "time": "19:00 - 19:00",
-              "title": "Speakers",
               "speaker": "Soyoung Park",
               "location": "Berlin, Germany"
             }
@@ -519,11 +519,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00"
+              "time": "19:00 - 19:00",
+              "title": "Speakers"
             },
             {
               "time": "19:00 - 19:00",
-              "title": "Speakers",
               "speaker": "Igor Branchi",
               "location": "Rome, Italy"
             }
@@ -539,11 +539,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00"
+              "time": "19:00 - 19:00",
+              "title": "Speakers"
             },
             {
               "time": "19:00 - 19:00",
-              "title": "Speakers",
               "speaker": "Panayiota Poirazi",
               "location": "Heraklion, Greece"
             }
@@ -11479,11 +11479,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "Emma Yhnell",
               "location": "United Kingdom"
             }
@@ -11515,11 +11515,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "Simona Lodato",
               "location": "Italy"
             }
@@ -11535,17 +11535,18 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "Shenqin Yao",
-              "location": "Seattle, United States"
+              "location": "Seattle, United States",
+              "title": "Open Theatre (OT)"
             },
             {
               "time": "13:00 - 13:30",
-              "title": "Open Theatre (OT)"
+              "title": "Open Theatre OT02 - The Wandering Mind: Mindfulness of Thought"
             }
           ]
         },
@@ -11586,11 +11587,12 @@
             {
               "time": "13:30 - 14:25",
               "speaker": "Charan Ranganath",
-              "location": "Davis, United States"
+              "location": "Davis, United States",
+              "title": "Open Theatre (OT)"
             },
             {
               "time": "15:00 - 15:20",
-              "title": "Open Theatre (OT)"
+              "title": "Open Theatre OT03 - Powering Neuroscience Imaging with 3i’s Advanced Imaging and Photostimulation Technologies: 3i - Intelligent Imaging Solutions"
             }
           ]
         },
@@ -11955,11 +11957,11 @@
           ],
           "talks": [
             {
-              "time": "18:45 - 18:45"
+              "time": "18:45 - 18:45",
+              "title": "Speakers"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Speakers",
               "speaker": "Nicole Gervais",
               "location": "Groningen, Netherlands"
             }
@@ -11972,7 +11974,8 @@
           "title": "NE08 - Austrian Neuroscience Association - General Assembly Networking Events (NE)",
           "talks": [
             {
-              "time": "18:45 - 20:15"
+              "time": "18:45 - 20:15",
+              "title": "HALL F NE09 - Portuguese Neuroscience Society - General Assembly"
             }
           ]
         },
@@ -11983,11 +11986,11 @@
           "title": "NE10 - Driving Equitable Global Participation in Neuroscience Training",
           "talks": [
             {
-              "time": "18:45 - 18:45"
+              "time": "18:45 - 18:45",
+              "title": "Speakers"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Speakers",
               "speaker": "Ana Silva",
               "location": "Montevideo, Uruguay"
             }
@@ -22930,11 +22933,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "Iñigo Uriarte",
               "location": "Spain"
             }
@@ -22950,11 +22953,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "John Simon Butler",
               "location": "Dublin, Ireland"
             }
@@ -22970,11 +22973,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "Esther Berrocoso",
               "location": "Spain"
             }
@@ -22987,17 +22990,18 @@
           "title": "SiE11 - Redefining success in neuroscience",
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "Bita Moghaddam",
-              "location": "United States"
+              "location": "United States",
+              "title": "Open Theatre (OT)"
             },
             {
               "time": "13:00 - 13:30",
-              "title": "Open Theatre (OT)"
+              "title": "Open Theatre OT05 - Beyond Sensation: Decoupling Experience from Suffering"
             }
           ]
         },
@@ -23388,11 +23392,11 @@
           ],
           "talks": [
             {
-              "time": "18:45 - 18:45"
+              "time": "18:45 - 18:45",
+              "title": "Speakers"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Speakers",
               "speaker": "Volko Straub",
               "location": "Leicester, United Kingdom"
             }
@@ -23408,11 +23412,11 @@
           ],
           "talks": [
             {
-              "time": "18:45 - 18:45"
+              "time": "18:45 - 18:45",
+              "title": "Speakers"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Speakers",
               "speaker": "Juan Nacher",
               "location": "Burjassot, Spain"
             }
@@ -23425,17 +23429,17 @@
           "title": "NE14 - German Neuroscience Society - General Assembly Networking Events (NE)",
           "talks": [
             {
-              "time": "18:45 - 20:15"
+              "time": "18:45 - 20:15",
+              "title": "HALL H NE15 - Shaping your path: finding the right mentors (for you) Moderator: Yoav Livneh (Rehovot, Israel) Moderator: Laura Andreae (London, United Kingdom) Mentor panellists"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "HALL H NE15 - Shaping your path: finding the right mentors (for you) Moderator: Yoav Livneh (Rehovot, Israel) Moderator: Laura Andreae (London, United Kingdom) Mentor panellists",
               "speaker": "Georgia Rapti",
-              "location": "Brussels, Belgium"
+              "location": "Brussels, Belgium",
+              "title": "Mentee panellists"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Mentee panellists",
               "speaker": "Leticia Perez Sisques",
               "location": "London, United Kingdom"
             }
@@ -23448,11 +23452,11 @@
           "title": "NE16 - Art and Science: Creative Pathways for Science Communication",
           "talks": [
             {
-              "time": "18:45 - 18:45"
+              "time": "18:45 - 18:45",
+              "title": "Speakers"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Speakers",
               "speaker": "Paulina Carriba",
               "location": "Barcelona, Spain"
             }
@@ -34354,11 +34358,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "Eduardo Zimmer",
               "location": "Brazil"
             }
@@ -34376,11 +34380,11 @@
             {
               "time": "12:00 - 12:00",
               "speaker": "Magdalena Gomółka",
-              "location": "Wroclaw, Poland"
+              "location": "Wroclaw, Poland",
+              "title": "Participants Liaison"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Participants Liaison",
               "speaker": "Michaela Fencková",
               "location": "České Budějovice, Czech Republic"
             }
@@ -34396,11 +34400,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "Kathleen D'Hondt",
               "location": "Belgium"
             }
@@ -34413,17 +34417,18 @@
           "title": "SiE15 - Communicating Science Through Scientific Figures: From Data to Insight",
           "talks": [
             {
-              "time": "12:00 - 12:00"
+              "time": "12:00 - 12:00",
+              "title": "Speakers"
             },
             {
               "time": "12:00 - 12:00",
-              "title": "Speakers",
               "speaker": "Christos Frantzidis",
-              "location": "United Kingdom"
+              "location": "United Kingdom",
+              "title": "Open Theatre (OT)"
             },
             {
               "time": "13:00 - 13:30",
-              "title": "Open Theatre (OT)"
+              "title": "Open Theatre OT08 - Mindfulness and Emotional Wellbeing: From Rumination to Compassion"
             }
           ]
         },
@@ -34819,11 +34824,11 @@
           ],
           "talks": [
             {
-              "time": "18:45 - 18:45"
+              "time": "18:45 - 18:45",
+              "title": "Speakers"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Speakers",
               "speaker": "Toshiyuki Takagi",
               "location": "Strasbourg, France"
             }
@@ -34836,15 +34841,15 @@
           "title": "NE18 - “SPEED-NEURODATING” A workshop aimed at the students to meet young and consolidated Neuroscientists Networking Events (NE)",
           "talks": [
             {
-              "time": "18:45 - 20:15"
-            },
-            {
-              "time": "18:45 - 18:45",
+              "time": "18:45 - 20:15",
               "title": "HALL H NE19 - Sleep Across the Tree of Life: Phylogenetic Perspectives on Sleep Definition, Regulation, and Function Moderator: Julie Seibt (United Kingdom) Moderator: Charlotte Boccara (Norway) Programme"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Speakers",
+              "title": "Speakers"
+            },
+            {
+              "time": "18:45 - 18:45",
               "speaker": "Giorgio Gilestro",
               "location": "United Kingdom"
             }
@@ -34857,11 +34862,11 @@
           "title": "NE20 - Effective Allyship as an Essential Strategy for Professional Career Development",
           "talks": [
             {
-              "time": "18:45 - 18:45"
+              "time": "18:45 - 18:45",
+              "title": "Speakers"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Speakers",
               "speaker": "Sonakshi Gupta",
               "location": "Lyon, France"
             }
@@ -40516,17 +40521,17 @@
           "title": "SL09 - ERA-NET NEURON/Excellent Paper in Neuroscience Award Lecture, Linbi Cai (CH) Welcome and Introduction",
           "talks": [
             {
-              "time": "11:30 - 11:40"
+              "time": "11:30 - 11:40",
+              "title": "A nasal chemosensation–dependent critical window for somatosensory development"
             },
             {
               "time": "11:40 - 12:20",
-              "title": "A nasal chemosensation–dependent critical window for somatosensory development",
               "speaker": "Linbi Cai",
-              "location": "Zurich, Switzerland"
+              "location": "Zurich, Switzerland",
+              "title": "Award Ceremony"
             },
             {
-              "time": "12:20 - 12:30",
-              "title": "Award Ceremony"
+              "time": "12:20 - 12:30"
             }
           ]
         },

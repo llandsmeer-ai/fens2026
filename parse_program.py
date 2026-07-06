@@ -384,11 +384,18 @@ def parse_non_poster_event(day_lines, start_idx, event_type):
         result["chairs"] = chairs
 
     # Now parse talks
-    # The PDF extraction puts titles BEFORE their time range:
-    #   [title]  [time]  [Speaker: Name]  [next title]  [time]  [Speaker: Name]  ...
+    # Two possible patterns:
+    #   [title] [time] [Speaker: Name]  (used by symposia, special lectures, special interest events)
+    #   [time] [Speaker: Name] [title]  (used by workshops)
+    # Detect which pattern by checking if the first non-empty line is a time range.
     talks = []
     pending_title = None
     current_talk = None
+
+    scan = i
+    while scan < len(day_lines) and not day_lines[scan].strip():
+        scan += 1
+    time_first = scan < len(day_lines) and is_time_range(day_lines[scan])
 
     while i < len(day_lines):
         l = day_lines[i].strip()
@@ -396,69 +403,108 @@ def parse_non_poster_event(day_lines, start_idx, event_type):
             i += 1
             continue
 
-        # Check for event type repetition FIRST (same type repeating)
         if l == event_type:
             if current_talk:
                 talks.append(current_talk)
                 current_talk = None
             break
 
-        # Check if we hit a different new event section
         if is_event_header(l) and l != event_type:
             if current_talk:
                 talks.append(current_talk)
                 current_talk = None
             break
 
-        # Check for special endings
         if l == "Q&A":
-            if current_talk:
+            if time_first:
+                # In [time][speaker][title] pattern, "Q&A" is a talk title
+                if current_talk is None:
+                    current_talk = {}
+                if "title" in current_talk:
+                    current_talk["title"] += " " + l
+                else:
+                    current_talk["title"] = l
+                i += 1
+                continue
+            else:
+                # In [title][time][speaker] pattern, "Q&A" is a section ender
+                if current_talk:
+                    talks.append(current_talk)
+                    current_talk = None
+                i += 1
+                continue
+
+        if time_first:
+            # [time] [Speaker: Name] [title] pattern (workshops)
+            if is_time_range(l):
+                if current_talk and "time" in current_talk:
+                    talks.append(current_talk)
+                current_talk = {"time": l}
+                i += 1
+                continue
+
+            if is_speaker_line(l):
+                if current_talk is None:
+                    current_talk = {}
+                rest = l[len("Speaker:"):].strip()
+                m = re.match(r'^(.+?)\s+\((.+)\)$', rest)
+                if m:
+                    current_talk["speaker"] = m.group(1).strip()
+                    current_talk["location"] = m.group(2).strip()
+                else:
+                    current_talk["speaker"] = rest
+                    current_talk["location"] = ""
+                i += 1
+                continue
+
+            # Regular text = title for the current talk
+            if current_talk is None:
+                current_talk = {}
+            if "title" in current_talk:
+                current_talk["title"] += " " + l
+            else:
+                current_talk["title"] = l
+            i += 1
+
+        else:
+            # [title] [time] [Speaker: Name] pattern (symposia, special lectures, etc.)
+            if is_time_range(l):
+                if current_talk is None:
+                    current_talk = {}
+                current_talk["time"] = l
+                if pending_title:
+                    current_talk["title"] = pending_title
+                    pending_title = None
+                i += 1
+                continue
+
+            if is_speaker_line(l):
+                if current_talk is None:
+                    current_talk = {}
+                rest = l[len("Speaker:"):].strip()
+                m = re.match(r'^(.+?)\s+\((.+)\)$', rest)
+                if m:
+                    current_talk["speaker"] = m.group(1).strip()
+                    current_talk["location"] = m.group(2).strip()
+                else:
+                    current_talk["speaker"] = rest
+                    current_talk["location"] = ""
+                i += 1
+                continue
+
+            # Regular text — new talk title
+            if current_talk is not None and ("time" in current_talk or "speaker" in current_talk):
                 talks.append(current_talk)
                 current_talk = None
-            i += 1
-            continue
+                pending_title = l
+                i += 1
+                continue
 
-        # Is it a time range?
-        if is_time_range(l):
-            if current_talk is None:
-                current_talk = {}
-            current_talk["time"] = l
             if pending_title:
-                current_talk["title"] = pending_title
-                pending_title = None
-            i += 1
-            continue
-
-        # Is it a speaker line?
-        if is_speaker_line(l):
-            if current_talk is None:
-                current_talk = {}
-            rest = l[len("Speaker:"):].strip()
-            m = re.match(r'^(.+?)\s+\((.+)\)$', rest)
-            if m:
-                current_talk["speaker"] = m.group(1).strip()
-                current_talk["location"] = m.group(2).strip()
+                pending_title += " " + l
             else:
-                current_talk["speaker"] = rest
-                current_talk["location"] = ""
+                pending_title = l
             i += 1
-            continue
-
-        # Regular text — it's a title. If current_talk already has time or speaker,
-        # it belongs to a complete talk; flush and start a new title for the next talk.
-        if current_talk is not None and ("time" in current_talk or "speaker" in current_talk):
-            talks.append(current_talk)
-            current_talk = None
-            pending_title = l
-            i += 1
-            continue
-
-        # Accumulate title (no time or speaker seen yet for this talk)
-        if pending_title:
-            pending_title += " " + l
-        else:
-            pending_title = l
-        i += 1
 
     if current_talk:
         talks.append(current_talk)
