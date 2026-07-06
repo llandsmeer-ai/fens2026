@@ -9,7 +9,6 @@
           "type": "Special Interest Events (SiE)",
           "time": "10:00 - 12:00",
           "location": "HALL H",
-          "introduction": "Introduction",
           "title": "SiE01 - EBBS/EBPS Special Symposium - The importance of behaviour to neuroscience: from cells to systems",
           "chairs": [
             "Alexander Easton (Durham, United Kingdom)",
@@ -18,28 +17,29 @@
           "talks": [
             {
               "time": "10:00 - 10:06",
-              "title": "Social status impacts T-cell responses through synapse strength in prefrontal cortex"
+              "title": "Introduction"
             },
             {
               "time": "10:06 - 10:27",
+              "title": "Social status impacts T-cell responses through synapse strength in prefrontal cortex",
               "speaker": "Helmut Kessels",
-              "location": "Amsterdam, Netherlands",
-              "title": "Should we add the subthalamic nucleus in the “social brain”?"
+              "location": "Amsterdam, Netherlands"
             },
             {
               "time": "10:27 - 10:48",
+              "title": "Should we add the subthalamic nucleus in the “social brain”?",
               "speaker": "Christelle Baunez",
-              "location": "Marseille, France",
-              "title": "Play matters for brain and behavioural development"
+              "location": "Marseille, France"
             },
             {
               "time": "10:48 - 11:09",
+              "title": "Play matters for brain and behavioural development",
               "speaker": "Heidi Lesscher",
-              "location": "Utrecht, Netherlands",
-              "title": "Social stress drives plasticity in prefrontal cortical - hypothalamic -midbrain circuits to drive binge intake of fat"
+              "location": "Utrecht, Netherlands"
             },
             {
               "time": "11:09 - 11:30",
+              "title": "Social stress drives plasticity in prefrontal cortical - hypothalamic -midbrain circuits to drive binge intake of fat",
               "speaker": "Frank Meye",
               "location": "Utrecht, Netherlands"
             }
@@ -49,7 +49,6 @@
           "type": "Special Interest Events (SiE)",
           "time": "10:30 - 12:00",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "SiE02 - FENS-EPA-EAN-ESO Special Symposium - Insights from psychiatry and neurology: translating multidisciplinary neuroscience research to the clinic",
           "chairs": [
             "Karen Doyle (Galway, Ireland)",
@@ -58,28 +57,29 @@
           "talks": [
             {
               "time": "10:30 - 10:36",
-              "title": "Machado-Joseph disease – from mechanisms to drugs and back"
+              "title": "Introduction"
             },
             {
               "time": "10:36 - 10:57",
+              "title": "Machado-Joseph disease – from mechanisms to drugs and back",
               "speaker": "Patricia Maciel",
-              "location": "Braga, Portugal",
-              "title": "Primary Prevention in Psychiatry: Translating Multidisciplinary Neuroscience into Early Clinical Intervention"
+              "location": "Braga, Portugal"
             },
             {
               "time": "10:57 - 11:18",
+              "title": "Primary Prevention in Psychiatry: Translating Multidisciplinary Neuroscience into Early Clinical Intervention",
               "speaker": "Celso Arango",
-              "location": "Madrid, Spain",
-              "title": "Translational research in nutrition and stroke: from Drosophila to new functional foods"
+              "location": "Madrid, Spain"
             },
             {
               "time": "11:18 - 11:39",
+              "title": "Translational research in nutrition and stroke: from Drosophila to new functional foods",
               "speaker": "Joan Montaner Villalonga",
-              "location": "Seville, Spain",
-              "title": "Therapies and drug development for Parkinson's disease"
+              "location": "Seville, Spain"
             },
             {
               "time": "11:39 - 12:00",
+              "title": "Therapies and drug development for Parkinson's disease",
               "speaker": "Per Svenningsson",
               "location": "Stockholm, Sweden"
             }
@@ -89,7 +89,6 @@
           "type": "Technical Workshop (W)",
           "time": "11:00 - 14:00",
           "location": "HALL C",
-          "introduction": "Introduction",
           "title": "W01 - Expanding Horizons: Array Tomography in Neuroscience for All - Additional paid registration required",
           "chairs": [
             "Martina Schifferer (München, Germany)",
@@ -98,40 +97,41 @@
           "talks": [
             {
               "time": "11:00 - 11:10",
-              "title": "Array tomography in post-mortem human brain tissue"
+              "title": "Introduction"
             },
             {
               "time": "11:10 - 11:35",
+              "title": "Array tomography in post-mortem human brain tissue",
               "speaker": "Tara Spires-Jones",
-              "location": "Edinburgh, United Kingdom",
-              "title": "Quantitative interrogation of input-specific brain circuits with array tomography"
+              "location": "Edinburgh, United Kingdom"
             },
             {
               "time": "11:35 - 12:00",
+              "title": "Quantitative interrogation of input-specific brain circuits with array tomography",
               "speaker": "Mariano Soiza-Reilly",
-              "location": "Buenos Aires, Argentina",
-              "title": "Molecular compozition of rodent and human synapses in health and disease"
+              "location": "Buenos Aires, Argentina"
             },
             {
               "time": "12:00 - 12:25",
+              "title": "Molecular compozition of rodent and human synapses in health and disease",
               "speaker": "Zoltan Nusser",
-              "location": "Budapest, Hungary",
-              "title": "Insights into synaptic function and plasticity with conjugate array tomography"
+              "location": "Budapest, Hungary"
             },
             {
               "time": "12:25 - 12:50",
+              "title": "Insights into synaptic function and plasticity with conjugate array tomography",
               "speaker": "Kristina Micheva",
-              "location": "Stanford, CA, United States",
-              "title": "vEM and Neuronal Connectomics in Marine Zooplankton Larvae"
+              "location": "Stanford, CA, United States"
             },
             {
               "time": "12:50 - 13:15",
+              "title": "vEM and Neuronal Connectomics in Marine Zooplankton Larvae",
               "speaker": "Gaspar Jekely",
-              "location": "Heidelberg, Germany",
-              "title": "Guided accumulation of ultrathin serial sections with a static magnetic field"
+              "location": "Heidelberg, Germany"
             },
             {
               "time": "13:15 - 13:40",
+              "title": "Guided accumulation of ultrathin serial sections with a static magnetic field",
               "speaker": "Kevin Briggman",
               "location": "Bonn, Germany"
             },
@@ -152,41 +152,41 @@
           ],
           "talks": [
             {
-              "time": "11:00 - 11:15",
-              "title": "Barcoding across vertebrates"
+              "time": "11:00 - 11:15"
             },
             {
               "time": "11:15 - 11:40",
+              "title": "Barcoding across vertebrates",
               "speaker": "Justus Kebschull",
-              "location": "Baltimore, United States",
-              "title": "The input-output organization of the cortical-thalamic-basal ganglia network and its molecular basis"
+              "location": "Baltimore, United States"
             },
             {
               "time": "11:40 - 12:05",
+              "title": "The input-output organization of the cortical-thalamic-basal ganglia network and its molecular basis",
               "speaker": "Shenqin Yao",
-              "location": "Seattle, United States",
-              "title": "Sequencing-based connectomics reveals dynamic connectivity motifs in the developing human brain"
+              "location": "Seattle, United States"
             },
             {
               "time": "12:05 - 12:30",
+              "title": "Sequencing-based connectomics reveals dynamic connectivity motifs in the developing human brain",
               "speaker": "Cathryn Cadwell",
-              "location": "San Francisco, United States",
-              "title": "Tracing 1000s of synaptic connections with BRISC: Barcoded Rabies In Situ Connectomics"
+              "location": "San Francisco, United States"
             },
             {
               "time": "12:30 - 12:55",
+              "title": "Tracing 1000s of synaptic connections with BRISC: Barcoded Rabies In Situ Connectomics",
               "speaker": "Petr Znamenskiy",
-              "location": "London, United Kingdom",
-              "title": "Shotgun assembly of synaptic wiring diagrams"
+              "location": "London, United Kingdom"
             },
             {
               "time": "12:55 - 13:20",
+              "title": "Shotgun assembly of synaptic wiring diagrams",
               "speaker": "Arpiar Saunders",
-              "location": "Portland, United States",
-              "title": "Connectome-seq: High-throughput Circuit Mapping via SingleNucleus and Synaptosome Sequencing"
+              "location": "Portland, United States"
             },
             {
               "time": "13:20 - 13:45",
+              "title": "Connectome-seq: High-throughput Circuit Mapping via SingleNucleus and Synaptosome Sequencing",
               "speaker": "Boxuan Zhao",
               "location": "Champaign, United States"
             },
@@ -206,40 +206,38 @@
           ],
           "talks": [
             {
-              "title": "In vivo Perturb-seq: Investigating gene function and their brainwide action at scale",
               "speaker": "Xin Jin",
-              "location": "La Jolla, United States"
+              "location": "La Jolla, United States",
+              "time": "11:00 - 11:00",
+              "title": "In vivo Perturb-seq: Investigating gene function and their brainwide action at scale"
             },
             {
               "time": "11:00 - 11:00",
-              "title": "Barcoded lineage and circuit tracing to uncover principles of neural network assembly"
-            },
-            {
-              "time": "11:00 - 11:00",
+              "title": "Barcoded lineage and circuit tracing to uncover principles of neural network assembly",
               "speaker": "Michael Ratz",
-              "location": "Stockholm, Sweden",
-              "title": "Genetic tracking reactive microglial states throughout the lifespan"
+              "location": "Stockholm, Sweden"
             },
             {
               "time": "11:00 - 11:00",
+              "title": "Genetic tracking reactive microglial states throughout the lifespan",
               "speaker": "Qingyun Li",
-              "location": "St. Louis, United States",
-              "title": "Unveiling Astrocyte Mitochondrial Dynamics with Chronic Intravital Imaging"
+              "location": "St. Louis, United States"
             },
             {
               "time": "11:00 - 11:00",
+              "title": "Unveiling Astrocyte Mitochondrial Dynamics with Chronic Intravital Imaging",
               "speaker": "Amit Agarwal",
-              "location": "Heidelberg, Germany",
-              "title": "Targeted synaptic barcoding for joint acquisition of transcriptomic and neuroanatomical identity"
+              "location": "Heidelberg, Germany"
             },
             {
               "time": "11:00 - 11:00",
+              "title": "Targeted synaptic barcoding for joint acquisition of transcriptomic and neuroanatomical identity",
               "speaker": "Michael-John Dolan",
-              "location": "Dublin, Ireland",
-              "title": "Combining electrophysiology and transcriptome to uncover functional diversity in glial cells."
+              "location": "Dublin, Ireland"
             },
             {
               "time": "11:00 - 11:00",
+              "title": "Combining electrophysiology and transcriptome to uncover functional diversity in glial cells.",
               "speaker": "Helena Pivoňková",
               "location": "Prague, Czech Republic"
             }
@@ -256,28 +254,26 @@
           ],
           "talks": [
             {
-              "title": "Optical interrogation of Alzheimer’s disease using fiber photometry"
-            },
-            {
               "time": "11:00 - 11:00",
+              "title": "Optical interrogation of Alzheimer’s disease using fiber photometry",
               "speaker": "Nicole Byron",
-              "location": "London, United Kingdom",
-              "title": "Aberration corrected GRIN lenses for extended field-of-view twophoton imaging in deep brain regions"
+              "location": "London, United Kingdom"
             },
             {
               "time": "11:00 - 11:00",
+              "title": "Aberration corrected GRIN lenses for extended field-of-view twophoton imaging in deep brain regions",
               "speaker": "Chiara Nardin",
-              "location": "Genova, Italy",
-              "title": "Multimodal Implantable Nanophotonic Neural Probes"
+              "location": "Genova, Italy"
             },
             {
               "time": "11:00 - 11:00",
+              "title": "Multimodal Implantable Nanophotonic Neural Probes",
               "speaker": "Wesley Sacher",
-              "location": "Halle, Germany",
-              "title": "Exploring brain with fibre optics: holographic endoscopy for deep brain imaging"
+              "location": "Halle, Germany"
             },
             {
               "time": "11:00 - 11:00",
+              "title": "Exploring brain with fibre optics: holographic endoscopy for deep brain imaging",
               "speaker": "Tomáš Čižmár",
               "location": "Jena, Germany"
             }
@@ -296,41 +292,43 @@
             {
               "time": "11:00 - 11:05",
               "speaker": "Antoine Bergel",
-              "location": "Paris, France",
-              "title": "Neurovascular interactions across the sleep-wake cycle in freelymoving rats, mice and reptiles"
+              "location": "Paris, France"
             },
             {
               "time": "11:05 - 11:30",
+              "title": "Neurovascular interactions across the sleep-wake cycle in freelymoving rats, mice and reptiles",
               "speaker": "Antoine Bergel",
-              "location": "Paris, France",
-              "title": "Neural correlates of spontaneous behavioral state switching"
+              "location": "Paris, France"
             },
             {
               "time": "11:30 - 11:55",
+              "title": "Neural correlates of spontaneous behavioral state switching",
               "speaker": "Emilie Macé",
-              "location": "Göttingen, Germany",
-              "title": "Modulation of brainwide activity by arousal and behavioral state"
+              "location": "Göttingen, Germany"
             },
             {
               "time": "11:55 - 12:20",
+              "title": "Modulation of brainwide activity by arousal and behavioral state",
               "speaker": "Agnes Landemard",
-              "location": "London, United Kingdom",
-              "title": "Cortical hemodynamic activity tracks arousal in awake ferrets"
+              "location": "London, United Kingdom"
             },
             {
               "time": "12:20 - 12:45",
+              "title": "Cortical hemodynamic activity tracks arousal in awake ferrets",
               "speaker": "Yves Boubenec",
-              "location": "Paris, France",
-              "title": "Transcranial in-depth ultrafast ultrasound brain imaging in non-"
+              "location": "Paris, France"
             },
             {
               "time": "12:45 - 13:10",
-              "title": "human primates Mobile human brain imaging using functional ultrasound",
+              "title": "Transcranial in-depth ultrafast ultrasound brain imaging in non-"
+            },
+            {
               "speaker": "Thomas Orset",
               "location": "Paris, France"
             },
             {
               "time": "13:10 - 13:35",
+              "title": "Mobile human brain imaging using functional ultrasound",
               "speaker": "Sadaf Soloukey",
               "location": "Rotterdam, Netherlands"
             },
@@ -349,28 +347,26 @@
           ],
           "talks": [
             {
-              "title": "The good, the bad, and the ugly: the various roles of microglia in Alzheimer’s disease pathogenesis"
-            },
-            {
               "time": "12:15 - 12:15",
+              "title": "The good, the bad, and the ugly: the various roles of microglia in Alzheimer’s disease pathogenesis",
               "speaker": "Michael Heneka",
-              "location": "Esch-Belval, Luxembourg",
-              "title": "Alzheimer’s disease-related pathology alters synaptic transmission and microglia-neuron interaction in the human brain"
+              "location": "Esch-Belval, Luxembourg"
             },
             {
               "time": "12:15 - 12:15",
+              "title": "Alzheimer’s disease-related pathology alters synaptic transmission and microglia-neuron interaction in the human brain",
               "speaker": "Tarja Malm",
-              "location": "Kuopio, Finland",
-              "title": "Immune cells as a modulator of disease progression in Amyotrophic Lateral Sclerosis"
+              "location": "Kuopio, Finland"
             },
             {
               "time": "12:15 - 12:15",
+              "title": "Immune cells as a modulator of disease progression in Amyotrophic Lateral Sclerosis",
               "speaker": "Severine Boillee",
-              "location": "Paris, France",
-              "title": "Inflammation and immunity in depression, schizophrenia, and Alzheimer's: from causal mechanism to new treatment"
+              "location": "Paris, France"
             },
             {
               "time": "12:15 - 12:15",
+              "title": "Inflammation and immunity in depression, schizophrenia, and Alzheimer's: from causal mechanism to new treatment",
               "speaker": "Golam Khandaker",
               "location": "Bristol, United Kingdom"
             }
@@ -380,35 +376,35 @@
           "type": "Special Lecture (SL)",
           "time": "13:00 - 14:00",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "SL01 - FENS-EJN Awards Lectures, Alain Chédotal (FR), Sarah Mondoloni (FR), Roisin McMackin (IE)",
           "talks": [
             {
               "time": "13:00 - 13:02",
-              "title": "Development and evolution of visual circuits"
+              "title": "Introduction"
             },
             {
               "time": "13:02 - 13:30",
+              "title": "Development and evolution of visual circuits",
               "speaker": "Alain Chédotal",
-              "location": "Paris, France",
-              "title": "Introduction"
+              "location": "Paris, France"
             },
             {
               "time": "13:30 - 13:32",
-              "title": "Emotional contagion shapes adaptive behaviors: a serotonin echo in the brain"
-            },
-            {
-              "time": "13:32 - 13:45",
-              "speaker": "Sarah Mondoloni",
-              "location": "Marseille, France",
               "title": "Introduction"
             },
             {
+              "time": "13:32 - 13:45",
+              "title": "Emotional contagion shapes adaptive behaviors: a serotonin echo in the brain",
+              "speaker": "Sarah Mondoloni",
+              "location": "Marseille, France"
+            },
+            {
               "time": "13:45 - 13:47",
-              "title": "Where is the Disconnect? Measuring Network Dysfunction in Neurodegeneration with Electrophysiology"
+              "title": "Introduction"
             },
             {
               "time": "13:47 - 14:00",
+              "title": "Where is the Disconnect? Measuring Network Dysfunction in Neurodegeneration with Electrophysiology",
               "speaker": "Roisin McMackin",
               "location": "Dublin, Ireland"
             }
@@ -437,15 +433,15 @@
           "title": "Opening Ceremony Plenary Lecture (PL)",
           "talks": [
             {
-              "time": "18:00 - 19:00",
-              "title": "HALL A PL01 - Fred Kavli Opening Plenary Lecture, Guillermina López-Bendito (ES) Introduction"
+              "time": "18:00 - 19:00"
             },
             {
               "time": "18:00 - 18:05",
-              "title": "Wiring the Senses: The Dialogue Between Genes and Spontaneous Activity in Circuit Formation"
+              "title": "HALL A PL01 - Fred Kavli Opening Plenary Lecture, Guillermina López-Bendito (ES) Introduction"
             },
             {
               "time": "18:05 - 19:00",
+              "title": "Wiring the Senses: The Dialogue Between Genes and Spontaneous Activity in Circuit Formation",
               "speaker": "Guillermina López-Bendito",
               "location": "Alicante, Spain"
             }
@@ -461,11 +457,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00",
-              "title": "Speakers"
+              "time": "19:00 - 19:00"
             },
             {
               "time": "19:00 - 19:00",
+              "title": "Speakers",
               "speaker": "Eduardo Zimmer",
               "location": "Brazil"
             }
@@ -481,11 +477,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00",
-              "title": "Speakers"
+              "time": "19:00 - 19:00"
             },
             {
               "time": "19:00 - 19:00",
+              "title": "Speakers",
               "speaker": "Morten Lorenzen",
               "location": "Denmark"
             }
@@ -501,11 +497,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00",
-              "title": "Speakers"
+              "time": "19:00 - 19:00"
             },
             {
               "time": "19:00 - 19:00",
+              "title": "Speakers",
               "speaker": "Soyoung Park",
               "location": "Berlin, Germany"
             }
@@ -523,11 +519,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00",
-              "title": "Speakers"
+              "time": "19:00 - 19:00"
             },
             {
               "time": "19:00 - 19:00",
+              "title": "Speakers",
               "speaker": "Igor Branchi",
               "location": "Rome, Italy"
             }
@@ -543,11 +539,11 @@
           ],
           "talks": [
             {
-              "time": "19:00 - 19:00",
-              "title": "Speakers"
+              "time": "19:00 - 19:00"
             },
             {
               "time": "19:00 - 19:00",
+              "title": "Speakers",
               "speaker": "Panayiota Poirazi",
               "location": "Heraklion, Greece"
             }
@@ -11098,15 +11094,15 @@
           "type": "Plenary Lecture (PL)",
           "time": "08:30 - 09:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "PL02 - ERA-NET NEURON Plenary Lecture, Elisabeth Binder (DE)",
           "talks": [
             {
               "time": "08:30 - 08:35",
-              "title": "Understanding the Molecular Impact of Stress: from functional mapping of Gene–Environment Interactions to clinical implication"
+              "title": "Introduction"
             },
             {
               "time": "08:35 - 09:30",
+              "title": "Understanding the Molecular Impact of Stress: from functional mapping of Gene–Environment Interactions to clinical implication",
               "speaker": "Elisabeth Binder",
               "location": "Munich, Germany"
             }
@@ -11116,7 +11112,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "S01 - Thalamocortical Circuits in Cognition: From Adaptive Learning to Maladaptive States",
           "chairs": [
             "Mathieu Wolff (Bordeaux, France)"
@@ -11124,28 +11119,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Thalamocortical bursts encode stimulus-reward contingencies"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Thalamocortical bursts encode stimulus-reward contingencies",
               "speaker": "Alexander Groh",
-              "location": "Heidelberg, Germany",
-              "title": "Cell type-specific thalamic control of cortical states"
+              "location": "Heidelberg, Germany"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Cell type-specific thalamic control of cortical states",
               "speaker": "Ferenc Matyas",
-              "location": "Budapest, Hungary",
-              "title": "Thalamocortical circuits for processing unexpected visual information"
+              "location": "Budapest, Hungary"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Thalamocortical circuits for processing unexpected visual information",
               "speaker": "Sonja Hofer",
-              "location": "London, United Kingdom",
-              "title": "Thalamic circuits for visual processing"
+              "location": "London, United Kingdom"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Thalamic circuits for visual processing",
               "speaker": "Fiona Müllner",
               "location": "Aarhus C, Denmark"
             }
@@ -11155,7 +11151,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "S02 - Light on the Move: Optical Developments and Circuit Neuroscience in Freely Moving Animals",
           "chairs": [
             "Nicolo Accanto (Barcelona, Spain)",
@@ -11164,28 +11159,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Miniscope imaging reveals persistent prefrontal reference frames across task rules"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Miniscope imaging reveals persistent prefrontal reference frames across task rules",
               "speaker": "Marlene Bartos",
-              "location": "Freiburg, Germany",
-              "title": "Development of miniature two-photon microscopy to study neural computation in freely moving animals"
+              "location": "Freiburg, Germany"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Development of miniature two-photon microscopy to study neural computation in freely moving animals",
               "speaker": "Weijian Zong",
-              "location": "Trondheim, Norway",
-              "title": "Fast imaging of neuronal activity in freely-behaving mice using a confocal fiberscope"
+              "location": "Trondheim, Norway"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Fast imaging of neuronal activity in freely-behaving mice using a confocal fiberscope",
               "speaker": "Cathie Ventalon",
-              "location": "Paris, France",
-              "title": "Linking Neural Ensemble Dynamics to Memory Encoding and Flexible Avoidance via In Vivo Imaging"
+              "location": "Paris, France"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Linking Neural Ensemble Dynamics to Memory Encoding and Flexible Avoidance via In Vivo Imaging",
               "speaker": "Benjamin Grewe",
               "location": "Zurich, Switzerland"
             }
@@ -11195,7 +11191,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL C",
-          "introduction": "Introduction",
           "title": "S03 - Ectodomain Shedding in Brain Disorders: From Mechanism to Therapeutic Potential",
           "chairs": [
             "M. Dolores Martín-de-Saavedra (Madrid, Spain)"
@@ -11203,28 +11198,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Ectodomain shedding in neurodevelopmental conditions: from synapses to connectivity"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Ectodomain shedding in neurodevelopmental conditions: from synapses to connectivity",
               "speaker": "M. Dolores Martín-de-Saavedra",
-              "location": "Madrid, Spain",
-              "title": "Pro-cognitive reshaping of neuronal dynamics by a human CSFbased factor"
+              "location": "Madrid, Spain"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Pro-cognitive reshaping of neuronal dynamics by a human CSFbased factor",
               "speaker": "Peter Penzes",
-              "location": "Chicago, United States",
-              "title": "Proteolysis in neurodegeneration: from amyloid production to microglial risk genes"
+              "location": "Chicago, United States"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Proteolysis in neurodegeneration: from amyloid production to microglial risk genes",
               "speaker": "Stefan Lichtenthaler",
-              "location": "Munich, Germany",
-              "title": "Gamma-secretase dysfunction across familial Alzheimer’s disease causal genes, is it all about APP?"
+              "location": "Munich, Germany"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Gamma-secretase dysfunction across familial Alzheimer’s disease causal genes, is it all about APP?",
               "speaker": "Lucía Chávez Gutiérrez",
               "location": "Leuven, Belgium"
             }
@@ -11234,7 +11230,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL D",
-          "introduction": "Introduction",
           "title": "S04 - Neuro-Evo-Devo: Origins and diversification of neural systems",
           "chairs": [
             "Lora Sweeney (Klosterneuburg, Austria)",
@@ -11243,28 +11238,31 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Functional evolution of the taste and digestive system in vertebrates"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Functional evolution of the taste and digestive system in vertebrates",
               "speaker": "Maude Baldwin",
-              "location": "Martinsried, Germany",
-              "title": "Syncytial nerve net in a ctenophore: a different view on neural organization and signaling"
+              "location": "Martinsried, Germany"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Syncytial nerve net in a ctenophore: a different view on neural organization and signaling",
               "speaker": "Pawel Burkhardt",
-              "location": "Bergen, Norway",
-              "title": "Cross-species receptor expression tracing in an olfactory organ uncovers evolutionary patterns"
+              "location": "Bergen, Norway"
             },
             {
               "time": "10:31 - 10:53",
-              "speaker": "Maria Antonietta Tosches",
-              "location": "New York City, United States",
-              "title": "The evolution of cell types and neural circuits in the cerebral cortex"
+              "title": "Cross-species receptor expression tracing in an olfactory organ uncovers evolutionary patterns",
+              "speaker": "Lucia Prieto-Godino",
+              "location": "London, United Kingdom"
             },
             {
-              "time": "10:53 - 11:15"
+              "speaker": "Maria Antonietta Tosches",
+              "location": "New York City, United States",
+              "time": "10:53 - 11:15",
+              "title": "The evolution of cell types and neural circuits in the cerebral cortex"
             }
           ]
         },
@@ -11272,7 +11270,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL E",
-          "introduction": "Introduction",
           "title": "S05 - Shining a light on the extracellular matrix and its interactions with neurons and glia",
           "chairs": [
             "Federico N. Soria (Leioa, Spain)",
@@ -11281,28 +11278,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "The Extracellular Matrix as a Key Modulator of Microglial Dynamics"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "The Extracellular Matrix as a Key Modulator of Microglial Dynamics",
               "speaker": "Federico N. Soria",
-              "location": "Leioa, Spain",
-              "title": "Visualizing Extracellular Matrix Remodeling in Mouse and Human Models of Stroke"
+              "location": "Leioa, Spain"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Visualizing Extracellular Matrix Remodeling in Mouse and Human Models of Stroke",
               "speaker": "Egor Dzyubenko",
-              "location": "Essen, Germany",
-              "title": "Sculpting the Matrix Over Time: Astrocytic Control via Secreted Molecules"
+              "location": "Essen, Germany"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Sculpting the Matrix Over Time: Astrocytic Control via Secreted Molecules",
               "speaker": "Dolores Irala",
-              "location": "Memphis, United States",
-              "title": "Navigation of single protein within the hippocampal extracellular space"
+              "location": "Memphis, United States"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Navigation of single protein within the hippocampal extracellular space",
               "speaker": "Ivo Calaresu",
               "location": "Bordeaux, France"
             }
@@ -11312,7 +11310,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL F",
-          "introduction": "Introduction",
           "title": "S06 - Neurobiological mechanisms on the cognitive control of feeding in the modern food environment",
           "chairs": [
             "Stephanie Borgland (Calgary, Canada)"
@@ -11320,28 +11317,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "The role of the orbitofrontal cortex in the cognitive control of feeding"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "The role of the orbitofrontal cortex in the cognitive control of feeding",
               "speaker": "Stephanie Borgland",
-              "location": "Calgary, Canada",
-              "title": "Adolescent diet exposure and dopaminergic changes in adult food intake behaviours"
+              "location": "Calgary, Canada"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Adolescent diet exposure and dopaminergic changes in adult food intake behaviours",
               "speaker": "Fabien Naneix",
-              "location": "Aberdeen, United Kingdom",
-              "title": "Brain Lipid sensing and adaptive responses to the modern food environment"
+              "location": "Aberdeen, United Kingdom"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Brain Lipid sensing and adaptive responses to the modern food environment",
               "speaker": "Serge Luquet",
-              "location": "Paris Cedex, France",
-              "title": "Ultra-processed food affects structural integrity of feeding-related brain regions in humans"
+              "location": "Paris Cedex, France"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Ultra-processed food affects structural integrity of feeding-related brain regions in humans",
               "speaker": "Annette Horstmann",
               "location": "Helsinki, Finland"
             }
@@ -11351,7 +11349,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL G",
-          "introduction": "Introduction",
           "title": "S07 - Memory in context",
           "chairs": [
             "Karsten Rauss (Tuebingen, Germany)",
@@ -11360,28 +11357,31 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Event-context integration across sleep and wakefulness"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Event-context integration across sleep and wakefulness",
               "speaker": "Karsten Rauss",
-              "location": "Tuebingen, Germany",
-              "title": "Reconstructing context: rethinking the nature of context within memory"
+              "location": "Tuebingen, Germany"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Reconstructing context: rethinking the nature of context within memory",
               "speaker": "Alexander Easton",
-              "location": "Durham, United Kingdom",
-              "title": "Piecing the World Together: How context shapes emotional and"
+              "location": "Durham, United Kingdom"
             },
             {
               "time": "10:31 - 10:53",
-              "title": "incidental learning during development The life of a memory: it’s all about context",
+              "title": "Piecing the World Together: How context shapes emotional and"
+            },
+            {
               "speaker": "Patrese A. Robinson",
               "location": "Haverford, United States"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "The life of a memory: it’s all about context",
               "speaker": "Vanessa A. van Ast",
               "location": "Amsterdam, Netherlands"
             }
@@ -11391,7 +11391,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL H",
-          "introduction": "Introduction",
           "title": "S08 - From bench to bedside: Novel biomarkers and models to accelerate ALS therapeutic discovery",
           "chairs": [
             "Orla Hardiman (Dublin, Ireland)",
@@ -11400,70 +11399,71 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Cryptic exons as markers for TDP-43 proteinopathy"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Cryptic exons as markers for TDP-43 proteinopathy",
               "speaker": "Ana Rita Agra de Almeida Quadros",
-              "location": "Coimbra, Portugal",
-              "title": "Evolving Models of ALS: the Missing Links"
+              "location": "Coimbra, Portugal"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Evolving Models of ALS: the Missing Links",
               "speaker": "Mark Baker",
-              "location": "Newcastle Upon Tyne, United Kingdom",
-              "title": "Integrating data from cell models and human cohorts for novel biomarker identification in ALS"
+              "location": "Newcastle Upon Tyne, United Kingdom"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Integrating data from cell models and human cohorts for novel biomarker identification in ALS",
               "speaker": "Kevin Talbot",
-              "location": "Oxford, United Kingdom",
-              "title": "Precision Medicine in ALS - Are we there yet?"
+              "location": "Oxford, United Kingdom"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Precision Medicine in ALS - Are we there yet?",
               "speaker": "Orla Hardiman",
-              "location": "Dublin, Ireland",
-              "title": "Open Theatre (OT)"
+              "location": "Dublin, Ireland"
             },
             {
               "time": "11:30 - 11:50",
+              "title": "Open Theatre (OT)"
+            },
+            {
+              "time": "12:00 - 13:00",
               "title": "Open Theatre OT01 - The CellXpress.ai automated cell culture system for automated, robust forebrain and midbrain organoid generation: Molecular Devices Sponsored Sessions (SS)"
             },
             {
-              "time": "12:00 - 13:00",
-              "title": "HALL C SS01 - Functional Ultrasound Imaging of Brain Networks: Insights into Social Cognition, Aging, and Pharmacological Modulation: ICONEUS Moderator: Hippolyte De Valmont (France) Chair: Sara Romanzi (France) Hippocampal CA2 regulates brain-wide activity and functional connectivity"
-            },
-            {
               "time": "12:00 - 12:00",
+              "title": "HALL C SS01 - Functional Ultrasound Imaging of Brain Networks: Insights into Social Cognition, Aging, and Pharmacological Modulation: ICONEUS Moderator: Hippolyte De Valmont (France) Chair: Sara Romanzi (France) Hippocampal CA2 regulates brain-wide activity and functional connectivity",
               "speaker": "Alessa A. Franz",
-              "location": "Biberach an der Riss, Germany",
-              "title": "Longitudinal Imaging of Cerebrovascular Aging with Functional Ultrasound"
+              "location": "Biberach an der Riss, Germany"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Longitudinal Imaging of Cerebrovascular Aging with Functional Ultrasound",
               "speaker": "Stephano Tarantini",
-              "location": "United States",
-              "title": "fUS imaging of the awake mouse brain to correlate drug-induced changes in functional connectivity and behavior"
+              "location": "United States"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "fUS imaging of the awake mouse brain to correlate drug-induced changes in functional connectivity and behavior",
               "speaker": "Zsolt Lenkei",
-              "location": "Paris, France",
+              "location": "Paris, France"
+            },
+            {
+              "time": "12:00 - 13:00",
               "title": "Sponsored Sessions (SS)"
             },
             {
-              "time": "12:00 - 13:00",
-              "title": "HALL D SS02 - Every sample has a story. It could change someone’s life: 10x Genomics Chair: Gaye Tanrıöver (Germany) A single cell and spatio-temporal characterization of astrocyte heterogeneity in brain metatasis"
-            },
-            {
               "time": "12:00 - 12:00",
+              "title": "HALL D SS02 - Every sample has a story. It could change someone’s life: 10x Genomics Chair: Gaye Tanrıöver (Germany) A single cell and spatio-temporal characterization of astrocyte heterogeneity in brain metatasis",
               "speaker": "Carolina Hernández Oliver",
-              "location": "Spain",
-              "title": "From single-cell analysis to high-definition spatial transcriptomics in the age of AI"
+              "location": "Spain"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "From single-cell analysis to high-definition spatial transcriptomics in the age of AI",
               "speaker": "Andrés Ramírez",
               "location": "Spain"
             }
@@ -11479,11 +11479,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "Emma Yhnell",
               "location": "United Kingdom"
             }
@@ -11515,11 +11515,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "Simona Lodato",
               "location": "Italy"
             }
@@ -11535,18 +11535,17 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "Shenqin Yao",
-              "location": "Seattle, United States",
-              "title": "Open Theatre (OT)"
+              "location": "Seattle, United States"
             },
             {
               "time": "13:00 - 13:30",
-              "title": "Open Theatre OT02 - The Wandering Mind: Mindfulness of Thought"
+              "title": "Open Theatre (OT)"
             }
           ]
         },
@@ -11554,25 +11553,25 @@
           "type": "Special Lecture (SL)",
           "time": "13:30 - 14:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "SL02 - Brain Prize Lecture, Frank Winkler (DE), Michelle Monje (US)",
           "talks": [
             {
               "time": "13:30 - 13:34",
-              "title": "Cancer Neuroscience in focus: Neural influences on brain tumors and their response to therapies"
-            },
-            {
-              "time": "13:34 - 14:01",
-              "speaker": "Frank Winkler",
-              "location": "Heidelberg, Germany",
               "title": "Introduction"
             },
             {
+              "time": "13:34 - 14:01",
+              "title": "Cancer Neuroscience in focus: Neural influences on brain tumors and their response to therapies",
+              "speaker": "Frank Winkler",
+              "location": "Heidelberg, Germany"
+            },
+            {
               "time": "14:01 - 14:03",
-              "title": "The Neuroscience of Brain Cancers"
+              "title": "Introduction"
             },
             {
               "time": "14:03 - 14:30",
+              "title": "The Neuroscience of Brain Cancers",
               "speaker": "Michelle Monje",
               "location": "Stanford, United States"
             }
@@ -11587,12 +11586,11 @@
             {
               "time": "13:30 - 14:25",
               "speaker": "Charan Ranganath",
-              "location": "Davis, United States",
-              "title": "Open Theatre (OT)"
+              "location": "Davis, United States"
             },
             {
               "time": "15:00 - 15:20",
-              "title": "Open Theatre OT03 - Powering Neuroscience Imaging with 3i’s Advanced Imaging and Photostimulation Technologies: 3i - Intelligent Imaging Solutions"
+              "title": "Open Theatre (OT)"
             }
           ]
         },
@@ -11600,7 +11598,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "S09 - Neuroplasticity and Depression: A Double-Edged Sword",
           "chairs": [
             "Claus Normann (Freiburg, Germany)",
@@ -11609,28 +11606,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Neuroplasticity in depressed humans and mice: assessment, modulation, behavioral effects"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Neuroplasticity in depressed humans and mice: assessment, modulation, behavioral effects",
               "speaker": "Louise Schuberth",
-              "location": "Freiburg, Germany",
-              "title": "Building Resilience Through the Interplay between Plasticity and Context - a network-based approach"
+              "location": "Freiburg, Germany"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Building Resilience Through the Interplay between Plasticity and Context - a network-based approach",
               "speaker": "Igor Branchi",
-              "location": "Rome, Italy",
-              "title": "Behavioral outcomes of neuronal plasticity promoted by antidepressants and psychedelics"
+              "location": "Rome, Italy"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Behavioral outcomes of neuronal plasticity promoted by antidepressants and psychedelics",
               "speaker": "Eero Castren",
-              "location": "Helsinki, Finland",
-              "title": "Local synaptic transcriptome reveals pre-synaptic molecular signatures of the plasticity state"
+              "location": "Helsinki, Finland"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Local synaptic transcriptome reveals pre-synaptic molecular signatures of the plasticity state",
               "speaker": "Urte Neniskyte",
               "location": "Vilnius, Lithuania"
             }
@@ -11640,7 +11638,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "S10 - Whole-brain neural representations and computations: interplay and function",
           "chairs": [
             "Douglas Feitosa Tomé (Klosterneuburg, Austria)",
@@ -11649,26 +11646,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Data-driven circuit models reveal the dynamics of consensus across visual areas in mice"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Data-driven circuit models reveal the dynamics of consensus across visual areas in mice",
+              "speaker": "Guillaume Hennequin",
+              "location": "Cambridge, United Kingdom"
+            },
+            {
               "speaker": "Jennifer Li",
               "location": "Tübingen, Germany",
+              "time": "16:04 - 16:26",
               "title": "Brain-wide joint analysis of neuromodulatory and cognitive networks during spatial learning in freely swimming zebrafish"
             },
             {
-              "time": "16:04 - 16:26",
-              "title": "Parallelised orthogonal computations across distributed memory engrams"
-            },
-            {
               "time": "16:26 - 16:48",
+              "title": "Parallelised orthogonal computations across distributed memory engrams",
               "speaker": "Douglas Feitosa Tomé",
-              "location": "Klosterneuburg, Austria",
-              "title": "Early cellular memories reveal the sequence and mechanisms of whole-brain functional development"
+              "location": "Klosterneuburg, Austria"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Early cellular memories reveal the sequence and mechanisms of whole-brain functional development",
               "speaker": "Yingxi Lin",
               "location": "Dallas, United States"
             }
@@ -11678,7 +11678,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL C",
-          "introduction": "Introduction",
           "title": "S11 - Flexible function through degenerate neural circuit architecture",
           "chairs": [
             "Carlotta Martelli (Mainz, Germany)",
@@ -11687,28 +11686,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Circuit Mechanisms for Flexible and Adaptive Social Behaviors"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Circuit Mechanisms for Flexible and Adaptive Social Behaviors",
               "speaker": "Vanessa Ruta",
-              "location": "New York, United States",
-              "title": "Degenerate circuit motifs support functional robustness of motion detection"
+              "location": "New York, United States"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Degenerate circuit motifs support functional robustness of motion detection",
               "speaker": "Marion Silies",
-              "location": "Mainz, Germany",
-              "title": "Exploring heterogeneity and redundancy in large-scale models of neural computations"
+              "location": "Mainz, Germany"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Exploring heterogeneity and redundancy in large-scale models of neural computations",
               "speaker": "Jakob Macke",
-              "location": "Tübingen, Germany",
-              "title": "Neuronal circuits controlling initiation, speed, and termination of walking in Drosophila."
+              "location": "Tübingen, Germany"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Neuronal circuits controlling initiation, speed, and termination of walking in Drosophila.",
               "speaker": "Jan Ache",
               "location": "Würzburg, Germany"
             }
@@ -11718,7 +11718,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL D",
-          "introduction": "Introduction",
           "title": "S12 - Blue Networks: Mapping of Locus Coeruleus Structure and Function Across Lifespan and Species",
           "chairs": [
             "Maryam Ziaei (Lade, trondheim, Norway)",
@@ -11727,28 +11726,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Linking cortical noradrenergic receptor expression to spontaneous and learned behaviors"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Linking cortical noradrenergic receptor expression to spontaneous and learned behaviors",
               "speaker": "Vincent Breton-Provenchar",
-              "location": "Québec, Canada",
-              "title": "Mapping noradrenergic networks: a cross-scale journey into Locus Coeruleus control of brain dynamics"
+              "location": "Québec, Canada"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Mapping noradrenergic networks: a cross-scale journey into Locus Coeruleus control of brain dynamics",
               "speaker": "Valerio Zerbi",
-              "location": "Geneva, Switzerland",
-              "title": "Alteration of locus coeruleus organization and emotional wellbeing in late adulthood"
+              "location": "Geneva, Switzerland"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Alteration of locus coeruleus organization and emotional wellbeing in late adulthood",
               "speaker": "Maryam Ziaei",
-              "location": "Lade, trondheim, Norway",
-              "title": "Tracking anatomical changes in LC connections across aging and Alzheimer's disease"
+              "location": "Lade, trondheim, Norway"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Tracking anatomical changes in LC connections across aging and Alzheimer's disease",
               "speaker": "Joana Braga Peira",
               "location": "Stockholm, Sweden"
             }
@@ -11758,7 +11758,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL E",
-          "introduction": "Introduction",
           "title": "S13 - The Role of Forces and Mechanics in Neuronal Function",
           "chairs": [
             "Michael Krieg (Castelldefels, Spain)",
@@ -11767,28 +11766,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Tethers and scaffolds for ultrafast mechanotransduction"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Tethers and scaffolds for ultrafast mechanotransduction",
               "speaker": "Gary Lewin",
-              "location": "Berlin, Germany",
-              "title": "Mechanical force induces axon growth in neurons: mechanisms and implications for regeneration"
+              "location": "Berlin, Germany"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Mechanical force induces axon growth in neurons: mechanisms and implications for regeneration",
               "speaker": "Vittoria Raffa",
-              "location": "Pisa, Italy",
-              "title": "Mechanosensitive regulation of lipid mobility by a BAR-domain scaffold"
+              "location": "Pisa, Italy"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Mechanosensitive regulation of lipid mobility by a BAR-domain scaffold",
               "speaker": "Jennifer Kefauver",
-              "location": "Oviedo, Spain",
-              "title": "Viscoelastic phase transitions and their role in neuronal mechanotransduction"
+              "location": "Oviedo, Spain"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Viscoelastic phase transitions and their role in neuronal mechanotransduction",
               "speaker": "Michael Krieg",
               "location": "Castelldefels, Spain"
             }
@@ -11798,7 +11798,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL F",
-          "introduction": "Introduction",
           "title": "S14 - Connectomics of memory",
           "chairs": [
             "Matthias Haberl (Berlin, Germany)",
@@ -11807,28 +11806,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Structural synaptic plasticity during hippocampal LTP"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Structural synaptic plasticity during hippocampal LTP",
               "speaker": "Kristen Harris",
-              "location": "Austin, United States",
-              "title": "Characterising engrams in the insect mushroom body"
+              "location": "Austin, United States"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Characterising engrams in the insect mushroom body",
               "speaker": "Marta Zlatic",
-              "location": "Cambridge, United Kingdom",
-              "title": "Time-resolved multimodal microscopy: revealing stable and dynamic structures and connections"
+              "location": "Cambridge, United Kingdom"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Time-resolved multimodal microscopy: revealing stable and dynamic structures and connections",
               "speaker": "Mark Ellisman",
-              "location": "San Diego, United States",
-              "title": "Connectomic traces of memory in mouse and shrew"
+              "location": "San Diego, United States"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Connectomic traces of memory in mouse and shrew",
               "speaker": "Helene Schmidt",
               "location": "Frankfurt, Germany"
             }
@@ -11838,7 +11838,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL G",
-          "introduction": "Introduction",
           "title": "S15 - 3D genome regulation of neurodevelopment and neuroplasticity",
           "chairs": [
             "Angel Barco (Sant Joan d'Alacant, Spain)"
@@ -11846,28 +11845,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Epigenetic regulation in brain development and evolution"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Epigenetic regulation in brain development and evolution",
               "speaker": "Boyan Bonev",
-              "location": "Munich, Germany",
-              "title": "Transcriptional coactivator shuttling during neuronal activation"
+              "location": "Munich, Germany"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Transcriptional coactivator shuttling during neuronal activation",
               "speaker": "Angel Barco",
-              "location": "Sant Joan d'Alacant, Spain",
-              "title": "Cocaine exposure leads to long-term deregulation of gene expression and chromatin accessibility"
+              "location": "Sant Joan d'Alacant, Spain"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Cocaine exposure leads to long-term deregulation of gene expression and chromatin accessibility",
               "speaker": "Ana Pombo",
-              "location": "Baltimore, United States",
-              "title": "Decoding the X-chromosome Dynamics in the Adult Female Brain"
+              "location": "Baltimore, United States"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Decoding the X-chromosome Dynamics in the Adult Female Brain",
               "speaker": "Marija Kundakovic",
               "location": "Bronx, New York, United States"
             }
@@ -11877,7 +11877,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL H",
-          "introduction": "Introduction",
           "title": "S16 - Effects of stressful events in shaping future experiences",
           "chairs": [
             "Bianca Silva (Valbonne, France)"
@@ -11885,35 +11884,35 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Attenuation of memories related to traumatic stress"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Attenuation of memories related to traumatic stress",
               "speaker": "Bianca Silva",
-              "location": "Valbonne, France",
-              "title": "Early life stress impact on social behaviors and insular cortex activity"
+              "location": "Valbonne, France"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Early life stress impact on social behaviors and insular cortex activity",
               "speaker": "Joeri Bordes",
-              "location": "Bordeaux, France",
-              "title": "Threat-Driven Prelimbic Dynamics Remodel Fear Representations"
+              "location": "Bordeaux, France"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Threat-Driven Prelimbic Dynamics Remodel Fear Representations",
               "speaker": "Gisella Vetere",
-              "location": "Paris, France",
-              "title": "An anterior hypothalamic circuit gates stress vulnerability"
+              "location": "Paris, France"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "An anterior hypothalamic circuit gates stress vulnerability",
               "speaker": "Denise Cai",
-              "location": "New York, NY, United States",
-              "title": "Award Ceremony (AC)"
+              "location": "New York, NY, United States"
             },
             {
               "time": "17:20 - 17:30",
-              "title": "HALL A AC01 - Peter Seeburg Integrative Neuroscience Prize Ceremony Awardee: Amy Arnsten (New Haven, United States)"
+              "title": "Award Ceremony (AC)"
             }
           ]
         },
@@ -11921,15 +11920,15 @@
           "type": "Plenary Lecture (PL)",
           "time": "17:30 - 18:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "PL03 - Plenary Lecture, Ila Fiete (US)",
           "talks": [
             {
               "time": "17:30 - 17:35",
-              "title": "Spontaneous emergence of complex cortical structure from simple precursors: maps, hierarchies, and modules"
+              "title": "Introduction"
             },
             {
               "time": "17:35 - 18:30",
+              "title": "Spontaneous emergence of complex cortical structure from simple precursors: maps, hierarchies, and modules",
               "speaker": "Ila Fiete",
               "location": "Cambridge, United States"
             }
@@ -11956,11 +11955,11 @@
           ],
           "talks": [
             {
-              "time": "18:45 - 18:45",
-              "title": "Speakers"
+              "time": "18:45 - 18:45"
             },
             {
               "time": "18:45 - 18:45",
+              "title": "Speakers",
               "speaker": "Nicole Gervais",
               "location": "Groningen, Netherlands"
             }
@@ -11973,8 +11972,7 @@
           "title": "NE08 - Austrian Neuroscience Association - General Assembly Networking Events (NE)",
           "talks": [
             {
-              "time": "18:45 - 20:15",
-              "title": "HALL F NE09 - Portuguese Neuroscience Society - General Assembly"
+              "time": "18:45 - 20:15"
             }
           ]
         },
@@ -11985,11 +11983,11 @@
           "title": "NE10 - Driving Equitable Global Participation in Neuroscience Training",
           "talks": [
             {
-              "time": "18:45 - 18:45",
-              "title": "Speakers"
+              "time": "18:45 - 18:45"
             },
             {
               "time": "18:45 - 18:45",
+              "title": "Speakers",
               "speaker": "Ana Silva",
               "location": "Montevideo, Uruguay"
             }
@@ -22584,15 +22582,15 @@
           "type": "Plenary Lecture (PL)",
           "time": "08:30 - 09:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "PL04 - Plenary Lecture, Yukiko Goda (JP)",
           "talks": [
             {
               "time": "08:30 - 08:35",
-              "title": "Cracking the Synaptic Code in Local Circuits: Building Blocks of Brain Plasticity"
+              "title": "Introduction"
             },
             {
               "time": "08:35 - 09:30",
+              "title": "Cracking the Synaptic Code in Local Circuits: Building Blocks of Brain Plasticity",
               "speaker": "Yukiko Goda",
               "location": "Okinawa, Japan"
             }
@@ -22602,7 +22600,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "S17 - Targeting oscillation deficits in Alzheimer’s disease: new avenues for memory improvement",
           "chairs": [
             "Tristan Shuman (New York, United States)"
@@ -22610,28 +22607,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "MEC-hippocampal desynchronization parallels the onset of memory deficits in a model of AD pathology"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "MEC-hippocampal desynchronization parallels the onset of memory deficits in a model of AD pathology",
               "speaker": "Tristan Shuman",
-              "location": "New York, United States",
-              "title": "Sharp Wave Ripples in the context Alzheimer's Disease: in search of a mechanism"
+              "location": "New York, United States"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Sharp Wave Ripples in the context Alzheimer's Disease: in search of a mechanism",
               "speaker": "Silvia Viana da Silva",
-              "location": "Berlin, Germany",
-              "title": "Towards closed-loop deep brain stimulation for the treatment of Alzheimer’s disease"
+              "location": "Berlin, Germany"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Towards closed-loop deep brain stimulation for the treatment of Alzheimer’s disease",
               "speaker": "Andrew Sharott",
-              "location": "Oxford, United Kingdom",
-              "title": "Exploring Sensory Gamma Stimulation for Alzheimer's and Neuroprotective Strategies"
+              "location": "Oxford, United Kingdom"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Exploring Sensory Gamma Stimulation for Alzheimer's and Neuroprotective Strategies",
               "speaker": "Li-Huei Tsai",
               "location": "Cambridge, United States"
             }
@@ -22641,7 +22639,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL B",
-          "introduction": "Brief introduction",
           "title": "S18 - The modern neuroscience lab in the age of AI",
           "chairs": [
             "Emily Singer (Arlington, United States)",
@@ -22650,28 +22647,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "AI for better neuroscience: Boosting data integrity, quality, and impact with LLMs"
+              "title": "Brief introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "AI for better neuroscience: Boosting data integrity, quality, and impact with LLMs",
               "speaker": "Sean Hill",
-              "location": "Lausanne, Switzerland",
-              "title": "Improving Large Language Models as Model Organisms of Language in the Human Brain"
+              "location": "Lausanne, Switzerland"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Improving Large Language Models as Model Organisms of Language in the Human Brain",
               "speaker": "Mariya Toneva",
-              "location": "Saarbruecken, Germany",
-              "title": "A computational knowledge ecosystem for neuroscience research"
+              "location": "Saarbruecken, Germany"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "A computational knowledge ecosystem for neuroscience research",
               "speaker": "Satrajit Ghosh",
-              "location": "Cambridge, United States",
-              "title": "From bees to brains: Building better benchmarks for LLMs in biology"
+              "location": "Cambridge, United States"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "From bees to brains: Building better benchmarks for LLMs in biology",
               "speaker": "Rachel Parkinson",
               "location": "London, United Kingdom"
             }
@@ -22681,7 +22679,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL C",
-          "introduction": "Introduction",
           "title": "S19 - The other half - sex differences in Neuroscience",
           "chairs": [
             "Kerstin Lenk (Graz, Austria)"
@@ -22689,26 +22686,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Sex differences in glial cells contribute to the molecular etiology of Parkinson’s disease"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Sex differences in glial cells contribute to the molecular etiology of Parkinson’s disease",
               "speaker": "Julia M. Schulze-Hentrich",
-              "location": "Saarbrücken, Germany",
-              "title": "Astrocytes as architects of sex-specific brain maturation and behavior in health and disease"
+              "location": "Saarbrücken, Germany"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Astrocytes as architects of sex-specific brain maturation and behavior in health and disease",
+              "speaker": "Barbara Di Benedetto",
+              "location": "Regensburg, Germany"
+            },
+            {
               "speaker": "Ciaran Murphy-Royal",
               "location": "Montreal, Québec, Canada",
+              "time": "10:31 - 10:53",
               "title": "A divergent astrocytic response to stress alters activity patterns in male and female mice"
             },
             {
-              "time": "10:31 - 10:53",
-              "title": "Modeling sex differences in astrocyte function: A computational approach"
-            },
-            {
               "time": "10:53 - 11:15",
+              "title": "Modeling sex differences in astrocyte function: A computational approach",
               "speaker": "Kerstin Lenk",
               "location": "Graz, Austria"
             }
@@ -22725,32 +22725,30 @@
           ],
           "talks": [
             {
+              "time": "09:45 - 09:47",
               "title": "Inroduction"
             },
             {
-              "time": "09:45 - 09:47",
-              "title": "Collicular modules in action and cognition"
-            },
-            {
               "time": "09:47 - 10:09",
+              "title": "Collicular modules in action and cognition",
               "speaker": "Marco Tripodi",
-              "location": "Cambridge, United Kingdom",
-              "title": "A Fronto-Collicular Circuit for Routing Visual Distractors into Behavior"
+              "location": "Cambridge, United Kingdom"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "A Fronto-Collicular Circuit for Routing Visual Distractors into Behavior",
               "speaker": "Andreas Kardamakis",
-              "location": "San Juan de Alicante, Spain",
-              "title": "The Superior Colliculus and Beyond: An evolutionary perspective on visual circuits for action"
+              "location": "San Juan de Alicante, Spain"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "The Superior Colliculus and Beyond: An evolutionary perspective on visual circuits for action",
               "speaker": "Sarah Ruedinger",
-              "location": "London, United Kingdom",
-              "title": "Neurons in motion: modular organization of brainstem neurons for locomotor and orienting control"
+              "location": "London, United Kingdom"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Neurons in motion: modular organization of brainstem neurons for locomotor and orienting control",
               "speaker": "Julien Bouvier",
               "location": "Paris, France"
             }
@@ -22760,7 +22758,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL E",
-          "introduction": "Introduction",
           "title": "S21 - Mechanisms of neural circuit dysfunction in obsessive compulsive disorder",
           "chairs": [
             "Elizabeth Manning (Callaghan, Australia)",
@@ -22769,28 +22766,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Astrocyte-neuron interactions regulate compulsive behavior"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Astrocyte-neuron interactions regulate compulsive behavior",
               "speaker": "Baljit Khakh",
-              "location": "Los Angeles, United States",
-              "title": "Striatal activity patterns associated with distinct behavioural changes relevant to OCD"
+              "location": "Los Angeles, United States"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Striatal activity patterns associated with distinct behavioural changes relevant to OCD",
               "speaker": "Elizabeth Manning",
-              "location": "Callaghan, Australia",
-              "title": "Electrophysiological correlates of compulsivity in rat corticostriatal circuits"
+              "location": "Callaghan, Australia"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Electrophysiological correlates of compulsivity in rat corticostriatal circuits",
               "speaker": "Tara Arbab",
-              "location": "Amsterdam, Netherlands",
-              "title": "Using the observing response task for mechanistic studies and drug discovery in OCD"
+              "location": "Amsterdam, Netherlands"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Using the observing response task for mechanistic studies and drug discovery in OCD",
               "speaker": "Amy Milton",
               "location": "Cambridge, United Kingdom"
             }
@@ -22800,7 +22798,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL F",
-          "introduction": "Introduction",
           "title": "S22 - Synaptic and Circuit Mechanisms of Neurodevelopmental Disorders",
           "chairs": [
             "Anna Fejtova (91054, Germany)"
@@ -22808,28 +22805,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Role of SYNGAP in regulating the cellular and circuit development"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Role of SYNGAP in regulating the cellular and circuit development",
               "speaker": "Peter C. Kind",
-              "location": "Edinburgh, United Kingdom",
-              "title": "SYNGAP1 deficiency disrupts synaptic neoteny in xenotransplanted human cortical neurons"
+              "location": "Edinburgh, United Kingdom"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "SYNGAP1 deficiency disrupts synaptic neoteny in xenotransplanted human cortical neurons",
               "speaker": "Ben Vermaercke",
-              "location": "Leuven, Belgium",
-              "title": "Autism gene variants disrupt enteric neuron migration and cause gastrointestinal dysmotility"
+              "location": "Leuven, Belgium"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Autism gene variants disrupt enteric neuron migration and cause gastrointestinal dysmotility",
               "speaker": "Helen R. Willsey",
-              "location": "San Francisco, United States",
-              "title": "Development of Translatable Synapse/Circuit Phenotypes and Firstin-Class Precision Therapeutics"
+              "location": "San Francisco, United States"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Development of Translatable Synapse/Circuit Phenotypes and Firstin-Class Precision Therapeutics",
               "speaker": "Gavin Rumbaugh",
               "location": "Jupiter, United States"
             }
@@ -22839,7 +22837,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL G",
-          "introduction": "Introduction",
           "title": "S23 - Interneurons shape cortical population codes in dependence of experience",
           "chairs": [
             "Marlene Bartos (Freiburg, Germany)"
@@ -22847,28 +22844,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Neocortical SST neuron plasticity driven by stimulus-reward contingencies during learning"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Neocortical SST neuron plasticity driven by stimulus-reward contingencies during learning",
               "speaker": "Alison Barth",
-              "location": "Pittsburgh, United States",
-              "title": "Top-down control of threat memory through neocortical layer 1"
+              "location": "Pittsburgh, United States"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Top-down control of threat memory through neocortical layer 1",
               "speaker": "Johannes Letzkus",
-              "location": "Freiburg, Germany",
-              "title": "Experience-induced genomic mechanisms that control perception and learning"
+              "location": "Freiburg, Germany"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Experience-induced genomic mechanisms that control perception and learning",
               "speaker": "Ivo Spiegel",
-              "location": "Rehovot, Israel",
-              "title": "Functional maturation of Layer 1 inhibitory neurons in the visual and auditory cortex"
+              "location": "Rehovot, Israel"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Functional maturation of Layer 1 inhibitory neurons in the visual and auditory cortex",
               "speaker": "Leena Ibrahim",
               "location": "Thuwal, Saudi Arabia"
             }
@@ -22878,7 +22876,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL H",
-          "introduction": "Introduction",
           "title": "S24 - Brain-Body Interactions in Health And Disease",
           "chairs": [
             "Jatin Nagpal (Cork, Ireland)",
@@ -22887,39 +22884,39 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "From Nutrients to Neurons: Decoding How Brain-Body Interactions Guide Dietary Decisions"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "From Nutrients to Neurons: Decoding How Brain-Body Interactions Guide Dietary Decisions",
               "speaker": "Carlos Ribeiro",
-              "location": "Lisboa, Portugal",
-              "title": "The role of early-life microbiota in neuro-glia-vascular development."
+              "location": "Lisboa, Portugal"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "The role of early-life microbiota in neuro-glia-vascular development.",
               "speaker": "María Rodríguez Aburto",
-              "location": "Cork, Ireland",
-              "title": "Enrichment and exercise prevent stress-driven social and BBB changes via FGF2 signaling"
+              "location": "Cork, Ireland"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Enrichment and exercise prevent stress-driven social and BBB changes via FGF2 signaling",
               "speaker": "Caroline Ménard",
-              "location": "Quebec, Canada",
-              "title": "Immuno-metabolic depression: from etiology to treatment"
+              "location": "Quebec, Canada"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Immuno-metabolic depression: from etiology to treatment",
               "speaker": "Brenda Penninx",
-              "location": "Amsterdam, Netherlands",
-              "title": "Open Theatre (OT)"
+              "location": "Amsterdam, Netherlands"
             },
             {
               "time": "11:30 - 11:50",
-              "title": "Open Theatre OT04 - Iconeus One: Pioneering Real-time Whole-Brain Imaging with functional Ultrasound: ICONEUS Sponsored Sessions (SS)"
+              "title": "Open Theatre (OT)"
             },
             {
               "time": "12:00 - 13:00",
-              "title": "HALL D SS03 - Mapping Neuroinflammation: Spatial Multiomic Insights into Neurological Disorders: Bio-Techne Spatial"
+              "title": "Open Theatre OT04 - Iconeus One: Pioneering Real-time Whole-Brain Imaging with functional Ultrasound: ICONEUS Sponsored Sessions (SS)"
             }
           ]
         },
@@ -22933,11 +22930,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "Iñigo Uriarte",
               "location": "Spain"
             }
@@ -22953,11 +22950,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "John Simon Butler",
               "location": "Dublin, Ireland"
             }
@@ -22973,11 +22970,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "Esther Berrocoso",
               "location": "Spain"
             }
@@ -22990,18 +22987,17 @@
           "title": "SiE11 - Redefining success in neuroscience",
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "Bita Moghaddam",
-              "location": "United States",
-              "title": "Open Theatre (OT)"
+              "location": "United States"
             },
             {
               "time": "13:00 - 13:30",
-              "title": "Open Theatre OT05 - Beyond Sensation: Decoupling Experience from Suffering"
+              "title": "Open Theatre (OT)"
             }
           ]
         },
@@ -23009,15 +23005,15 @@
           "type": "Special Lecture (SL)",
           "time": "13:30 - 14:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "SL04 - Host Society Special Lecture, Isabel Fariñas (ES)",
           "talks": [
             {
               "time": "13:30 - 13:35",
-              "title": "Regulation of neural stem cell quiescence in the adult brain"
+              "title": "Introduction"
             },
             {
               "time": "13:35 - 14:30",
+              "title": "Regulation of neural stem cell quiescence in the adult brain",
               "speaker": "Isabel Fariñas",
               "location": "Burjassot, Spain"
             }
@@ -23027,26 +23023,25 @@
           "type": "Special Lecture (SL)",
           "time": "13:30 - 14:30",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "SL05 - Boehringer Ingelheim / FENS Research Award Lecture, Gioele La Manno (CH)",
           "talks": [
             {
               "time": "13:30 - 13:35",
-              "title": "Understanding Brain Development with Biological Data Science"
+              "title": "Introduction"
             },
             {
               "time": "13:35 - 14:28",
+              "title": "Understanding Brain Development with Biological Data Science",
               "speaker": "Gioele La Manno",
-              "location": "Lausanne, Switzerland",
-              "title": "Closing Remarks"
+              "location": "Lausanne, Switzerland"
             },
             {
               "time": "14:28 - 14:30",
-              "title": "Open Theatre (OT)"
+              "title": "Closing Remarks"
             },
             {
               "time": "14:30 - 14:50",
-              "title": "Open Theatre OT06 - The Black Box Problem: How Not Understanding Our Tools Is Holding Neuroscience Back Chair: Elena Dreosti (United Kingdom)"
+              "title": "Open Theatre (OT)"
             }
           ]
         },
@@ -23054,7 +23049,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "S25 - Decoding neural circuit dynamics through next-generation biosensors",
           "chairs": [
             "Yulong Li (Beijing, China)"
@@ -23062,28 +23056,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Design and optimize genetically-encoded neuropeptide sensors by harnessing GPCR regulation mechanism"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Design and optimize genetically-encoded neuropeptide sensors by harnessing GPCR regulation mechanism",
               "speaker": "Yulong Li",
-              "location": "Beijing, China",
-              "title": "Spatiotemporal dynamics of neuropeptide signaling in the C. elegans nervous system"
+              "location": "Beijing, China"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Spatiotemporal dynamics of neuropeptide signaling in the C. elegans nervous system",
               "speaker": "Isabel Beets",
-              "location": "Leuven, Belgium",
-              "title": "Using genetically encoded DA sensors to delineate addiction vulnerability"
+              "location": "Leuven, Belgium"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Using genetically encoded DA sensors to delineate addiction vulnerability",
               "speaker": "Christian Lüscher",
-              "location": "Genève, Switzerland",
-              "title": "Data-driven approaches towards developing and improving biosensors for neuronal activity"
+              "location": "Genève, Switzerland"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Data-driven approaches towards developing and improving biosensors for neuronal activity",
               "speaker": "Alison Tebo",
               "location": "Ashburn, Virginia, United States"
             }
@@ -23093,7 +23088,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "S26 - Mitochondria as central regulators of brain and behavior: From multiple cell types to circuits",
           "chairs": [
             "Carmen Sandi (Lausanne, Switzerland)",
@@ -23102,28 +23096,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Mitochondrial quality control and neuroprotection"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Mitochondrial quality control and neuroprotection",
               "speaker": "Patricia Boya",
-              "location": "Fribourg, Switzerland",
-              "title": "Beyond energy: Astrocytic mitochondria as signals for behavior"
+              "location": "Fribourg, Switzerland"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Beyond energy: Astrocytic mitochondria as signals for behavior",
               "speaker": "Juan P. Bolaños",
-              "location": "Salamanca, Spain",
-              "title": "Cannabinoids and mitochondria: linking brain metabolism and signaling to determine behavior"
+              "location": "Salamanca, Spain"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Cannabinoids and mitochondria: linking brain metabolism and signaling to determine behavior",
               "speaker": "Giovanni Marsicano",
-              "location": "Bordeaux, France",
-              "title": "Mitochondrial brain signatures in reward and motivation"
+              "location": "Bordeaux, France"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Mitochondrial brain signatures in reward and motivation",
               "speaker": "Mary Kay Lobo",
               "location": "Baltimore, United States"
             }
@@ -23133,7 +23128,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL C",
-          "introduction": "Introduction",
           "title": "S27 - How microglia affect neuronal networks relevant for behavior in the normal and diseased brain",
           "chairs": [
             "Martin Fuhrmann (Bonn, Germany)"
@@ -23141,28 +23135,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Monocyte-derived microglia - a liability or fountain of youth?"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Monocyte-derived microglia - a liability or fountain of youth?",
               "speaker": "Steffen Jung",
-              "location": "Rehovot, Israel",
-              "title": "Noradrenergic modulation of microglial function in health and disease"
+              "location": "Rehovot, Israel"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Noradrenergic modulation of microglial function in health and disease",
               "speaker": "Ania K. Majewska",
-              "location": "Rochester, United States",
-              "title": "Mechanisms of bi-directional microglia neuron communication in the hippocampus"
+              "location": "Rochester, United States"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Mechanisms of bi-directional microglia neuron communication in the hippocampus",
               "speaker": "Martin Fuhrmann",
-              "location": "Bonn, Germany",
-              "title": "The regenerative properties of microglial phagocytosis in the neurogenic niche"
+              "location": "Bonn, Germany"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "The regenerative properties of microglial phagocytosis in the neurogenic niche",
               "speaker": "Amanda Sierra",
               "location": "Leioa, Spain"
             }
@@ -23172,7 +23167,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL D",
-          "introduction": "Introduction",
           "title": "S28 - Flexible Memory Systems: Adaptive and Maladaptive Pathways",
           "chairs": [
             "Johannes Felsenberg (Basel, Switzerland)"
@@ -23180,28 +23174,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Amygdala-striatal control of actions and habits"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Amygdala-striatal control of actions and habits",
               "speaker": "Kate Wassum",
-              "location": "Los Angeles, United States",
-              "title": "Orbitofrontal modulation of retrospective and prospective fear propagation"
+              "location": "Los Angeles, United States"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Orbitofrontal modulation of retrospective and prospective fear propagation",
               "speaker": "Mihaela Iordanova",
-              "location": "Montreal, Canada",
-              "title": "Malaise learning reveals consolidation to be a time for memory updating"
+              "location": "Montreal, Canada"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Malaise learning reveals consolidation to be a time for memory updating",
               "speaker": "Scott Waddell",
-              "location": "Oxford, United Kingdom",
-              "title": "Neuropharmacological adaption of threat- and safety-memories in humans"
+              "location": "Oxford, United Kingdom"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Neuropharmacological adaption of threat- and safety-memories in humans",
               "speaker": "Jan Haaker",
               "location": "Hamburg, Germany"
             }
@@ -23211,7 +23206,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL E",
-          "introduction": "Introduction",
           "title": "S29 - Untangling the human brain: characterising the properties of human cells, synapses and circuits",
           "chairs": [
             "Jake F Watson (Klosterneuburg, Austria)"
@@ -23219,28 +23213,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Cell-type diversity across the human brain"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Cell-type diversity across the human brain",
               "speaker": "Kimberly Siletti",
-              "location": "Utrecht, Netherlands",
-              "title": "Dendrites in human cortex and hippocampus: the link between form and function"
+              "location": "Utrecht, Netherlands"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Dendrites in human cortex and hippocampus: the link between form and function",
               "speaker": "Christiaan P J de Kock",
-              "location": "Amsterdam, Netherlands",
-              "title": "Exploring the arrangement of human hippocampal microcircuits"
+              "location": "Amsterdam, Netherlands"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Exploring the arrangement of human hippocampal microcircuits",
               "speaker": "Jake F Watson",
-              "location": "Klosterneuburg, Austria",
-              "title": "Searching for human hippocampal sharp-wave ripples in a sea of interictal spikes on stereo-EEG"
+              "location": "Klosterneuburg, Austria"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Searching for human hippocampal sharp-wave ripples in a sea of interictal spikes on stereo-EEG",
               "speaker": "Anna Maslarova",
               "location": "New York, United States"
             }
@@ -23256,28 +23251,26 @@
           ],
           "talks": [
             {
-              "title": "Gene therapy strategies increasing inhibitory neurotransmission"
-            },
-            {
               "time": "15:40 - 16:02",
+              "title": "Gene therapy strategies increasing inhibitory neurotransmission",
               "speaker": "Michele Simonato",
-              "location": "Ferrara, Italy",
-              "title": "Gene therapy strategies inhibiting excitatory neurotransmission"
+              "location": "Ferrara, Italy"
             },
             {
               "time": "16:02 - 16:24",
+              "title": "Gene therapy strategies inhibiting excitatory neurotransmission",
               "speaker": "Valerie Crepel",
-              "location": "Marseille, France",
-              "title": "On-demand Gene Therapy for circuit disorders"
+              "location": "Marseille, France"
             },
             {
               "time": "16:24 - 16:46",
+              "title": "On-demand Gene Therapy for circuit disorders",
               "speaker": "Gabriele Lignani",
-              "location": "London, United Kingdom",
-              "title": "Gene Therapy Targeting the Sodium Channelopathy in Dravet Syndrome"
+              "location": "London, United Kingdom"
             },
             {
               "time": "16:46 - 17:08",
+              "title": "Gene Therapy Targeting the Sodium Channelopathy in Dravet Syndrome",
               "speaker": "Moran Rubinstein",
               "location": "Tel Aviv, Israel"
             }
@@ -23287,7 +23280,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL G",
-          "introduction": "Introduction",
           "title": "S31 - Neuroendocrine Plasticity in the Female Brain Across Physiological States",
           "chairs": [
             "Roberta Haddad-Tovolli (Barcelona, Spain)",
@@ -23296,28 +23288,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Dynamic Modulation of Feeding Circuits Across Female Reproductive States"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Dynamic Modulation of Feeding Circuits Across Female Reproductive States",
               "speaker": "Roberta Haddad-Tovolli",
-              "location": "Barcelona, Spain",
-              "title": "Neurovascular plasticity during pregnancy shapes maternal behaviors"
+              "location": "Barcelona, Spain"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Neurovascular plasticity during pregnancy shapes maternal behaviors",
               "speaker": "Nicolas Renier",
-              "location": "Paris, France",
-              "title": "Sensory-hormonal coupling in the postpartum brain"
+              "location": "Paris, France"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Sensory-hormonal coupling in the postpartum brain",
               "speaker": "Silvana Valtcheva",
-              "location": "Cologne, Germany",
-              "title": "Well Aging and the Tanycytic Control of Female Brain Health"
+              "location": "Cologne, Germany"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Well Aging and the Tanycytic Control of Female Brain Health",
               "speaker": "Vincent Prevot",
               "location": "Lille, France"
             }
@@ -23327,7 +23320,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL H",
-          "introduction": "Introduction",
           "title": "S32 - Breathing as a dynamic scaffold of learning, emotion, and neural dynamics",
           "chairs": [
             "Nikolas Karalis (Paris, France)"
@@ -23335,35 +23327,35 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Causal investigation of breathing as an interoceptive scaffold of neural dynamics"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Causal investigation of breathing as an interoceptive scaffold of neural dynamics",
               "speaker": "Nikolas Karalis",
-              "location": "Paris, France",
-              "title": "Global coordination of brain activity by the breathing cycle"
+              "location": "Paris, France"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Global coordination of brain activity by the breathing cycle",
               "speaker": "Adriano Tort",
-              "location": "Natal - RN, Brazil",
-              "title": "Cardiorespiratory rhythm-contingent classical conditioning"
+              "location": "Natal - RN, Brazil"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Cardiorespiratory rhythm-contingent classical conditioning",
               "speaker": "Miriam Nokia",
-              "location": "Jyväskylä, Finland",
-              "title": "Different breathing frequencies entrain the brain in the face of threat: from defense to recovery"
+              "location": "Jyväskylä, Finland"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Different breathing frequencies entrain the brain in the face of threat: from defense to recovery",
               "speaker": "Sophie Bagur",
-              "location": "Paris, France",
-              "title": "Award Ceremony (AC)"
+              "location": "Paris, France"
             },
             {
               "time": "17:20 - 17:30",
-              "title": "HALL A AC02 - ALBA-Roche Prize for Excellence in Neuroscience Research Ceremony Awardee: Mychael Lourenço (Brazil)"
+              "title": "Award Ceremony (AC)"
             }
           ]
         },
@@ -23371,15 +23363,15 @@
           "type": "Plenary Lecture (PL)",
           "time": "17:30 - 18:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "PL05 - Presidential Plenary Lecture, Gilles Laurent (DE)",
           "talks": [
             {
               "time": "17:30 - 17:35",
-              "title": "Neural circuit designs, dynamics and evolution"
+              "title": "Introduction"
             },
             {
               "time": "17:35 - 18:30",
+              "title": "Neural circuit designs, dynamics and evolution",
               "speaker": "Gilles Laurent",
               "location": "Frankfurt, Germany"
             }
@@ -23396,11 +23388,11 @@
           ],
           "talks": [
             {
-              "time": "18:45 - 18:45",
-              "title": "Speakers"
+              "time": "18:45 - 18:45"
             },
             {
               "time": "18:45 - 18:45",
+              "title": "Speakers",
               "speaker": "Volko Straub",
               "location": "Leicester, United Kingdom"
             }
@@ -23416,11 +23408,11 @@
           ],
           "talks": [
             {
-              "time": "18:45 - 18:45",
-              "title": "Speakers"
+              "time": "18:45 - 18:45"
             },
             {
               "time": "18:45 - 18:45",
+              "title": "Speakers",
               "speaker": "Juan Nacher",
               "location": "Burjassot, Spain"
             }
@@ -23433,17 +23425,17 @@
           "title": "NE14 - German Neuroscience Society - General Assembly Networking Events (NE)",
           "talks": [
             {
-              "time": "18:45 - 20:15",
-              "title": "HALL H NE15 - Shaping your path: finding the right mentors (for you) Moderator: Yoav Livneh (Rehovot, Israel) Moderator: Laura Andreae (London, United Kingdom) Mentor panellists"
+              "time": "18:45 - 20:15"
             },
             {
               "time": "18:45 - 18:45",
+              "title": "HALL H NE15 - Shaping your path: finding the right mentors (for you) Moderator: Yoav Livneh (Rehovot, Israel) Moderator: Laura Andreae (London, United Kingdom) Mentor panellists",
               "speaker": "Georgia Rapti",
-              "location": "Brussels, Belgium",
-              "title": "Mentee panellists"
+              "location": "Brussels, Belgium"
             },
             {
               "time": "18:45 - 18:45",
+              "title": "Mentee panellists",
               "speaker": "Leticia Perez Sisques",
               "location": "London, United Kingdom"
             }
@@ -23456,11 +23448,11 @@
           "title": "NE16 - Art and Science: Creative Pathways for Science Communication",
           "talks": [
             {
-              "time": "18:45 - 18:45",
-              "title": "Speakers"
+              "time": "18:45 - 18:45"
             },
             {
               "time": "18:45 - 18:45",
+              "title": "Speakers",
               "speaker": "Paulina Carriba",
               "location": "Barcelona, Spain"
             }
@@ -34019,15 +34011,15 @@
           "type": "Plenary Lecture (PL)",
           "time": "08:30 - 09:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "PL06 - Plenary Lecture, Kenneth Harris (UK)",
           "talks": [
             {
               "time": "08:30 - 08:35",
-              "title": "Large scale cortical population codes"
+              "title": "Introduction"
             },
             {
               "time": "08:35 - 09:30",
+              "title": "Large scale cortical population codes",
               "speaker": "Kenneth Harris",
               "location": "London, United Kingdom"
             }
@@ -34037,7 +34029,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "S33 - Astrocyte integration in brain circuit functions",
           "chairs": [
             "Gertrudis Perea (MADRID, Spain)",
@@ -34046,28 +34037,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Noncanonical substrates of computation"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Noncanonical substrates of computation",
               "speaker": "Misha Ahrens",
-              "location": "Ashburn, VA, United States",
-              "title": "Astrocytes Promote Social Bonding"
+              "location": "Ashburn, VA, United States"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Astrocytes Promote Social Bonding",
               "speaker": "Gertrudis Perea",
-              "location": "MADRID, Spain",
-              "title": "Astrocytic oxytocin receptor as driver of behavioral stress response"
+              "location": "MADRID, Spain"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Astrocytic oxytocin receptor as driver of behavioral stress response",
               "speaker": "Alexandre Charlet",
-              "location": "Strasbourg, France",
-              "title": "Catching Astrocytic Ensembles: Unveiling the Power of Astrocyte Networks in Learning and Motivation"
+              "location": "Strasbourg, France"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Catching Astrocytic Ensembles: Unveiling the Power of Astrocyte Networks in Learning and Motivation",
               "speaker": "Marta Navarrete",
               "location": "Madrid, Spain"
             }
@@ -34077,7 +34069,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "S34 - All-Optical Voltage Imaging for Neuronal Circuit Dissection",
           "chairs": [
             "Janos Fuzik (Stockholm, Sweden)",
@@ -34086,28 +34077,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Novel genetically encoded voltage sensors for single and multiphoton imaging of neuronal activity"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Novel genetically encoded voltage sensors for single and multiphoton imaging of neuronal activity",
               "speaker": "Ahmed Abdelfattah",
-              "location": "Providence, United States",
-              "title": "Multicolor photocontrol of neuronal ion fluxes"
+              "location": "Providence, United States"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Multicolor photocontrol of neuronal ion fluxes",
               "speaker": "Johannes Vierock",
-              "location": "Berlin, Germany",
-              "title": "Imaging voltage across scales"
+              "location": "Berlin, Germany"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Imaging voltage across scales",
               "speaker": "Adam E. Cohen",
-              "location": "Cambridge, United States",
-              "title": "Scanless Two-Photon in vivo Voltage Imaging"
+              "location": "Cambridge, United States"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Scanless Two-Photon in vivo Voltage Imaging",
               "speaker": "Valentina Emiliani",
               "location": "Paris, France"
             }
@@ -34117,7 +34109,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL C",
-          "introduction": "Introduction",
           "title": "S35 - The brain in context: flexible neuronal processing across behaviors and states",
           "chairs": [
             "Ainiah Masood (London, United Kingdom)",
@@ -34126,28 +34117,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Context-invariant beliefs link to dynamic prefrontal cortex functional connectivity reconfiguration"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Context-invariant beliefs link to dynamic prefrontal cortex functional connectivity reconfiguration",
               "speaker": "Jean-Paul Noel",
-              "location": "Minneapolis, United States",
-              "title": "Learning with internal states and internal models"
+              "location": "Minneapolis, United States"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Learning with internal states and internal models",
               "speaker": "Sami El-Boustani",
-              "location": "Geneva, Switzerland",
-              "title": "Population codes for context-dependent decision making"
+              "location": "Geneva, Switzerland"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Population codes for context-dependent decision making",
               "speaker": "Stefano Panzeri",
-              "location": "Hamburg, Germany",
-              "title": "Internal state modulation of visual cortex: energy use and coding precision during food scarcity"
+              "location": "Hamburg, Germany"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Internal state modulation of visual cortex: energy use and coding precision during food scarcity",
               "speaker": "Nathalie Rochefort",
               "location": "Edinburgh, United Kingdom"
             }
@@ -34157,7 +34149,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL D",
-          "introduction": "Introduction",
           "title": "S36 - Beyond episodic memory: engrams for feelings and facts",
           "chairs": [
             "Lisa Genzel (Nijmegen, Netherlands)"
@@ -34165,28 +34156,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Cold memories control whole-body thermoregulatory responses"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Cold memories control whole-body thermoregulatory responses",
               "speaker": "Tomas Ryan",
-              "location": "Dublin, Ireland",
-              "title": "Painful Interactions between engrams of fear memory and pain"
+              "location": "Dublin, Ireland"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Painful Interactions between engrams of fear memory and pain",
               "speaker": "Rohini Kuner",
-              "location": "Heidelberg, Germany",
-              "title": "Beyond slow learning: fast and adaptive role of the cortex in semantic memory processing"
+              "location": "Heidelberg, Germany"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Beyond slow learning: fast and adaptive role of the cortex in semantic memory processing",
               "speaker": "Anumita Samanta",
-              "location": "Nijmegen, Netherlands",
-              "title": "Social memory representation in the hippocampus"
+              "location": "Nijmegen, Netherlands"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Social memory representation in the hippocampus",
               "speaker": "Teruhiro Okuyama",
               "location": "Tokyo, Japan"
             }
@@ -34196,7 +34188,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL E",
-          "introduction": "Introduction",
           "title": "S37 - Separated yet co-dependent: axon-dendrite interactions in neuronal function, development and disease",
           "chairs": [
             "Matthew Grubb (London, United Kingdom)"
@@ -34204,28 +34195,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "The axon on a dendrite - a morphological feature driving network function?"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "The axon on a dendrite - a morphological feature driving network function?",
               "speaker": "Maren Engelhardt",
-              "location": "Linz, Austria",
-              "title": "Respective roles of axon initial segment and dendrites in midbrain dopaminergic neuron excitability"
+              "location": "Linz, Austria"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Respective roles of axon initial segment and dendrites in midbrain dopaminergic neuron excitability",
               "speaker": "Jean-Marc Goaillard",
-              "location": "Marseille, France",
-              "title": "Co-ordination of axonal and dendritic development in mitral cells of the olfactory bulb"
+              "location": "Marseille, France"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Co-ordination of axonal and dendritic development in mitral cells of the olfactory bulb",
               "speaker": "Matthew Grubb",
-              "location": "London, United Kingdom",
-              "title": "Neuronal revival - the insulin pathway to dendritic and synaptic regeneration after axonal injury"
+              "location": "London, United Kingdom"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Neuronal revival - the insulin pathway to dendritic and synaptic regeneration after axonal injury",
               "speaker": "Adriana Di Polo",
               "location": "Montreal, Canada"
             }
@@ -34235,7 +34227,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL F",
-          "introduction": "Introduction",
           "title": "S38 - The Untold story of Neuroscience education and research in Africa",
           "chairs": [
             "Lihle Qulu_Appiah (Cape Town, South Africa)",
@@ -34244,26 +34235,27 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Key Decisions and Leadership Behind the Birth of Neuroscience Collaboration in Africa"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
-              "title": "\"The Transformative Power of Education in Shaping Neuroscience in Africa\""
+              "title": "Key Decisions and Leadership Behind the Birth of Neuroscience Collaboration in Africa"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "\"The Transformative Power of Education in Shaping Neuroscience in Africa\"",
               "speaker": "Sharon Juliano",
-              "location": "Bethesda, United States",
-              "title": "\"Two Decades of Advancements: The Evolving Landscape of Neuroscience Research in Africa\""
+              "location": "Bethesda, United States"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "\"Two Decades of Advancements: The Evolving Landscape of Neuroscience Research in Africa\"",
               "speaker": "Amadi Ihunwo",
-              "location": "Johannesburg, South Africa",
-              "title": "My African journey on Teaching & Mentorship\""
+              "location": "Johannesburg, South Africa"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "My African journey on Teaching & Mentorship\"",
               "speaker": "Martha Davila Garcia",
               "location": "Washington DC, United States"
             }
@@ -34273,7 +34265,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL G",
-          "introduction": "Introduction",
           "title": "S39 - Hypothalamic Neural Circuits Controlling Metabolism: From Central Mechanisms to Peripheral Impact",
           "chairs": [
             "Nathalie Krauth (København N, Denmark)",
@@ -34282,26 +34273,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "The circadian control of hunger"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "The circadian control of hunger",
+              "speaker": "Amelia M. Douglass",
+              "location": "Klosterneuburg, Austria"
+            },
+            {
               "speaker": "Sophie M. Steculorum",
               "location": "Köln, Germany",
+              "time": "10:09 - 10:31",
               "title": "A hypothalamic circuit for food odor perception"
             },
             {
-              "time": "10:09 - 10:31",
-              "title": "Multifaceted mitochondria in hypothalamic neurons"
-            },
-            {
               "time": "10:31 - 10:53",
+              "title": "Multifaceted mitochondria in hypothalamic neurons",
               "speaker": "Marc Claret",
-              "location": "Barcelona, Spain",
-              "title": "The Flexible Brain: Hypothalamic Plasticity in Therapeutics and Exercise"
+              "location": "Barcelona, Spain"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "The Flexible Brain: Hypothalamic Plasticity in Therapeutics and Exercise",
               "speaker": "Kevin W. Williams",
               "location": "Dallas, Texas, United States"
             }
@@ -34311,7 +34305,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL H",
-          "introduction": "Introduction",
           "title": "S40 - Dopamine Circuits in Negative Valence and Anxiety",
           "chairs": [
             "Miriam Melis (Monserrato, Italy)"
@@ -34319,35 +34312,35 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "A pallido-midbrain endocannabinoid circuit for the attribution of threat salience"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "A pallido-midbrain endocannabinoid circuit for the attribution of threat salience",
               "speaker": "Miguel Á. Luján",
-              "location": "Chicago, United States",
-              "title": "The role of dopaminergic signaling in the basolateral amygdala in anxiety-related behaviors"
+              "location": "Chicago, United States"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "The role of dopaminergic signaling in the basolateral amygdala in anxiety-related behaviors",
               "speaker": "Alba Garcia-Baos",
-              "location": "Bordeaux, France",
-              "title": "Dopamine transmission in the anterior insula shapes the neural coding of anxiety"
+              "location": "Bordeaux, France"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Dopamine transmission in the anterior insula shapes the neural coding of anxiety",
               "speaker": "Yoni Couderc",
-              "location": "Bordeaux, France",
-              "title": "Dysregulation of sensory processing upon developmental perturbation of endocannabinoid signaling"
+              "location": "Bordeaux, France"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Dysregulation of sensory processing upon developmental perturbation of endocannabinoid signaling",
               "speaker": "Miriam Melis",
-              "location": "Monserrato, Italy",
-              "title": "Open Theatre (OT)"
+              "location": "Monserrato, Italy"
             },
             {
               "time": "11:30 - 11:50",
-              "title": "Open Theatre OT07 - Nikon AXMP: From complex experiment to simplified setup: NIKON"
+              "title": "Open Theatre (OT)"
             }
           ]
         },
@@ -34361,11 +34354,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "Eduardo Zimmer",
               "location": "Brazil"
             }
@@ -34383,11 +34376,11 @@
             {
               "time": "12:00 - 12:00",
               "speaker": "Magdalena Gomółka",
-              "location": "Wroclaw, Poland",
-              "title": "Participants Liaison"
+              "location": "Wroclaw, Poland"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Participants Liaison",
               "speaker": "Michaela Fencková",
               "location": "České Budějovice, Czech Republic"
             }
@@ -34403,11 +34396,11 @@
           ],
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "Kathleen D'Hondt",
               "location": "Belgium"
             }
@@ -34420,18 +34413,17 @@
           "title": "SiE15 - Communicating Science Through Scientific Figures: From Data to Insight",
           "talks": [
             {
-              "time": "12:00 - 12:00",
-              "title": "Speakers"
+              "time": "12:00 - 12:00"
             },
             {
               "time": "12:00 - 12:00",
+              "title": "Speakers",
               "speaker": "Christos Frantzidis",
-              "location": "United Kingdom",
-              "title": "Open Theatre (OT)"
+              "location": "United Kingdom"
             },
             {
               "time": "13:00 - 13:30",
-              "title": "Open Theatre OT08 - Mindfulness and Emotional Wellbeing: From Rumination to Compassion"
+              "title": "Open Theatre (OT)"
             }
           ]
         },
@@ -34439,15 +34431,15 @@
           "type": "Special Lecture (SL)",
           "time": "13:30 - 14:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "SL06 - Eric Kandel Prize Lecture & Scientific Award Ceremony, Johannes Kohl (UK)",
           "talks": [
             {
               "time": "13:30 - 13:35",
-              "title": "Plasticity of the parental brain"
+              "title": "Introduction"
             },
             {
               "time": "13:35 - 14:30",
+              "title": "Plasticity of the parental brain",
               "speaker": "Johannes Kohl",
               "location": "London, United Kingdom"
             }
@@ -34457,26 +34449,25 @@
           "type": "Special Lecture (SL)",
           "time": "13:30 - 14:30",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "SL07 - Chica and Heinz Schaller Foundation Award Lecture, Carmen Sandi (CH)",
           "talks": [
             {
               "time": "13:30 - 13:38",
-              "title": "Mitochondria and Brain Function: From Mechanisms to Interventions in Mental Health"
+              "title": "Introduction"
             },
             {
               "time": "13:38 - 14:25",
+              "title": "Mitochondria and Brain Function: From Mechanisms to Interventions in Mental Health",
               "speaker": "Carmen Sandi",
-              "location": "Lausanne, Switzerland",
-              "title": "Award Ceremony"
+              "location": "Lausanne, Switzerland"
             },
             {
               "time": "14:25 - 14:30",
-              "title": "Open Theatre (OT)"
+              "title": "Award Ceremony"
             },
             {
               "time": "15:00 - 15:30",
-              "title": "Open Theatre OT09 - From Academia to a Start-up: Upgrade, Nightmare or Odyssey? Moderator: Marc Tallo Parra (Spain)"
+              "title": "Open Theatre (OT)"
             }
           ]
         },
@@ -34484,7 +34475,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "S41 - Studying the neural circuits dynamics underlying the adapting of complex behaviors",
           "chairs": [
             "Oded Klavir (Haifa, Israel)"
@@ -34492,28 +34482,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Neural circuits of fear memory driven actions."
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Neural circuits of fear memory driven actions.",
               "speaker": "Oded Klavir",
-              "location": "Haifa, Israel",
-              "title": "Contributions of the insular cortex to anxiety: from dopamine modulation to psychedelic anxiolysis"
+              "location": "Haifa, Israel"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Contributions of the insular cortex to anxiety: from dopamine modulation to psychedelic anxiolysis",
               "speaker": "Anna Beyeler",
-              "location": "Bordeaux, France",
-              "title": "Astrocytic Control of Prefrontal Cortex SOM Neurons Enables Emotion Discrimination"
+              "location": "Bordeaux, France"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Astrocytic Control of Prefrontal Cortex SOM Neurons Enables Emotion Discrimination",
               "speaker": "Francesco Papaleo",
-              "location": "Genova, Italy",
-              "title": "How motivational brain circuits shape social behavior in mice."
+              "location": "Genova, Italy"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "How motivational brain circuits shape social behavior in mice.",
               "speaker": "Ewelina Knapska",
               "location": "Warsaw, Poland"
             }
@@ -34523,7 +34514,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "S42 - Neuroprostheses for the restoration of sensory and motor functions in humans",
           "chairs": [
             "Giacomo Valle (Gothenburg, Sweden)"
@@ -34531,28 +34521,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Restoring touch through a brain interface: intracortical microstimulation of human S1"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Restoring touch through a brain interface: intracortical microstimulation of human S1",
               "speaker": "Giacomo Valle",
-              "location": "Gothenburg, Sweden",
-              "title": "New approaches for a visual brain prosthesis for blind people"
+              "location": "Gothenburg, Sweden"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "New approaches for a visual brain prosthesis for blind people",
               "speaker": "Pieter Roelfsema",
-              "location": "Amsterdam, Netherlands",
-              "title": "Neural interfaces for bioelectronic applications"
+              "location": "Amsterdam, Netherlands"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Neural interfaces for bioelectronic applications",
               "speaker": "Maria Asplund",
-              "location": "Gothenburg, Sweden",
-              "title": "Cortical hand movement prosthetics"
+              "location": "Gothenburg, Sweden"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Cortical hand movement prosthetics",
               "speaker": "Hans Scherberger",
               "location": "Göttingen, Germany"
             }
@@ -34562,7 +34553,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL C",
-          "introduction": "Introduction",
           "title": "S43 - Plasticity and Fluid Cell Identity of Cortical Interneuron",
           "chairs": [
             "Lynette Lim (Leuven, Belgium)",
@@ -34571,28 +34561,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "MicroRNA Mechanisms of Interneuron Migration and Specification"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "MicroRNA Mechanisms of Interneuron Migration and Specification",
               "speaker": "Giordano Lippi",
-              "location": "La Jolla, United States",
-              "title": "Novel Mechanisms of Interneuron Recruitment into Cortical and Hippocampal Neuronal Circuits"
+              "location": "La Jolla, United States"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Novel Mechanisms of Interneuron Recruitment into Cortical and Hippocampal Neuronal Circuits",
               "speaker": "Carla Gomes da Silva",
-              "location": "Utrecht, Netherlands",
-              "title": "Assembly of Cortical Interneurons in a Dynamic Circuit"
+              "location": "Utrecht, Netherlands"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Assembly of Cortical Interneurons in a Dynamic Circuit",
               "speaker": "Beatriz Rico",
-              "location": "London, United Kingdom",
-              "title": "Fate Plasticity in Cortical Interneurons: From Specification to Reprogramming"
+              "location": "London, United Kingdom"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Fate Plasticity in Cortical Interneurons: From Specification to Reprogramming",
               "speaker": "Mohammed Mostajo-Radji",
               "location": "Santa Cruz, United States"
             }
@@ -34602,7 +34593,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL D",
-          "introduction": "Introduction",
           "title": "S44 - 'Computational astroscience': brain computations beyond neurons",
           "chairs": [
             "Inbal Goshen (Jerusalem, Israel)"
@@ -34610,28 +34600,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Complementary encoding of spatial information in hippocampal astrocytes"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Complementary encoding of spatial information in hippocampal astrocytes",
               "speaker": "Tommaso Fellin",
-              "location": "Genova, Italy",
-              "title": "Linking astrocyte structure to function: insights from computational approaches"
+              "location": "Genova, Italy"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Linking astrocyte structure to function: insights from computational approaches",
               "speaker": "Audrey Denizot",
-              "location": "Villeurbanne, France",
-              "title": "Intrinsic Goals for Autonomous Agents: Model-Based Exploration in Virtual Zebrafish Predicts Ethological Behavior and Whole-Brain Dynamics"
+              "location": "Villeurbanne, France"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Intrinsic Goals for Autonomous Agents: Model-Based Exploration in Virtual Zebrafish Predicts Ethological Behavior and Whole-Brain Dynamics",
               "speaker": "Aran Nayebi",
-              "location": "Pittsburgh, United States",
-              "title": "Dissecting the role of astrocytes in brain circuits and behavior"
+              "location": "Pittsburgh, United States"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Dissecting the role of astrocytes in brain circuits and behavior",
               "speaker": "Thomas Papouin",
               "location": "St Louis, United States"
             }
@@ -34641,7 +34632,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL E",
-          "introduction": "Introduction",
           "title": "S45 - Presynaptic Mechanisms Controlling Neural Circuits",
           "chairs": [
             "Pablo Castillo (Bronx, United States)",
@@ -34650,28 +34640,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Ultrastructural plasticity of neurons"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Ultrastructural plasticity of neurons",
               "speaker": "Shigeki Watanabe",
-              "location": "Baltimore, United States",
-              "title": "Visual experience regulates presynaptic function at thalamocortical synapses in adult visual cortex"
+              "location": "Baltimore, United States"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Visual experience regulates presynaptic function at thalamocortical synapses in adult visual cortex",
               "speaker": "Elizabeth M Quinlan",
-              "location": "Madison, United States",
-              "title": "Nanoscale Synaptic Remodeling in Homeostatic Plasticity"
+              "location": "Madison, United States"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Nanoscale Synaptic Remodeling in Homeostatic Plasticity",
               "speaker": "Martin Müller",
-              "location": "Zurich, Switzerland",
-              "title": "Unconventional mechanisms underlying presynaptic plasticity"
+              "location": "Zurich, Switzerland"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Unconventional mechanisms underlying presynaptic plasticity",
               "speaker": "Coralie Berthoux",
               "location": "Montpellier, France"
             }
@@ -34681,7 +34672,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL F",
-          "introduction": "Introduction",
           "title": "S46 - Unravelling Neurobiological Mechanisms underlying Eating Disorders using Preclinical Models",
           "chairs": [
             "Odile VILTART (Villeneuve d'Ascq, France)",
@@ -34690,28 +34680,31 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Role of the ghrelin/LEAP-2 balance on feeding and reward-oriented behaviors in anorexia nervosa"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Role of the ghrelin/LEAP-2 balance on feeding and reward-oriented behaviors in anorexia nervosa",
               "speaker": "Virginie TOLLE",
-              "location": "Paris, France",
-              "title": "Effect of Glp-1 receptor activation on food choice and eating behaviour"
+              "location": "Paris, France"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Effect of Glp-1 receptor activation on food choice and eating behaviour",
               "speaker": "Lora Heisler",
-              "location": "Aberdeen, United Kingdom",
-              "title": "Targeting the orexigenic system in animal models of eating disorders"
+              "location": "Aberdeen, United Kingdom"
             },
             {
               "time": "16:26 - 16:48",
-              "speaker": "Roger ADAN",
-              "location": "Utrecht, Netherlands",
-              "title": "Chemogenetic manipulation of neuronal ensembles in an anorexia nervosa mouse model"
+              "title": "Targeting the orexigenic system in animal models of eating disorders",
+              "speaker": "Suzanne L Dickson",
+              "location": "Göteborg, Sweden"
             },
             {
-              "time": "16:48 - 17:10"
+              "speaker": "Roger ADAN",
+              "location": "Utrecht, Netherlands",
+              "time": "16:48 - 17:10",
+              "title": "Chemogenetic manipulation of neuronal ensembles in an anorexia nervosa mouse model"
             }
           ]
         },
@@ -34719,7 +34712,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL G",
-          "introduction": "Introduction",
           "title": "S47 - Neural Networks of Memory Integration: Beyond classical Associations",
           "chairs": [
             "Paula Gómez-Sotres (Barcelona, Spain)"
@@ -34727,28 +34719,29 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Manipulating the dynamics of choice ensembles during short-term memory"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Manipulating the dynamics of choice ensembles during short-term memory",
               "speaker": "Balma Serrano Porcar",
-              "location": "Barcelona, Spain",
-              "title": "Endocannabinoid modulation of neural networks underlying incidental association memory"
+              "location": "Barcelona, Spain"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Endocannabinoid modulation of neural networks underlying incidental association memory",
               "speaker": "Marta Barrera-Conde",
-              "location": "Bordeaux, France",
-              "title": "Social transmission of stress from conspecifics alters memory in male mice"
+              "location": "Bordeaux, France"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Social transmission of stress from conspecifics alters memory in male mice",
               "speaker": "Paula Gómez-Sotres",
-              "location": "Barcelona, Spain",
-              "title": "Higher order interactions between neurons during memory retrieval in mice"
+              "location": "Barcelona, Spain"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Higher order interactions between neurons during memory retrieval in mice",
               "speaker": "Sheena Josselyn",
               "location": "Toronto, Canada"
             }
@@ -34758,7 +34751,6 @@
           "type": "Scientific Symposia (S)",
           "time": "15:40 - 17:10",
           "location": "HALL H",
-          "introduction": "Introduction",
           "title": "S48 - Glia as a Key to Brain Metabolic Flexibility in Health and Disease",
           "chairs": [
             "Carlos Matute (Leioa, Spain)"
@@ -34766,35 +34758,35 @@
           "talks": [
             {
               "time": "15:40 - 15:42",
-              "title": "Metabolic flexibility of Drosophila glial cells"
+              "title": "Introduction"
             },
             {
               "time": "15:42 - 16:04",
+              "title": "Metabolic flexibility of Drosophila glial cells",
               "speaker": "Stefanie Schirmeier",
-              "location": "Dresden, Germany",
-              "title": "Metabolic control of microglia in health and disease"
+              "location": "Dresden, Germany"
             },
             {
               "time": "16:04 - 16:26",
+              "title": "Metabolic control of microglia in health and disease",
               "speaker": "Rosa Chiara Paolicelli",
-              "location": "Lausanne, Switzerland",
-              "title": "Oligodendrocytes in brain energy metabolism and neurodegenerative disease"
+              "location": "Lausanne, Switzerland"
             },
             {
               "time": "16:26 - 16:48",
+              "title": "Oligodendrocytes in brain energy metabolism and neurodegenerative disease",
               "speaker": "Klaus-Armin Nave",
-              "location": "Göttingen, Germany",
-              "title": "Brain myelin as an energy source and reservoir"
+              "location": "Göttingen, Germany"
             },
             {
               "time": "16:48 - 17:10",
+              "title": "Brain myelin as an energy source and reservoir",
               "speaker": "Carlos Matute",
-              "location": "Leioa, Spain",
-              "title": "Award Ceremony (AC)"
+              "location": "Leioa, Spain"
             },
             {
               "time": "17:20 - 17:30",
-              "title": "HALL A AC03 - FKNE Mentoring and FKNE PhD Thesis Prizes Ceremony Awardee: Dietmar Schmitz (Berlin, Germany) Awardee: Andrea Muñoz Zamora (New York, United States) Awardee: Rémi Hudelle (Lausanne, Switzerland)"
+              "title": "Award Ceremony (AC)"
             }
           ]
         },
@@ -34802,15 +34794,15 @@
           "type": "Plenary Lecture (PL)",
           "time": "17:30 - 18:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "PL07 - Plenary Lecture, Holly Ingraham (US)",
           "talks": [
             {
               "time": "17:30 - 17:35",
-              "title": "Adaptive Responses in the Female Brain and Why They Matter for Women’s Health"
+              "title": "Introduction"
             },
             {
               "time": "17:35 - 18:30",
+              "title": "Adaptive Responses in the Female Brain and Why They Matter for Women’s Health",
               "speaker": "Holly Ingraham",
               "location": "San Francisco, United States"
             }
@@ -34827,11 +34819,11 @@
           ],
           "talks": [
             {
-              "time": "18:45 - 18:45",
-              "title": "Speakers"
+              "time": "18:45 - 18:45"
             },
             {
               "time": "18:45 - 18:45",
+              "title": "Speakers",
               "speaker": "Toshiyuki Takagi",
               "location": "Strasbourg, France"
             }
@@ -34844,15 +34836,15 @@
           "title": "NE18 - “SPEED-NEURODATING” A workshop aimed at the students to meet young and consolidated Neuroscientists Networking Events (NE)",
           "talks": [
             {
-              "time": "18:45 - 20:15",
+              "time": "18:45 - 20:15"
+            },
+            {
+              "time": "18:45 - 18:45",
               "title": "HALL H NE19 - Sleep Across the Tree of Life: Phylogenetic Perspectives on Sleep Definition, Regulation, and Function Moderator: Julie Seibt (United Kingdom) Moderator: Charlotte Boccara (Norway) Programme"
             },
             {
               "time": "18:45 - 18:45",
-              "title": "Speakers"
-            },
-            {
-              "time": "18:45 - 18:45",
+              "title": "Speakers",
               "speaker": "Giorgio Gilestro",
               "location": "United Kingdom"
             }
@@ -34865,11 +34857,11 @@
           "title": "NE20 - Effective Allyship as an Essential Strategy for Professional Career Development",
           "talks": [
             {
-              "time": "18:45 - 18:45",
-              "title": "Speakers"
+              "time": "18:45 - 18:45"
             },
             {
               "time": "18:45 - 18:45",
+              "title": "Speakers",
               "speaker": "Sonakshi Gupta",
               "location": "Lyon, France"
             }
@@ -40168,15 +40160,15 @@
           "type": "Plenary Lecture (PL)",
           "time": "08:30 - 09:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "PL08 - Plenary Lecture, Gonçalo Castelo-Branco (SE)",
           "talks": [
             {
               "time": "08:30 - 08:35",
-              "title": "Single-Cell and Spatial Transcriptomics and Epigenomics in Neural Development and in Multiple Sclerosis"
+              "title": "Introduction"
             },
             {
               "time": "08:35 - 09:30",
+              "title": "Single-Cell and Spatial Transcriptomics and Epigenomics in Neural Development and in Multiple Sclerosis",
               "speaker": "Gonçalo Castelo-Branco",
               "location": "Stockholm, Sweden"
             }
@@ -40186,7 +40178,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "S49 - Bridging animal models and humans in brain-body research",
           "chairs": [
             "Yoav Livneh (Rehovot, Israel)"
@@ -40194,28 +40185,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Interoception of cerebrospinal fluid contributes to postural control, morphogenesis and host defense"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Interoception of cerebrospinal fluid contributes to postural control, morphogenesis and host defense",
               "speaker": "Claire Wyart",
-              "location": "Paris, France",
-              "title": "Joint modulation of attention, brain fluid dynamics, and bodily physiology across behavioral states"
+              "location": "Paris, France"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Joint modulation of attention, brain fluid dynamics, and bodily physiology across behavioral states",
               "speaker": "Zinong Yang",
-              "location": "Cambridge, United States",
-              "title": "Brain-body interactions: sensations and predictions in the insular cortex"
+              "location": "Cambridge, United States"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Brain-body interactions: sensations and predictions in the insular cortex",
               "speaker": "Yoav Livneh",
-              "location": "Rehovot, Israel",
-              "title": "Improving brain-body interactions in depression with non-invasive vagus nerve stimulation"
+              "location": "Rehovot, Israel"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Improving brain-body interactions in depression with non-invasive vagus nerve stimulation",
               "speaker": "Nils Kroemer",
               "location": "Bonn, Germany"
             }
@@ -40225,7 +40217,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL B",
-          "introduction": "Introduction",
           "title": "S50 - The role of inhibition in memory processes",
           "chairs": [
             "Jiannis Taxidis (Toronto, Canada)"
@@ -40233,28 +40224,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Inhibitory control of hippocampal sharp-wave ripple duration"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Inhibitory control of hippocampal sharp-wave ripple duration",
               "speaker": "Tristan Geiller",
-              "location": "New Haven, United States",
-              "title": "Dendrite-targeting interneurons form experience-dependent CA1 representations"
+              "location": "New Haven, United States"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Dendrite-targeting interneurons form experience-dependent CA1 representations",
               "speaker": "Christine Grienberger",
-              "location": "Waltham, United States",
-              "title": "The role of inhibition in shaping memory-encoding hippocampal sequences"
+              "location": "Waltham, United States"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "The role of inhibition in shaping memory-encoding hippocampal sequences",
               "speaker": "Jiannis Taxidis",
-              "location": "Toronto, Canada",
-              "title": "Interneuron contribution to hippocampal sequences for memory and planning"
+              "location": "Toronto, Canada"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Interneuron contribution to hippocampal sequences for memory and planning",
               "speaker": "Antonio Fernandez Ruiz",
               "location": "Ithaca, United States"
             }
@@ -40264,7 +40256,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL C",
-          "introduction": "Introduction",
           "title": "S51 - Robustness and flexibility of natural motor behaviors: from biomechanics to neural commands",
           "chairs": [
             "Vanessa Stempel (Frankfurt, Germany)",
@@ -40273,28 +40264,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Flexible and robust neuromuscular code of mouse locomotion"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Flexible and robust neuromuscular code of mouse locomotion",
               "speaker": "Graziana Gatto",
-              "location": "Cologne, Germany",
-              "title": "Flexible neuromuscular control of learned and innate behaviors in the songbird"
+              "location": "Cologne, Germany"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Flexible neuromuscular control of learned and innate behaviors in the songbird",
               "speaker": "Samuel Sober",
-              "location": "Atlanta, United States",
-              "title": "Learned object manipulation in the fly"
+              "location": "Atlanta, United States"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Learned object manipulation in the fly",
               "speaker": "Pavan Ramdya",
-              "location": "Lausanne, Switzerland",
-              "title": "Brainstem building blocks to generate complex forelimb behaviors"
+              "location": "Lausanne, Switzerland"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Brainstem building blocks to generate complex forelimb behaviors",
               "speaker": "Haohao Wu",
               "location": "Basel, Switzerland"
             }
@@ -40304,7 +40296,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL D",
-          "introduction": "Introduction",
           "title": "S52 - Regulation of circuit function and cognition by oligodendroglia",
           "chairs": [
             "Wendy Xin (San Francisco, United States)",
@@ -40313,28 +40304,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "How selective functional circuits are sculpted by oligodendrocyte precursor cells"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "How selective functional circuits are sculpted by oligodendrocyte precursor cells",
               "speaker": "Tim Czopka",
-              "location": "Edinburgh, United Kingdom",
-              "title": "Oligodendrocytes and myelin shape cortical maturation and experience-dependent neuronal plasticity"
+              "location": "Edinburgh, United Kingdom"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Oligodendrocytes and myelin shape cortical maturation and experience-dependent neuronal plasticity",
               "speaker": "Wendy Xin",
-              "location": "San Francisco, United States",
-              "title": "Myelination & Demyelination of Interneurons Shape Cortical Circuitry, Network Dynamics, and Behavior"
+              "location": "San Francisco, United States"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Myelination & Demyelination of Interneurons Shape Cortical Circuitry, Network Dynamics, and Behavior",
               "speaker": "Maria Cecilia Angulo",
-              "location": "Paris, France",
-              "title": "Sleep is a common driver for pathological electrical discharges in demyelinating circuits"
+              "location": "Paris, France"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Sleep is a common driver for pathological electrical discharges in demyelinating circuits",
               "speaker": "Mohit Dubey",
               "location": "Amsterdam, Netherlands"
             }
@@ -40344,7 +40336,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL E",
-          "introduction": "Introduction",
           "title": "S53 - Astroglial and Vascular Mechanisms of Metabolic Adaptations to Hypoxia",
           "chairs": [
             "Isabel Christie (Sheffield, United Kingdom)"
@@ -40352,28 +40343,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Astrocytes are essential for gas homeostasis but are they necessary for cerebral perfusion?"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Astrocytes are essential for gas homeostasis but are they necessary for cerebral perfusion?",
               "speaker": "Isabel Christie",
-              "location": "Sheffield, United Kingdom",
-              "title": "Real-time oxygen imaging reveals spontaneous cortical hypoxic pockets in the healthy brain"
+              "location": "Sheffield, United Kingdom"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Real-time oxygen imaging reveals spontaneous cortical hypoxic pockets in the healthy brain",
               "speaker": "Felix Beinlich",
-              "location": "København N, Denmark",
-              "title": "Varying Oxygen Availability in the Brain and its Impact on Function"
+              "location": "København N, Denmark"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Varying Oxygen Availability in the Brain and its Impact on Function",
               "speaker": "Catherine Hall",
-              "location": "Brighton, United Kingdom",
-              "title": "Reversing the pericyte-mediated fall of cerebral blood flow and capillary stalling that occurs in AD"
+              "location": "Brighton, United Kingdom"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Reversing the pericyte-mediated fall of cerebral blood flow and capillary stalling that occurs in AD",
               "speaker": "Nils Korte",
               "location": "Boston, United States"
             }
@@ -40383,7 +40375,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL F",
-          "introduction": "Introduction",
           "title": "S54 - The role of neuronal synchronization during sleep",
           "chairs": [
             "Celia Kjærby (Copenhagen, Denmark)",
@@ -40392,26 +40383,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "The role of neuromodulators in shaping infraslow sleep microstructure"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "The role of neuromodulators in shaping infraslow sleep microstructure",
+              "speaker": "Celia Kjærby",
+              "location": "Copenhagen, Denmark"
+            },
+            {
               "speaker": "Franz Weber",
               "location": "Philadelphia, United States",
+              "time": "10:09 - 10:31",
               "title": "Brainstem dynamics regulating REM sleep"
             },
             {
-              "time": "10:09 - 10:31",
-              "title": "State-dependent memory processes during sleep"
-            },
-            {
               "time": "10:31 - 10:53",
+              "title": "State-dependent memory processes during sleep",
               "speaker": "Azahara Oliva",
-              "location": "Ithaca, United States",
-              "title": "Insights from Human Deep Brain Recordings into the Role of Neuronal Synchronization During Sleep"
+              "location": "Ithaca, United States"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Insights from Human Deep Brain Recordings into the Role of Neuronal Synchronization During Sleep",
               "speaker": "Tobias Staudigl",
               "location": "Munich, Germany"
             }
@@ -40421,7 +40415,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL G",
-          "introduction": "Introduction",
           "title": "S55 - Latent representations for smart decisions",
           "chairs": [
             "Dileep George (Mountain View, United States)",
@@ -40430,28 +40423,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "Cortico-cerebellar modularity as an inductive bias for learning temporal task structure"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "Cortico-cerebellar modularity as an inductive bias for learning temporal task structure",
               "speaker": "Claudia Clopath",
-              "location": "London, United Kingdom",
-              "title": "Space is a latent sequence: A theory of the hippocampus"
+              "location": "London, United Kingdom"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Space is a latent sequence: A theory of the hippocampus",
               "speaker": "Dileep George",
-              "location": "Mountain View, United States",
-              "title": "Learning latent representations for goal-directed spatial navigation and planning"
+              "location": "Mountain View, United States"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Learning latent representations for goal-directed spatial navigation and planning",
               "speaker": "Giovanni Pezzulo",
-              "location": "Rome, Italy",
-              "title": "A cellular basis for mapping behavioural structure"
+              "location": "Rome, Italy"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "A cellular basis for mapping behavioural structure",
               "speaker": "Mohamady El-Gaby",
               "location": "Oxford, United Kingdom"
             }
@@ -40461,7 +40455,6 @@
           "type": "Scientific Symposia (S)",
           "time": "09:45 - 11:15",
           "location": "HALL H",
-          "introduction": "Introduction",
           "title": "S56 - Photopharmacology for precision modulation of neural signalling",
           "chairs": [
             "Galyna Maleeva (Barcelona, Spain)",
@@ -40470,28 +40463,29 @@
           "talks": [
             {
               "time": "09:45 - 09:47",
-              "title": "In vivo photopharmacology with photocaged drugs and neuropeptides"
+              "title": "Introduction"
             },
             {
               "time": "09:47 - 10:09",
+              "title": "In vivo photopharmacology with photocaged drugs and neuropeptides",
               "speaker": "Matthew R. Banghart",
-              "location": "La Jolla, California, United States",
-              "title": "Optical control of specific NMDA receptor populations"
+              "location": "La Jolla, California, United States"
             },
             {
               "time": "10:09 - 10:31",
+              "title": "Optical control of specific NMDA receptor populations",
               "speaker": "Laetitia Mony",
-              "location": "Paris, France",
-              "title": "Photopharmacology reveals the molecular mechanisms of memory persistence"
+              "location": "Paris, France"
             },
             {
               "time": "10:31 - 10:53",
+              "title": "Photopharmacology reveals the molecular mechanisms of memory persistence",
               "speaker": "Miquel Bosch",
-              "location": "Sant Cugat del Vallès, Spain",
-              "title": "Light-responsive azobenzenes for modulating membrane capacitance and reinstating visual responses"
+              "location": "Sant Cugat del Vallès, Spain"
             },
             {
               "time": "10:53 - 11:15",
+              "title": "Light-responsive azobenzenes for modulating membrane capacitance and reinstating visual responses",
               "speaker": "Chiara Bertarelli",
               "location": "Milan, Italy"
             }
@@ -40501,15 +40495,15 @@
           "type": "Special Lecture (SL)",
           "time": "11:30 - 12:30",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "SL08 - EJN Special Feature Lecture, Felix Leroy (ES)",
           "talks": [
             {
               "time": "11:30 - 11:35",
-              "title": "Neuronal circuits regulating social preferences"
+              "title": "Introduction"
             },
             {
               "time": "11:35 - 12:30",
+              "title": "Neuronal circuits regulating social preferences",
               "speaker": "Felix Leroy",
               "location": "San Juan de Alicante, Spain"
             }
@@ -40522,17 +40516,17 @@
           "title": "SL09 - ERA-NET NEURON/Excellent Paper in Neuroscience Award Lecture, Linbi Cai (CH) Welcome and Introduction",
           "talks": [
             {
-              "time": "11:30 - 11:40",
-              "title": "A nasal chemosensation–dependent critical window for somatosensory development"
+              "time": "11:30 - 11:40"
             },
             {
               "time": "11:40 - 12:20",
+              "title": "A nasal chemosensation–dependent critical window for somatosensory development",
               "speaker": "Linbi Cai",
-              "location": "Zurich, Switzerland",
-              "title": "Award Ceremony"
+              "location": "Zurich, Switzerland"
             },
             {
-              "time": "12:20 - 12:30"
+              "time": "12:20 - 12:30",
+              "title": "Award Ceremony"
             }
           ]
         },
@@ -40540,36 +40534,35 @@
           "type": "Special Lecture (SL)",
           "time": "11:30 - 12:30",
           "location": "HALL C",
-          "introduction": "Introduction",
           "title": "SL10 - ALBA-Elsevier Award Lecture on Brain Sciences, Valeria Della-Maggiore (AR), Éva Mikics (HU)",
           "talks": [
             {
               "time": "11:30 - 11:33",
-              "title": "Leveraging the multiple timescales of motor learning to optimize training and rehabilitation"
-            },
-            {
-              "time": "11:33 - 11:58",
-              "speaker": "Valeria Della-Maggiore",
-              "location": "Villa Chacabuco, Argentina",
               "title": "Introduction"
             },
             {
+              "time": "11:33 - 11:58",
+              "title": "Leveraging the multiple timescales of motor learning to optimize training and rehabilitation",
+              "speaker": "Valeria Della-Maggiore",
+              "location": "Villa Chacabuco, Argentina"
+            },
+            {
               "time": "11:58 - 12:01",
-              "title": "Neural Network Signatures of Susceptibility to Fear Dysregulation Following Traumatic Stress"
+              "title": "Introduction"
             },
             {
               "time": "12:01 - 12:26",
+              "title": "Neural Network Signatures of Susceptibility to Fear Dysregulation Following Traumatic Stress",
               "speaker": "Éva Mikics",
-              "location": "Budapest, Hungary",
-              "title": "Award Ceremony"
+              "location": "Budapest, Hungary"
             },
             {
               "time": "12:26 - 12:30",
-              "title": "Award Ceremony (AC)"
+              "title": "Award Ceremony"
             },
             {
               "time": "12:50 - 13:00",
-              "title": "HALL A AC04 - ALBA-FKNE Diversity Prize Ceremony Awardee: Dori Grijseels (Bonn, Germany)"
+              "title": "Award Ceremony (AC)"
             }
           ]
         },
@@ -40577,15 +40570,15 @@
           "type": "Plenary Lecture (PL)",
           "time": "13:00 - 14:00",
           "location": "HALL A",
-          "introduction": "Introduction",
           "title": "PL09 - Hertie Foundation Closing Lecture, Edward Chang (US)",
           "talks": [
             {
               "time": "13:00 - 13:05",
-              "title": "Beyond Phonemes: Word-Level Representations in the Human Auditory Cortex"
+              "title": "Introduction"
             },
             {
               "time": "13:05 - 14:00",
+              "title": "Beyond Phonemes: Word-Level Representations in the Human Auditory Cortex",
               "speaker": "Edward Chang",
               "location": "San Francisco, United States"
             }

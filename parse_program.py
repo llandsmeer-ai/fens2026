@@ -357,9 +357,13 @@ def parse_non_poster_event(day_lines, start_idx, event_type):
             # Skip panelist header
             i += 1
             continue
-        if l == "Introduction" or l == "Introduction to the session" or l == "Brief introduction" or l == "Workshop presentation":
+        if l == "Introduction to the session" or l == "Workshop presentation":
             result["introduction"] = l
             i += 1
+            break
+        if l == "Introduction" or l == "Brief introduction":
+            # "Introduction" is the first talk title, not event metadata.
+            # Break without consuming it so the talks loop sees it.
             break
         if l == "Programme" or l.startswith("Speakers"):
             i += 1
@@ -380,8 +384,10 @@ def parse_non_poster_event(day_lines, start_idx, event_type):
         result["chairs"] = chairs
 
     # Now parse talks
+    # The PDF extraction puts titles BEFORE their time range:
+    #   [title]  [time]  [Speaker: Name]  [next title]  [time]  [Speaker: Name]  ...
     talks = []
-    # current_talk being built
+    pending_title = None
     current_talk = None
 
     while i < len(day_lines):
@@ -414,9 +420,12 @@ def parse_non_poster_event(day_lines, start_idx, event_type):
 
         # Is it a time range?
         if is_time_range(l):
-            if current_talk:
-                talks.append(current_talk)
-            current_talk = {"time": l}
+            if current_talk is None:
+                current_talk = {}
+            current_talk["time"] = l
+            if pending_title:
+                current_talk["title"] = pending_title
+                pending_title = None
             i += 1
             continue
 
@@ -435,32 +444,20 @@ def parse_non_poster_event(day_lines, start_idx, event_type):
             i += 1
             continue
 
-        # If we have a current talk, it's the title
-        if current_talk is not None:
-            if "title" not in current_talk:
-                current_talk["title"] = l
-            else:
-                current_talk["title"] += " " + l
+        # Regular text — it's a title. If current_talk already has time or speaker,
+        # it belongs to a complete talk; flush and start a new title for the next talk.
+        if current_talk is not None and ("time" in current_talk or "speaker" in current_talk):
+            talks.append(current_talk)
+            current_talk = None
+            pending_title = l
             i += 1
             continue
 
-        # If no current talk, this line might be a talk title without preceding time/speaker
-        if current_talk is None:
-            current_talk = {"title": l}
-            i += 1
-            continue
-
-        # Check if we're in a networking event with just speaker names
-        if event_type in ["Networking Events (NE)"]:
-            m = re.match(r'^(.+?)\s+\((.+)\)$', l)
-            if m:
-                result.setdefault("talks", []).append({
-                    "speaker": m.group(1).strip(),
-                    "location": m.group(2).strip()
-                })
-                i += 1
-                continue
-
+        # Accumulate title (no time or speaker seen yet for this talk)
+        if pending_title:
+            pending_title += " " + l
+        else:
+            pending_title = l
         i += 1
 
     if current_talk:

@@ -193,6 +193,26 @@ function stars(){try{return JSON.parse(localStorage.getItem(LS_STARS)||'{}')}cat
 function saveStars(s){localStorage.setItem(LS_STARS,JSON.stringify(s))}
 function starred(k){return!!stars()[k]}
 
+// Tracks which groups are manually open/closed — persisted across render().
+// Keys match data-toggle attribute values (e.g. "evt-...", "sess-...", "ts-...").
+var openStates={};
+
+function toggleBody(el){
+  var tg=el.closest('[data-toggle]');
+  if(!tg)return;
+  var key=tg.getAttribute('data-toggle');
+  var card=tg.closest('.card');
+  var body=card?card.querySelector('.card-body'):null;
+  var nestedCard=tg.closest('.nested-card');
+  if(nestedCard)body=nestedCard.querySelector('.nested-body');
+  var arrow=tg.querySelector('.arrow');
+  if(body){
+    var now=body.classList.toggle('open');
+    if(arrow)arrow.classList.toggle('open',now);
+    openStates[key]=now;
+  }
+}
+
 function toggleStar(k){
   var s=stars();
   if(s[k])delete s[k];else s[k]=true;
@@ -216,9 +236,9 @@ function parseSession(s){
 }
 
 function tagHtml(cls){return '<span class="tag tag-'+cls+'">'+cls+'</span>'}
-function arrowHtml(open){return '<span class="arrow'+(open?' open':'')+'">&#9654;</span>'}
+function arrowHtml(open){return '<span class="arrow'+(open?' open':'')+'" onclick="toggleBody(this)">&#9654;</span>'}
 function starHtml(k,active){
-  return '<button class="star-btn'+(active?' active':'')+'" data-star="'+esc(k)+'">&#9733;</button>';
+  return '<button class="star-btn'+(active?' active':'')+'" data-star="'+esc(k)+'" onclick="toggleStar(this.getAttribute(\'data-star\'))">&#9733;</button>';
 }
 
 function render(){
@@ -295,18 +315,19 @@ function render(){
     var anySessOpen=false;
     for(var si=0;si<visSess.length;si++){
       var v=visSess[si];
-      if(v.sessStarred||(isSearch&&v.mp.length>0)||(onlyStarred&&v.mp.length>0)){
+      var sk='sess-'+esc(v.sess.session_name);
+      if(openStates[sk]||(isSearch&&v.mp.length>0)||(onlyStarred&&v.mp.length>0)){
         anySessOpen=true;break;
       }
     }
-    var grpOpen=grpStarred||anySessOpen;
+    var grpOpen=openStates[grpKey]||anySessOpen;
 
     h+='<div class="card">';
     // Timeslot header — clicking toggles entire group
     h+='<div class="card-header" data-toggle="ts-'+esc(day.date)+'-'+esc(ts)+'">';
     h+=arrowHtml(grpOpen);
     h+=tagHtml('timeslot');
-    h+='<span class="title">'+slotLabel+'</span>';
+    h+='<span class="title" onclick="toggleBody(this)">'+slotLabel+'</span>';
     h+='<span class="meta">'+esc(ts)+'</span>';
     h+='</div>';
     // Star for the timeslot (OUTSIDE toggle header)
@@ -324,14 +345,15 @@ function render(){
       var sessStarred=v.sessStarred;
       var mp=v.mp;
 
-      var sessOpen=sessStarred||(isSearch&&mp.length>0)||(onlyStarred&&mp.length>0);
+      var sk='sess-'+esc(sess.session_name);
+      var sessOpen=openStates[sk]||(isSearch&&mp.length>0)||(onlyStarred&&mp.length>0);
       var ps=parseSession(sess.session_name);
       var sessTitle=ps?ps.theme:sess.session_name;
       h+='<div class="nested-card">';
       h+='<div class="nested-header" data-toggle="sess-'+esc(sess.session_name)+'">';
       h+=arrowHtml(sessOpen);
       h+=tagHtml('poster');
-      h+='<span class="title">'+esc(sessTitle)+'</span>';
+      h+='<span class="title" onclick="toggleBody(this)">'+esc(sessTitle)+'</span>';
       h+='<span class="meta">'+mp.length+' posters</span>';
       h+=starHtml(sessKey,sessStarred);
       h+='</div>';
@@ -374,10 +396,7 @@ function render(){
     }
     if(onlyStarred&&!evStarred&&mt.length===0)return '';
     var hasContent=(ev.talks||[]).length>0;
-    var anyStar=evStarred||mt.some(function(t){
-      return starred('talk::'+eid+'::'+(t.speaker||'')+'::'+(t.time||''));
-    });
-    var isOpen=evStarred||anyStar||(isSearch&&mt.length>0)||(onlyStarred&&mt.length>0);
+    var isOpen=openStates['evt-'+esc(eid)]||(isSearch&&mt.length>0)||(onlyStarred&&mt.length>0);
 
     var typeClass='symposia';
     var m={'Scientific Symposia (S)':'symposia','Plenary Lecture (PL)':'plenary',
@@ -390,7 +409,7 @@ function render(){
     r+='<div class="card-header" data-toggle="evt-'+esc(eid)+'">';
     r+=arrowHtml(isOpen);
     r+=tagHtml(typeClass);
-    r+='<span class="title">'+esc(ev.title)+'</span>';
+    r+='<span class="title" onclick="toggleBody(this)">'+esc(ev.title)+'</span>';
     r+='<span class="meta">';
     if(ev.time && ev.location) r+=esc(ev.time)+' \u00b7 '+esc(ev.location);
     else if(ev.time) r+=esc(ev.time);
@@ -491,31 +510,7 @@ function render(){
   document.getElementById('content').innerHTML=h;
 }
 
-// Click handler: toggle only when clicking .arrow or .title inside [data-toggle].
-// Star buttons, meta text, and other areas do NOT trigger expand/collapse.
-document.addEventListener('click',function(e){
-  if(e.target.closest('[data-star]')){
-    toggleStar(e.target.closest('[data-star]').getAttribute('data-star'));
-    return;
-  }
-  var arrow=e.target.closest('[data-toggle] .arrow');
-  var title=e.target.closest('[data-toggle] .title');
-  if(arrow||title){
-    var tg=(arrow||title).closest('[data-toggle]');
-    var card=tg.closest('.card');
-    if(!card)return;
-    var body=card.querySelector('.card-body');
-    var nestedCard=tg.closest('.nested-card');
-    if(nestedCard){
-      body=nestedCard.querySelector('.nested-body');
-    }
-    if(body){
-      var open=body.classList.toggle('open');
-      var arrowEl=tg.querySelector('.arrow');
-      if(arrowEl)arrowEl.classList.toggle('open',open);
-    }
-  }
-});
+
 
 function switchDay(idx){
   curDay=idx;
