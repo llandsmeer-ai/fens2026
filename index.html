@@ -300,19 +300,22 @@ function render(){
       var sess=grp.sessions[si];
       var sessKey='session::'+sess.session_name;
       var sessStarred=starred(sessKey);
+      var ps=parseSession(sess.session_name);
+      var sessTitle=ps?ps.theme:sess.session_name;
 
       var mp=[];
+      var sessMatch=q&&mq(sessTitle,q);
       for(var pi=0;pi<sess.posters.length;pi++){
         var p=sess.posters[pi];
         var pk='poster::'+p.id;
         totalP++;
         if(onlyStarred&&!grpStarred&&!sessStarred&&!starred(pk))continue;
-        if(q&&!mq(p.title,q)&&!mq(p.presenter,q)&&!mq(p.id,q))continue;
+        if(!sessMatch && q&&!mq(p.title,q)&&!mq(p.presenter,q)&&!mq(p.id,q))continue;
         mp.push(p);
       }
 
       if(mp.length===0 && (onlyStarred||isSearch))continue;
-      visSess.push({sess:sess,sessStarred:sessStarred,mp:mp});
+      visSess.push({sess:sess,sessStarred:sessStarred,mp:mp,sessTitle:sessTitle});
     }
 
     if(onlyStarred&&!grpStarred&&visSess.length===0)continue;
@@ -364,8 +367,7 @@ function render(){
 
       var sk='sess-'+esc(sess.session_name);
       var sessOpen=openStates[sk]||(isSearch&&mp.length>0)||(onlyStarred&&mp.length>0);
-      var ps=parseSession(sess.session_name);
-      var sessTitle=ps?ps.theme:sess.session_name;
+      var sessTitle=v.sessTitle;
       h+='<div class="nested-card">';
       h+='<div class="nested-header" data-toggle="sess-'+esc(sess.session_name)+'">';
       h+=arrowHtml(sessOpen);
