@@ -50,6 +50,14 @@ h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
   font-size: 0.85rem; background: var(--surface); user-select: none; white-space: nowrap;
 }
 .star-filter.active { border-color: var(--star); background: var(--star-bg); }
+.share-btn {
+  display: flex; align-items: center; gap: 6px; padding: 7px 14px;
+  border: 1px solid var(--border); border-radius: 8px; cursor: pointer;
+  font-size: 0.85rem; font-weight: 600; background: var(--surface);
+  color: var(--text); user-select: none; white-space: nowrap;
+}
+.share-btn:hover { border-color: var(--accent); }
+.share-btn:active { background: var(--accent-light); }
 .stats { color: var(--text-muted); font-size: 0.8rem; margin-bottom: 12px; }
 
 /* Cards */
@@ -189,6 +197,7 @@ h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
 <div class="controls">
   <input class="search-box" id="search" type="text" placeholder="Search titles, authors, poster IDs...">
   <label class="star-filter" id="starFilter">&#9733; Starred only</label>
+  <button class="share-btn" id="shareBtn" type="button">&#8682; Share</button>
 </div>
 <div class="stats" id="stats"></div>
 <div id="content"></div>
@@ -198,9 +207,22 @@ const LS_STARS='fens2026_stars';
 let data=null;
 let curDay=0;
 
-function stars(){try{return JSON.parse(localStorage.getItem(LS_STARS)||'{}')}catch(e){return{}}}
-function saveStars(s){localStorage.setItem(LS_STARS,JSON.stringify(s))}
-function starred(k){return!!stars()[k]}
+// Cache the stars map in memory. Reading localStorage + JSON.parse on every one
+// of the 5000+ starred() calls per render was a real perf problem on mobile.
+var _stars=null;
+function stars(){
+  if(_stars===null){
+    try{_stars=JSON.parse(localStorage.getItem(LS_STARS)||'{}')||{};}
+    catch(e){_stars={};}
+  }
+  return _stars;
+}
+function saveStars(s){
+  _stars=s;
+  try{localStorage.setItem(LS_STARS,JSON.stringify(s));}
+  catch(e){/* storage disabled/full (e.g. private mode) — keep in-memory copy */}
+}
+function starred(k){return !!stars()[k];}
 
 // Tracks which groups are manually open/closed — persisted across render().
 // Keys match data-toggle attribute values (e.g. "evt-...", "sess-...", "ts-...").
@@ -222,16 +244,33 @@ function toggleBody(el){
   }
 }
 
-function toggleStar(k){
+function toggleStar(k,btn){
   var s=stars();
-  if(s[k])delete s[k];else s[k]=true;
-  saveStars(s);render();
+  var active;
+  if(s[k]){delete s[k];active=false;}else{s[k]=true;active=true;}
+  saveStars(s);
+  // When the "starred only" filter is on, un/starring changes what's visible,
+  // so a full re-render is required. Otherwise update in place — avoids the
+  // scroll-jump + slow rebuild that made saving look broken on mobile.
+  if(document.getElementById('starFilter').classList.contains('active')){render();return;}
+  if(btn){
+    btn.classList.toggle('active',active);
+    var item=btn.closest('.poster-item,.talk');
+    if(item)item.classList.toggle('starred',active);
+  }
 }
 
 function esc(s){
   var d=document.createElement('div');
   d.appendChild(document.createTextNode(s));
   return d.innerHTML;
+}
+// esc() does NOT escape quotes, so it is unsafe for attribute values.
+// Use escAttr() for anything placed inside a double-quoted HTML attribute.
+function escAttr(s){
+  return String(s==null?'':s)
+    .replace(/&/g,'&amp;').replace(/"/g,'&quot;')
+    .replace(/</g,'&lt;').replace(/>/g,'&gt;');
 }
 function hlight(t,q){
   if(!q)return esc(t);
@@ -255,7 +294,7 @@ function toTitleCase(s){
 }
 function arrowHtml(open){return '<span class="arrow'+(open?' open':'')+'" onclick="toggleBody(this)">&#9654;</span>'}
 function starHtml(k,active){
-  return '<button class="star-btn'+(active?' active':'')+'" data-star="'+esc(k)+'" onclick="toggleStar(this.getAttribute(\'data-star\'))">&#9733;</button>';
+  return '<button class="star-btn'+(active?' active':'')+'" data-star="'+escAttr(k)+'" onclick="toggleStar(this.getAttribute(\'data-star\'),this)">&#9733;</button>';
 }
 
 function render(){
@@ -298,7 +337,7 @@ function render(){
     var visSess=[];
     for(var si=0;si<grp.sessions.length;si++){
       var sess=grp.sessions[si];
-      var sessKey='session::'+sess.session_name;
+      var sessKey='evt::'+sess.sid;
       var sessStarred=starred(sessKey);
       var ps=parseSession(sess.session_name);
       var sessTitle=ps?ps.theme:sess.session_name;
@@ -335,7 +374,7 @@ function render(){
     var anySessOpen=false;
     for(var si=0;si<visSess.length;si++){
       var v=visSess[si];
-      var sk='sess-'+esc(v.sess.session_name);
+      var sk='sess-'+v.sess.sid;
       if(openStates[sk]||(isSearch&&v.mp.length>0)||(onlyStarred&&v.mp.length>0)){
         anySessOpen=true;break;
       }
@@ -361,15 +400,15 @@ function render(){
     for(var si=0;si<visSess.length;si++){
       var v=visSess[si];
       var sess=v.sess;
-      var sessKey='session::'+sess.session_name;
+      var sessKey='evt::'+sess.sid;
       var sessStarred=v.sessStarred;
       var mp=v.mp;
 
-      var sk='sess-'+esc(sess.session_name);
+      var sk='sess-'+sess.sid;
       var sessOpen=openStates[sk]||(isSearch&&mp.length>0)||(onlyStarred&&mp.length>0);
       var sessTitle=v.sessTitle;
       h+='<div class="nested-card">';
-      h+='<div class="nested-header" data-toggle="sess-'+esc(sess.session_name)+'">';
+      h+='<div class="nested-header" data-toggle="sess-'+sess.sid+'">';
       h+=arrowHtml(sessOpen);
       h+=tagHtml('poster');
       h+='<span class="title" onclick="toggleBody(this)">'+esc(sessTitle)+'</span>';
@@ -402,20 +441,19 @@ function render(){
 
   // --- Non-poster events (grouped by time to show parallel events) ---
   function renderEvent(ev){
-    var eid=ev.title;
-    var evKey='event::'+eid;
+    var evKey='evt::'+ev.sid;
     var evStarred=starred(evKey);
     var mt=[];
     for(var ti=0;ti<(ev.talks||[]).length;ti++){
       var t=ev.talks[ti];
-      var tk='talk::'+eid+'::'+(t.speaker||'')+'::'+(t.time||'');
+      var tk='talk::'+t.sid;
       if(onlyStarred&&!evStarred&&!starred(tk))continue;
       if(q&&!mq(t.title||'',q)&&!mq(t.speaker||'',q))continue;
       mt.push(t);
     }
     if(mt.length===0 && (onlyStarred||isSearch))return '';
     var hasContent=(ev.talks||[]).length>0;
-    var isOpen=openStates['evt-'+esc(eid)]||(isSearch&&mt.length>0)||(onlyStarred&&mt.length>0);
+    var isOpen=openStates['evt-'+ev.sid]||(isSearch&&mt.length>0)||(onlyStarred&&mt.length>0);
 
     var typeClass='symposia';
     var m={'Scientific Symposia (S)':'symposia','Plenary Lecture (PL)':'plenary',
@@ -425,7 +463,7 @@ function render(){
     typeClass=m[ev.type]||'other';
 
     var r='<div class="card">';
-    r+='<div class="card-header" data-toggle="evt-'+esc(eid)+'">';
+    r+='<div class="card-header" data-toggle="evt-'+ev.sid+'">';
     r+=arrowHtml(isOpen);
     r+=tagHtml(typeClass);
     r+='<span class="title" onclick="toggleBody(this)">'+esc(ev.title)+'</span>';
@@ -441,7 +479,7 @@ function render(){
       r+='<div class="chairs">Chairs: '+ev.chairs.map(function(c){return esc(c);}).join(', ')+'</div>';
     }
     function renderTalk(t){
-      var tk='talk::'+eid+'::'+(t.speaker||'')+'::'+(t.time||'');
+      var tk='talk::'+t.sid;
       var tStar=starred(tk);
       var s='<div class="talk'+(tStar?' starred':'')+'">';
       s+='<span class="talk-time">'+(t.time||'')+'</span>';
@@ -530,6 +568,106 @@ function render(){
 
 
 
+// --- Share: build a plaintext printout of the starred program ---
+function shortType(t){
+  var m={ScientificSymposia:'Symposium',PosterSession:'Posters',PlenaryLecture:'Plenary',
+    SpecialInterestEvents:'Special Interest',TechnicalWorkshop:'Workshop',SpecialLecture:'Lecture',
+    BrainDebate:'Debate',OpeningCeremony:'Ceremony',NetworkingEvents:'Networking'};
+  return m[t]||(t||'Event');
+}
+function buildStarredText(){
+  if(!data)return '';
+  var s=stars();
+  var out=[];
+  for(var di=0;di<data.days.length;di++){
+    var day=data.days[di];
+    var dayLines=[];
+    for(var ei=0;ei<day.events.length;ei++){
+      var ev=day.events[ei];
+      if(ev.posters){
+        var sessStar=!!s['evt::'+ev.sid];
+        var tsStar=!!s['timeslot::'+day.date+'::'+(ev.time||'')];
+        var picked=[];
+        for(var pi=0;pi<ev.posters.length;pi++){
+          var p=ev.posters[pi];
+          if(sessStar||tsStar||s['poster::'+p.id])picked.push(p);
+        }
+        if(picked.length){
+          dayLines.push('* '+(ev.session_name||'Poster Session')+'  ['+(ev.time||'')+']');
+          for(var pi=0;pi<picked.length;pi++){
+            var p=picked[pi];
+            dayLines.push('   - '+p.id+'  '+toTitleCase(p.title)
+              +(p.presenter?' — '+p.presenter:'')+(p.location?' ('+p.location+')':''));
+          }
+        }
+      }else{
+        var evStar=!!s['evt::'+ev.sid];
+        var picked=[];
+        for(var ti=0;ti<(ev.talks||[]).length;ti++){
+          var t=ev.talks[ti];
+          if(evStar||s['talk::'+t.sid])picked.push(t);
+        }
+        if(evStar||picked.length){
+          dayLines.push('* '+(ev.title||shortType(ev.type))
+            +'  ['+(ev.time||'')+(ev.location?', '+ev.location:'')+']');
+          for(var ti=0;ti<picked.length;ti++){
+            var t=picked[ti];
+            dayLines.push('   - '+(t.time?t.time+'  ':'')+(t.speaker||'')
+              +(t.title?' — '+t.title:'')+(t.location?' ('+t.location+')':''));
+          }
+        }
+      }
+    }
+    if(dayLines.length){
+      out.push(day.day+', '+day.date);
+      out.push.apply(out,dayLines);
+      out.push('');
+    }
+  }
+  if(!out.length)return '';
+  return 'FENS 2026 — My program\n\n'+out.join('\n').replace(/\n+$/,'')+'\n';
+}
+
+function showShareFallback(text){
+  var wrap=document.createElement('div');
+  wrap.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;'
+    +'display:flex;align-items:center;justify-content:center;padding:16px;';
+  var box=document.createElement('div');
+  box.style.cssText='background:var(--surface);color:var(--text);border-radius:12px;'
+    +'padding:16px;max-width:560px;width:100%;max-height:80vh;display:flex;flex-direction:column;gap:10px;';
+  var ta=document.createElement('textarea');
+  ta.value=text;ta.readOnly=true;
+  ta.style.cssText='flex:1;min-height:240px;width:100%;font-family:monospace;font-size:0.8rem;'
+    +'padding:8px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--text);';
+  var row=document.createElement('div');
+  row.style.cssText='display:flex;gap:8px;justify-content:flex-end;';
+  var copy=document.createElement('button');
+  copy.textContent='Copy';copy.className='share-btn';
+  copy.onclick=function(){ta.select();try{document.execCommand('copy');copy.textContent='Copied!';}catch(e){}};
+  var close=document.createElement('button');
+  close.textContent='Close';close.className='share-btn';
+  close.onclick=function(){document.body.removeChild(wrap);};
+  row.appendChild(copy);row.appendChild(close);
+  box.appendChild(ta);box.appendChild(row);wrap.appendChild(box);
+  wrap.onclick=function(e){if(e.target===wrap)document.body.removeChild(wrap);};
+  document.body.appendChild(wrap);
+  ta.focus();ta.select();
+}
+
+async function shareStarred(){
+  var text=buildStarredText();
+  if(!text){alert('You have not starred anything yet.\nTap the ★ next to talks, posters or sessions first.');return;}
+  if(navigator.share){
+    try{await navigator.share({title:'FENS 2026 — My program',text:text});return;}
+    catch(e){if(e&&e.name==='AbortError')return;/* else fall through to fallback */}
+  }
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    try{await navigator.clipboard.writeText(text);alert('Program copied to clipboard.');return;}
+    catch(e){/* fall through */}
+  }
+  showShareFallback(text);
+}
+
 function switchDay(idx){
   curDay=idx;
   var tabs=document.querySelectorAll('.tab');
@@ -557,6 +695,7 @@ async function init(){
     document.getElementById('starFilter').addEventListener('click',function(){
       this.classList.toggle('active');render();
     });
+    document.getElementById('shareBtn').addEventListener('click',shareStarred);
     render();
   }catch(e){
     document.getElementById('subtitle').textContent='Error loading program';

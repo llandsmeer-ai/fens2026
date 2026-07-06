@@ -536,6 +536,16 @@ def clean(obj):
 
 data = clean(data)
 
+# Assign stable, HTML-safe star IDs to every starrable node.
+# These contain only [a-z0-9] so they never break HTML attributes, and they are
+# decoupled from display strings so localStorage keys stay stable across parser
+# tweaks. Positional within (day, event, talk) — deterministic for a given input.
+for di, day in enumerate(data["days"]):
+    for ei, ev in enumerate(day["events"]):
+        ev["sid"] = f"d{di}e{ei}"
+        for ti, talk in enumerate(ev.get("talks") or []):
+            talk["sid"] = f"d{di}e{ei}t{ti}"
+
 with open("program.json", "w", encoding="utf-8") as f:
     json.dump(data, f, indent=2, ensure_ascii=False)
 
