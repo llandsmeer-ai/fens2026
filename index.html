@@ -132,6 +132,32 @@ h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
 .tag-ceremony { background: var(--tag-ceremony); }
 .tag-timeslot { background: var(--tag-timeslot); }
 .tag-other { background: var(--text-muted); }
+.tag-now { background: #16a34a; }
+.tag-clash { background: #dc2626; }
+
+/* Day headings shown in global (search / agenda) mode */
+.day-heading {
+  font-size: 1rem; font-weight: 700; margin: 20px 0 10px;
+  padding-bottom: 4px; border-bottom: 2px solid var(--border);
+}
+.day-heading:first-child { margin-top: 4px; }
+.today-pill {
+  font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+  background: var(--accent); color: #fff; padding: 2px 7px; border-radius: 10px;
+  vertical-align: middle; margin-left: 6px;
+}
+/* "Happening now" cards get a green accent edge */
+.card.now { border-color: #16a34a; box-shadow: inset 3px 0 0 #16a34a; }
+.tab.today { border-color: var(--accent); }
+
+/* Back-to-top floating button */
+#toTop {
+  position: fixed; right: 16px; bottom: 16px; z-index: 900;
+  width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--border);
+  background: var(--surface); color: var(--text); font-size: 1.2rem; cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); display: none; align-items: center; justify-content: center;
+}
+#toTop.show { display: flex; }
 
 /* Talks */
 .chairs { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 8px; }
@@ -146,8 +172,9 @@ h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
   font-family: monospace; min-width: 90px;
 }
 .talk-content { flex: 1; min-width: 0; }
-.talk-speaker { font-size: 0.85rem; font-weight: 600; }
-.talk-title { font-size: 0.85rem; }
+.talk-title { font-size: 0.85rem; font-weight: 600; }
+.talk-speaker { font-size: 0.82rem; color: var(--text-muted); }
+.card-header .meta-sep { color: var(--text-muted); }
 
 /* Posters */
 .poster-item {
@@ -175,13 +202,14 @@ h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
   .card-header .tag { margin-top: 2px; margin-bottom: 1px; }
   .card-header .meta { order: 3; }
   .card-header .meta-time, .card-header .meta-location { display: block; font-size: 0.75rem; line-height: 1.4; }
+  .card-header .meta-sep { display: none; }
   .card-header .title { width: 100%; order: 4; }
   .card-header .star-btn { order: 5; align-self: flex-end; }
   .poster-id { min-width: 85px; }
   .talk-time { min-width: 70px; }
   .controls { flex-direction: column; }
   .search-box { min-width: 100%; }
-  .star-filter { width: 100%; justify-content: center; }
+  .star-filter, .share-btn { width: 100%; justify-content: center; }
   .nested-header .tag-poster { display: none; }
   .poster-item { flex-wrap: wrap; }
   .poster-item .poster-id { order: 1; flex: 1; min-width: 0; }
@@ -195,12 +223,14 @@ h1 { font-size: 1.5rem; font-weight: 700; margin-bottom: 4px; }
 <div class="subtitle" id="subtitle">Loading program...</div>
 <div class="tabs" id="tabs"></div>
 <div class="controls">
-  <input class="search-box" id="search" type="text" placeholder="Search titles, authors, poster IDs...">
+  <input class="search-box" id="search" type="text" placeholder="Search titles, authors, cities, poster IDs...">
   <label class="star-filter" id="starFilter">&#9733; Starred only</label>
   <button class="share-btn" id="shareBtn" type="button">&#8682; Share</button>
+  <button class="share-btn" id="shareLinkBtn" type="button">&#128279; Share link</button>
 </div>
 <div class="stats" id="stats"></div>
 <div id="content"></div>
+<button id="toTop" type="button" title="Back to top">&#8593;</button>
 
 <script>
 const LS_STARS='fens2026_stars';
@@ -249,6 +279,7 @@ function toggleStar(k,btn){
   var active;
   if(s[k]){delete s[k];active=false;}else{s[k]=true;active=true;}
   saveStars(s);
+  updateStarCount();
   // When the "starred only" filter is on, un/starring changes what's visible,
   // so a full re-render is required. Otherwise update in place — avoids the
   // scroll-jump + slow rebuild that made saving look broken on mobile.
@@ -297,13 +328,72 @@ function starHtml(k,active){
   return '<button class="star-btn'+(active?' active':'')+'" data-star="'+escAttr(k)+'" onclick="toggleStar(this.getAttribute(\'data-star\'),this)">&#9733;</button>';
 }
 
-function render(){
-  if(!data)return;
-  var q=document.getElementById('search').value.trim();
-  var onlyStarred=document.getElementById('starFilter').classList.contains('active');
-  var day=data.days[curDay];
-  var isSearch=!!q;
-  document.getElementById('subtitle').textContent=day.date+' \u2014 '+day.day;
+// Parse "HH:MM - HH:MM" into {start,end} minutes-since-midnight.
+function parseTimeRange(t){
+  if(!t)return null;
+  var m=String(t).match(/(\d{1,2}):(\d{2})\s*-\s*(\d{1,2}):(\d{2})/);
+  if(!m)return null;
+  return {start:(+m[1])*60+(+m[2]), end:(+m[3])*60+(+m[4])};
+}
+function nowInRange(t,nowMin){
+  if(nowMin<0)return false;
+  var tr=parseTimeRange(t);
+  return !!tr && nowMin>=tr.start && nowMin<tr.end;
+}
+// Match the device's current date against the program days (for "today"/"now").
+var MONTHS=['January','February','March','April','May','June','July','August',
+  'September','October','November','December'];
+function todayLabel(){
+  var n=new Date();
+  return MONTHS[n.getMonth()]+' '+n.getDate()+', '+n.getFullYear();
+}
+function nowMinutes(){var n=new Date();return n.getHours()*60+n.getMinutes();}
+// A time range with start==end (e.g. "19:00 - 19:00") is a degenerate placeholder
+// (common on networking-event speaker lists) — treat its time as absent.
+function zeroDurTime(t){var tr=parseTimeRange(t);return !!tr&&tr.start===tr.end;}
+// The parser leaks section headers ("Speakers", "Programme") in as talks with no
+// speaker — filter them out of talk lists and the share export.
+function isJunkTalk(t){return !t.speaker&&(t.title==='Speakers'||t.title==='Programme'||t.title==='Panelists');}
+function eventTypeClass(ev){
+  var m={'Scientific Symposia (S)':'symposia','Plenary Lecture (PL)':'plenary',
+    'Special Interest Events (SiE)':'special','Technical Workshop (W)':'workshop',
+    'Special Lecture (SL)':'lecture','Brain Debate':'debate','Opening Ceremony':'ceremony',
+    'Networking Events (NE)':'network'};
+  return m[ev.type]||'other';
+}
+function updateStarCount(){
+  var el=document.getElementById('starFilter');
+  if(!el)return;
+  var n=Object.keys(stars()).length;
+  el.innerHTML='&#9733; Starred'+(n?' ('+n+')':'');
+}
+// Among starred non-poster events, find those whose times overlap another
+// starred event on the same day \u2014 the "I double-booked myself" signal.
+function computeConflicts(){
+  var s=stars(), set={};
+  for(var di=0;di<data.days.length;di++){
+    var evs=[], day=data.days[di];
+    for(var ei=0;ei<day.events.length;ei++){
+      var ev=day.events[ei];
+      if(ev.posters||!s['evt::'+ev.sid])continue;
+      var tr=parseTimeRange(ev.time);
+      if(tr)evs.push({sid:ev.sid,tr:tr});
+    }
+    for(var a=0;a<evs.length;a++)for(var b=a+1;b<evs.length;b++){
+      if(evs[a].tr.start<evs[b].tr.end && evs[b].tr.start<evs[a].tr.end){
+        set[evs[a].sid]=true; set[evs[b].sid]=true;
+      }
+    }
+  }
+  return set;
+}
+
+// Render a single day's events. Returns {h, visE, visP, totalP} rather than
+// touching the DOM, so render() can compose one day (browsing) or all days
+// (global search / agenda) with the same code.
+function renderDay(day, ctx){
+  var q=ctx.q, onlyStarred=ctx.onlyStarred, isSearch=ctx.isSearch;
+  var conflictSids=ctx.conflictSids||{}, nowMin=(ctx.nowMin==null?-1:ctx.nowMin);
 
   // Separate poster sessions and non-poster events
   var posterEvs=[];
@@ -349,7 +439,7 @@ function render(){
         var pk='poster::'+p.id;
         totalP++;
         if(onlyStarred&&!grpStarred&&!sessStarred&&!starred(pk))continue;
-        if(!sessMatch && q&&!mq(p.title,q)&&!mq(p.presenter,q)&&!mq(p.id,q))continue;
+        if(!sessMatch && q&&!mq(p.title,q)&&!mq(p.presenter,q)&&!mq(p.id,q)&&!mq(p.location,q))continue;
         mp.push(p);
       }
 
@@ -380,19 +470,16 @@ function render(){
       }
     }
     var grpOpen=openStates[grpKey]||anySessOpen;
+    var tsNow=nowInRange(ts,nowMin);
 
-    h+='<div class="card">';
+    h+='<div class="card'+(tsNow?' now':'')+'">';
     // Timeslot header — clicking toggles entire group
     h+='<div class="card-header" data-toggle="ts-'+esc(day.date)+'-'+esc(ts)+'">';
     h+=arrowHtml(grpOpen);
-    h+=tagHtml('timeslot');
+    h+=tagHtml('poster');
+    if(tsNow)h+='<span class="tag tag-now">&#9679; Now</span>';
     h+='<span class="title" onclick="toggleBody(this)">'+slotLabel+'</span>';
     h+='<span class="meta">'+esc(ts)+'</span>';
-    h+='</div>';
-    // Star for the timeslot (OUTSIDE toggle header)
-    h+='<div style="display:flex;align-items:center;gap:8px;padding:0 16px 2px;border-bottom:1px solid var(--border)">';
-    h+=starHtml(grpKey,grpStarred);
-    h+='<span style="font-size:0.75rem;color:var(--text-muted)">Star this time block</span>';
     h+='</div>';
 
     h+='<div class="card-body'+(grpOpen?' open':'')+'">';
@@ -410,7 +497,6 @@ function render(){
       h+='<div class="nested-card">';
       h+='<div class="nested-header" data-toggle="sess-'+sess.sid+'">';
       h+=arrowHtml(sessOpen);
-      h+=tagHtml('poster');
       h+='<span class="title" onclick="toggleBody(this)">'+esc(sessTitle)+'</span>';
       h+='<span class="meta">'+mp.length+' posters</span>';
       h+=starHtml(sessKey,sessStarred);
@@ -426,7 +512,7 @@ function render(){
         h+='<span class="poster-id">'+esc(p.id)+'</span>';
         h+='<div class="poster-info"><div class="poster-title">'+hlight(toTitleCase(p.title),q)+'</div>';
         h+='<div class="poster-presenter">'+hlight(p.presenter,q);
-        if(p.location)h+=' ('+esc(p.location)+')';
+        if(p.location)h+=' ('+hlight(p.location,q)+')';
         h+='</div></div>';
         h+=starHtml(pk,pStar);
         h+='</div>';
@@ -440,35 +526,35 @@ function render(){
   }
 
   // --- Non-poster events (grouped by time to show parallel events) ---
-  function renderEvent(ev){
+  function renderEvent(ev, hideTag){
     var evKey='evt::'+ev.sid;
     var evStarred=starred(evKey);
     var mt=[];
     for(var ti=0;ti<(ev.talks||[]).length;ti++){
       var t=ev.talks[ti];
+      if(isJunkTalk(t))continue;
       var tk='talk::'+t.sid;
       if(onlyStarred&&!evStarred&&!starred(tk))continue;
-      if(q&&!mq(t.title||'',q)&&!mq(t.speaker||'',q))continue;
+      if(q&&!mq(t.title||'',q)&&!mq(t.speaker||'',q)&&!mq(t.location||'',q))continue;
       mt.push(t);
     }
     if(mt.length===0 && (onlyStarred||isSearch))return '';
-    var hasContent=(ev.talks||[]).length>0;
     var isOpen=openStates['evt-'+ev.sid]||(isSearch&&mt.length>0)||(onlyStarred&&mt.length>0);
 
-    var typeClass='symposia';
-    var m={'Scientific Symposia (S)':'symposia','Plenary Lecture (PL)':'plenary',
-      'Special Interest Events (SiE)':'special','Technical Workshop (W)':'workshop',
-      'Special Lecture (SL)':'lecture','Brain Debate':'debate','Opening Ceremony':'ceremony',
-      'Networking Events (NE)':'network'};
-    typeClass=m[ev.type]||'other';
+    var typeClass=eventTypeClass(ev);
+    var evNow=nowInRange(ev.time,nowMin);
+    var evClash=!!conflictSids[ev.sid];
 
-    var r='<div class="card">';
+    var r='<div class="card'+(evNow?' now':'')+'">';
     r+='<div class="card-header" data-toggle="evt-'+ev.sid+'">';
     r+=arrowHtml(isOpen);
-    r+=tagHtml(typeClass);
+    if(!hideTag)r+=tagHtml(typeClass);
+    if(evNow)r+='<span class="tag tag-now">&#9679; Now</span>';
+    if(evClash)r+='<span class="tag tag-clash">&#9888; Clash</span>';
     r+='<span class="title" onclick="toggleBody(this)">'+esc(ev.title)+'</span>';
     r+='<span class="meta">';
     if(ev.time) r+='<span class="meta-time">'+esc(ev.time)+'</span>';
+    if(ev.time&&ev.location) r+='<span class="meta-sep"> · </span>';
     if(ev.location) r+='<span class="meta-location">'+esc(ev.location)+'</span>';
     r+='</span>';
     r+=starHtml(evKey,evStarred);
@@ -481,20 +567,24 @@ function render(){
     function renderTalk(t){
       var tk='talk::'+t.sid;
       var tStar=starred(tk);
+      var showTime=t.time&&!zeroDurTime(t.time);
       var s='<div class="talk'+(tStar?' starred':'')+'">';
-      s+='<span class="talk-time">'+(t.time||'')+'</span>';
+      s+='<span class="talk-time">'+(showTime?esc(t.time):'')+'</span>';
       s+='<div class="talk-content">';
-      if(t.speaker)s+='<div class="talk-speaker">'+hlight(t.speaker,q)+(t.location?' <span style="color:var(--text-muted);font-weight:400">('+esc(t.location)+')</span>':'')+'</div>';
+      // Title first, speaker below — reads better for symposia and lectures.
       if(t.title)s+='<div class="talk-title">'+hlight(t.title,q)+'</div>';
+      if(t.speaker)s+='<div class="talk-speaker">'+hlight(t.speaker,q)+(t.location?' <span style="color:var(--text-muted);font-weight:400">('+hlight(t.location,q)+')</span>':'')+'</div>';
       if(!t.speaker&&!t.title)s+='<div style="color:var(--text-muted)">(no details)</div>';
       s+='</div>';
       s+=starHtml(tk,tStar);
       s+='</div>';
       return s;
     }
-    if(hasContent){
-      var shown=mt.length>0?mt:ev.talks;
-      // Group talks by time to detect parallel ones
+    var shown=(mt.length>0?mt:(ev.talks||[])).filter(function(t){return !isJunkTalk(t);});
+    if(shown.length){
+      // Group talks by time to detect genuinely parallel ones. Degenerate
+      // zero-duration times (networking speaker lists) are NOT parallel — render
+      // them as a plain list instead of a misleading "Parallel" box.
       var tgroups=[], tgmap={};
       for(var ti=0;ti<shown.length;ti++){
         var t=shown[ti];
@@ -505,8 +595,8 @@ function render(){
       }
       for(var gi=0;gi<tgroups.length;gi++){
         var grp=tgroups[gi];
-        if(grp.talks.length===1){
-          r+=renderTalk(grp.talks[0]);
+        if(grp.talks.length===1||zeroDurTime(grp.time)){
+          for(var ti2=0;ti2<grp.talks.length;ti2++)r+=renderTalk(grp.talks[ti2]);
         }else{
           r+='<div style="margin:6px 0;padding:6px 8px;border:1px solid var(--border);border-radius:8px;background:var(--accent-light)">';
           r+='<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;font-size:0.8rem;color:var(--text-muted)">';
@@ -536,34 +626,89 @@ function render(){
   }
   for(var gi=0;gi<evGroups.length;gi++){
     var grp=evGroups[gi];
-    // Render each event in the group, filtering invisible ones
-    var rendered=[];
+    // First pass: which events in this time slot are actually visible.
+    var vis=[];
     for(var ei=0;ei<grp.events.length;ei++){
-      var evHtml=renderEvent(grp.events[ei]);
-      if(evHtml) { rendered.push(evHtml); visE++; }
+      if(renderEvent(grp.events[ei],false)!=='')vis.push(grp.events[ei]);
     }
-    if(rendered.length===0)continue;
-    if(rendered.length===1){
-      h+=rendered[0];
-    }else{
-      h+='<div style="margin:0 0 16px;padding:10px 12px;border:1px solid var(--border);border-radius:12px;background:var(--accent-light)">';
-      h+='<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;font-size:0.8rem;color:var(--text-muted)">';
-      h+='<span style="font-weight:600">&#8646; Parallel sessions</span>';
-      h+='<span style="font-family:monospace">'+esc(grp.time)+'</span>';
-      h+='</div>';
-      for(var ei=0;ei<rendered.length;ei++){
-        h+=rendered[ei];
-      }
-      h+='</div>';
+    if(vis.length===0)continue;
+    visE+=vis.length;
+    if(vis.length===1){
+      h+=renderEvent(vis[0],false);
+      continue;
     }
+    // Multiple parallel events: if they're all the same type, show the type tag
+    // once on the group header instead of repeating it on every card.
+    var types={};
+    for(var ei=0;ei<vis.length;ei++)types[eventTypeClass(vis[ei])]=1;
+    var typeKeys=Object.keys(types);
+    var hideTag=typeKeys.length===1;
+    h+='<div style="margin:0 0 16px;padding:10px 12px;border:1px solid var(--border);border-radius:12px;background:var(--accent-light)">';
+    h+='<div style="display:flex;align-items:center;gap:6px;margin-bottom:8px;font-size:0.8rem;color:var(--text-muted)">';
+    h+='<span style="font-weight:600">&#8646; Parallel sessions</span>';
+    h+='<span style="font-family:monospace">'+esc(grp.time)+'</span>';
+    if(hideTag)h+=tagHtml(typeKeys[0]);
+    h+='</div>';
+    for(var ei=0;ei<vis.length;ei++){
+      h+=renderEvent(vis[ei],hideTag);
+    }
+    h+='</div>';
+  }
+
+  return {h:h, visE:visE, visP:visP, totalP:totalP};
+}
+
+function render(){
+  if(!data)return;
+  var q=document.getElementById('search').value.trim();
+  var starEl=document.getElementById('starFilter');
+  var onlyStarred=starEl.classList.contains('active');
+  var isSearch=!!q;
+  // Search and "starred only" both go global \u2014 spanning all days \u2014 because at a
+  // conference you look people/topics up across the whole week, and your agenda
+  // is not confined to one tab. Plain browsing stays on the selected day.
+  var globalMode=isSearch||onlyStarred;
+  var tLabel=todayLabel();
+  var nMin=nowMinutes();
+  var conflictSids=computeConflicts();
+
+  var daysToRender=globalMode?data.days:[data.days[curDay]];
+  var totalP=0,visP=0,visE=0,shownDays=0,h='';
+  for(var di=0;di<daysToRender.length;di++){
+    var day=daysToRender[di];
+    var isToday=day.date===tLabel;
+    var res=renderDay(day,{q:q,onlyStarred:onlyStarred,isSearch:isSearch,
+      conflictSids:conflictSids,nowMin:isToday?nMin:-1});
+    totalP+=res.totalP; visP+=res.visP; visE+=res.visE;
+    if(globalMode){
+      if(res.visE===0)continue; // hide days with nothing to show
+      var realIdx=data.days.indexOf(day);
+      h+='<h2 class="day-heading" id="day-'+realIdx+'">'+esc(day.day)+' \u00b7 '+esc(day.date)
+        +(isToday?' <span class="today-pill">TODAY</span>':'')+'</h2>';
+      shownDays++;
+    }
+    h+=res.h;
   }
 
   if(visE===0){
-    h='<div style="text-align:center;padding:40px;color:var(--text-muted)">No items match your filters</div>';
+    h='<div style="text-align:center;padding:40px;color:var(--text-muted)">'
+      +(onlyStarred?'Nothing starred yet. Tap the \u2605 next to talks, posters or sessions.':'No items match your search.')
+      +'</div>';
   }
 
-  document.getElementById('stats').textContent=visE+' blocks \u00b7 '+visP+' posters (of '+totalP+')';
+  // Subtitle + stats reflect the active mode.
+  var sub;
+  if(isSearch)sub='Search results for \u201c'+q+'\u201d'+(onlyStarred?' (starred)':'');
+  else if(onlyStarred)sub='My agenda \u00b7 all days';
+  else{var d0=data.days[curDay];sub=d0.date+' \u2014 '+d0.day;}
+  document.getElementById('subtitle').textContent=sub;
+
+  updateStarCount();
+  document.getElementById('stats').textContent=
+    (globalMode?shownDays+' days \u00b7 ':'')+visE+' blocks \u00b7 '+visP+' posters (of '+totalP+')';
+
   document.getElementById('content').innerHTML=h;
+  toggleBackToTop();
 }
 
 
@@ -605,6 +750,7 @@ function buildStarredText(){
         var picked=[];
         for(var ti=0;ti<(ev.talks||[]).length;ti++){
           var t=ev.talks[ti];
+          if(isJunkTalk(t))continue;
           if(evStar||s['talk::'+t.sid])picked.push(t);
         }
         if(evStar||picked.length){
@@ -612,8 +758,9 @@ function buildStarredText(){
             +'  ['+(ev.time||'')+(ev.location?', '+ev.location:'')+']');
           for(var ti=0;ti<picked.length;ti++){
             var t=picked[ti];
-            dayLines.push('   - '+(t.time?t.time+'  ':'')+(t.speaker||'')
-              +(t.title?' — '+t.title:'')+(t.location?' ('+t.location+')':''));
+            var tt=(t.time&&!zeroDurTime(t.time))?t.time+'  ':'';
+            dayLines.push('   - '+tt+(t.title||'')
+              +(t.speaker?(t.title?' — ':'')+t.speaker:'')+(t.location?' ('+t.location+')':''));
           }
         }
       }
@@ -668,22 +815,154 @@ async function shareStarred(){
   showShareFallback(text);
 }
 
+// --- Share link: encode the starred keys into a URL hash so it can be sent to
+// someone else, who is then offered to merge them into their own saved stars. ---
+// Encoding: JSON array of star keys -> UTF-8-safe base64 (URL-safe variant).
+function b64urlEncode(str){
+  var b64=btoa(unescape(encodeURIComponent(str)));
+  return b64.replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+}
+function b64urlDecode(str){
+  var b64=str.replace(/-/g,'+').replace(/_/g,'/');
+  while(b64.length%4)b64+='=';
+  return decodeURIComponent(escape(atob(b64)));
+}
+function buildShareURL(){
+  var keys=Object.keys(stars());
+  if(!keys.length)return null;
+  var enc=b64urlEncode(JSON.stringify(keys));
+  var base=location.href.split('#')[0];
+  return base+'#stars='+enc;
+}
+
+async function shareStarredLink(){
+  var url=buildShareURL();
+  if(!url){alert('You have not starred anything yet.\nTap the ★ next to talks, posters or sessions first.');return;}
+  var n=Object.keys(stars()).length;
+  if(navigator.share){
+    try{await navigator.share({title:'FENS 2026 — My starred program',
+      text:'My FENS 2026 starred program ('+n+' items) — open to add them to yours:',url:url});return;}
+    catch(e){if(e&&e.name==='AbortError')return;/* else fall through */}
+  }
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    try{await navigator.clipboard.writeText(url);alert('Share link copied to clipboard.');return;}
+    catch(e){/* fall through */}
+  }
+  showShareFallback(url);
+}
+
+// If the page was opened with a #stars=... hash, offer to merge those stars.
+function importStarsFromHash(){
+  var m=(location.hash||'').match(/[#&]stars=([^&]+)/);
+  if(!m)return;
+  var keys;
+  try{keys=JSON.parse(b64urlDecode(m[1]));}catch(e){keys=null;}
+  // Clear the hash regardless so a refresh doesn't re-prompt.
+  try{history.replaceState(null,'',location.pathname+location.search);}
+  catch(e){location.hash='';}
+  if(!keys||!keys.length||!Array.isArray(keys))return;
+  var existing=stars();
+  var incoming=[];
+  for(var i=0;i<keys.length;i++){
+    if(typeof keys[i]==='string' && !existing[keys[i]])incoming.push(keys[i]);
+  }
+  if(!incoming.length)return; // nothing new to add
+  showImportDialog(keys.length,incoming);
+}
+
+function showImportDialog(total,incoming){
+  var wrap=document.createElement('div');
+  wrap.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;'
+    +'display:flex;align-items:center;justify-content:center;padding:16px;';
+  var box=document.createElement('div');
+  box.style.cssText='background:var(--surface);color:var(--text);border-radius:12px;'
+    +'padding:20px;max-width:420px;width:100%;display:flex;flex-direction:column;gap:14px;';
+  var msg=document.createElement('div');
+  var already=total-incoming.length;
+  msg.innerHTML='<div style="font-size:1.05rem;font-weight:700;margin-bottom:6px">Add shared stars?</div>'
+    +'<div style="font-size:0.9rem;color:var(--text-muted)">Someone shared a program with '
+    +total+' starred item'+(total===1?'':'s')+'. '
+    +'<b style="color:var(--text)">'+incoming.length+' new</b> will be added to your saved stars'
+    +(already?' ('+already+' you already have).':'.')+'</div>';
+  var row=document.createElement('div');
+  row.style.cssText='display:flex;gap:8px;justify-content:flex-end;';
+  var cancel=document.createElement('button');
+  cancel.textContent='Not now';cancel.className='share-btn';
+  cancel.onclick=function(){document.body.removeChild(wrap);};
+  var add=document.createElement('button');
+  add.textContent='Add '+incoming.length+' star'+(incoming.length===1?'':'s');
+  add.className='share-btn';
+  add.style.cssText='background:var(--accent);color:#fff;border-color:var(--accent);';
+  add.onclick=function(){
+    var s=stars();
+    for(var i=0;i<incoming.length;i++)s[incoming[i]]=true;
+    saveStars(s);
+    document.body.removeChild(wrap);
+    render();
+  };
+  row.appendChild(cancel);row.appendChild(add);
+  box.appendChild(msg);box.appendChild(row);wrap.appendChild(box);
+  wrap.onclick=function(e){if(e.target===wrap)document.body.removeChild(wrap);};
+  document.body.appendChild(wrap);
+}
+
 function switchDay(idx){
   curDay=idx;
   var tabs=document.querySelectorAll('.tab');
   for(var i=0;i<tabs.length;i++)tabs[i].classList.toggle('active',i===idx);
+  // In global mode all days are already on screen — just scroll to the heading.
+  var globalMode=!!document.getElementById('search').value.trim()
+    ||document.getElementById('starFilter').classList.contains('active');
+  if(globalMode){
+    var el=document.getElementById('day-'+idx);
+    if(el){el.scrollIntoView({behavior:'smooth',block:'start'});return;}
+  }
   render();
+  window.scrollTo(0,0);
+}
+
+function toggleBackToTop(){
+  var b=document.getElementById('toTop');
+  if(b)b.classList.toggle('show',window.scrollY>500);
+}
+
+// Load the program with offline resilience: serve from network when available
+// (and refresh the cache), fall back to the cached copy when the venue wifi drops.
+async function loadProgram(){
+  var url='program.json';
+  var hasCache=('caches' in window);
+  try{
+    var resp=await fetch(url);
+    if(!resp.ok)throw new Error('HTTP '+resp.status);
+    if(hasCache){try{var c=await caches.open('fens2026');await c.put(url,resp.clone());}catch(e){}}
+    return await resp.json();
+  }catch(err){
+    if(hasCache){
+      try{
+        var c=await caches.open('fens2026');
+        var cached=await c.match(url);
+        if(cached){
+          var el=document.getElementById('subtitle');
+          if(el)el.textContent='Offline — showing saved program';
+          return await cached.json();
+        }
+      }catch(e){}
+    }
+    throw err;
+  }
 }
 
 async function init(){
   try{
-    var resp=await fetch('program.json');
-    if(!resp.ok)throw new Error('HTTP '+resp.status);
-    data=await resp.json();
+    data=await loadProgram();
+    // Open on today's tab during the conference; otherwise the first day.
+    var tl=todayLabel(), startDay=0;
+    for(var i=0;i<data.days.length;i++){if(data.days[i].date===tl){startDay=i;break;}}
+    curDay=startDay;
     var tabsEl=document.getElementById('tabs');
     for(var i=0;i<data.days.length;i++){
       var tab=document.createElement('div');
-      tab.className='tab'+(i===0?' active':'');
+      tab.className='tab'+(i===startDay?' active':'')+(data.days[i].date===tl?' today':'');
       tab.textContent=data.days[i].day;
       tab.onclick=(function(idx){return function(){switchDay(idx);};})(i);
       tabsEl.appendChild(tab);
@@ -693,16 +972,30 @@ async function init(){
       clearTimeout(st);st=setTimeout(render,150);
     });
     document.getElementById('starFilter').addEventListener('click',function(){
-      this.classList.toggle('active');render();
+      this.classList.toggle('active');render();window.scrollTo(0,0);
     });
     document.getElementById('shareBtn').addEventListener('click',shareStarred);
+    document.getElementById('shareLinkBtn').addEventListener('click',shareStarredLink);
+    document.getElementById('toTop').addEventListener('click',function(){
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+    window.addEventListener('scroll',toggleBackToTop,{passive:true});
     render();
+    importStarsFromHash();
   }catch(e){
     document.getElementById('subtitle').textContent='Error loading program';
     document.getElementById('content').innerHTML='<div class="loading">Failed to load program.json.<br><small>'+e.message+'</small></div>';
   }
 }
 init();
+
+// Register the service worker for offline use (secure contexts only; no-op on
+// plain http or unsupported browsers).
+if('serviceWorker' in navigator){
+  window.addEventListener('load',function(){
+    navigator.serviceWorker.register('sw.js').catch(function(){});
+  });
+}
 </script>
 </body>
 </html>
